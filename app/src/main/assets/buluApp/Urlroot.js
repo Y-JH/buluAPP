@@ -17,45 +17,6 @@ $(function() {
 		return this.getHours() + ":" + this.getSeconds() + "";
 	};
 
-		//bookingClass.html 相关请求  翟勤
-		$.ajax({
-			type: "post",
-			url: activeUrl1 + "/TimeTable/timeTablelist",
-			data: {
-				"id": 1
-			},
-			async: false,
-			dataType: "json",
-			success: function(data) {
-				console.log(data)
-				for(var i = 0; i < data.data.length; i++) {
-					//获取时间和日期的相关代码
-					Date.prototype.toLocaleString = function() {
-						return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
-					};
-					var odom = document.getElementById('usera');
-					var unixTimestap = new Date(data.data[i].classDate); //获取日期
-					commonTime = unixTimestap.toLocaleString();
-					var unixTimestap = new Date(data.data[i].classDate); //获取开始时间
-					commonTime1 = unixTimestap.toLocaleString1();
-					odom.innerHTML += `<div class="main_font">
-						        <h4 class="hdr">${data.data[i].hour}</h4>
-						        <p>班级: ${data.data[i].classGrade.className}</p>
-						        <p>讲课老师: ${data.data[i].teacher}</p>
-						        <p>教室: 教学楼${data.data[i].classGrade.classroom}</p>
-						        <p class="padd">${commonTime} ${commonTime1}-${data.data[i].classTime}</p>
-					        </div>
-					        <div class="btn">
-						        <button type="button" class="mui-btn mui-btn-outlined quxiao" style="background-color: rgb(255,139,54); color: white;">预约</button>
-					        </div>`
-				}
-	
-			},
-			error: function(XMLHttpRequest, textStatus, errorThrown) {
-				alert("请求失败！");
-			}
-		});
-
 	//bookingClass.html课时预约课题大纲接口
 	$.ajax({
 		type: "post",
@@ -83,107 +44,107 @@ $(function() {
 	});
 
 	//		//myclass.html 页面请求 翟勤
-			$('#scribe').click(function(){
-				$('#mycalss').html('')
-			$.ajax({
-				type: "post",
-				url: activeUrl1 + "/cade/classRecordlist",
-				data: {
-					"yid": 1
-				},
-				async: false,
-				dataType: "json",
-				success: function(data) {
-					console.log(data)
-					//for 循环
-					for(var i = 0; i < data.data.length; i++) {
-						//获取时间和日期的相关代码
-						Date.prototype.toLocaleString = function() {
-							return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
-						};
-						var unixTimestap = new Date(data.data[i].schooldate); //获取日期
-						commonTime = unixTimestap.toLocaleString();
-						var unixTimestap = new Date(data.data[i].schooldate); //获取日期
-						commonTime = unixTimestap.toLocaleString();
-						var obtn = document.getElementById('');
-						var sta = ''
-						sta += `<li class="mui-table-view-cell" style="line-height: 1.5rem;">
-						<a href="mydetails.html"><div class="main_font" style="margin-top: 1rem;">
-			              		<h4 style="padding: 1rem 0 0.5rem 0; color: rgb(102,102,102);">课程: ${data.data[i].hourName}</h4>
-			              		<p>学生: ${data.data[i].cadetcyd[0].study}</p>
-			              		<p>讲课老师: ${data.data[i].teacher}</p>
-			              		<p class="star">课堂表现:
-			              			<img src="../../img/redxing.png"/>
-			              			<img src="../../img/redxing.png"/>
-			              			<img src="../../img/redxing.png"/>
-			              			<img src="../../img/redxing.png"/>
-			              			<img src="../../img/heixing.png"/>
-			              		</p>
-			              		<p style="color: rgb(103,103,103);">${commonTime} ${data.data[i].timeBucket}</p>
-			              		<p>课时总结: ${data.data[i].hourSum}</p>
-			              		<p>老师留言: ${data.data[i].teacherMess}</p>
-			              	</div></a></li>`
-						$('#myclass').append(sta)
-					}
-				},
-				error: function(XMLHttpRequest, textStatus, errorThrown) {
-					alert("请求失败！");
-				}
-			});
-		})
+	//		$('#scribe').click(function(){
+	//			$('#mycalss').html('')
+	//		$.ajax({
+	//			type: "post",
+	//			url: activeUrl1 + "/cade/classRecordlist",
+	//			data: {
+	//				"yid": 1
+	//			},
+	//			async: false,
+	//			dataType: "json",
+	//			success: function(data) {
+	//				console.log(data)
+	//				//for 循环
+	//				for(var i = 0; i < data.data.length; i++) {
+	//					//获取时间和日期的相关代码
+	//					Date.prototype.toLocaleString = function() {
+	//						return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+	//					};
+	//					var unixTimestap = new Date(data.data[i].schooldate); //获取日期
+	//					commonTime = unixTimestap.toLocaleString();
+	//					var unixTimestap = new Date(data.data[i].schooldate); //获取日期
+	//					commonTime = unixTimestap.toLocaleString();
+	//					var obtn = document.getElementById('');
+	//					var sta = ''
+	//					sta += `<li class="mui-table-view-cell" style="line-height: 1.5rem;">
+	//					<a href="mydetails.html"><div class="main_font" style="margin-top: 1rem;">
+	//		              		<h4 style="padding: 1rem 0 0.5rem 0; color: rgb(102,102,102);">课程: ${data.data[i].hourName}</h4>
+	//		              		<p>学生: ${data.data[i].cadetcyd[0].study}</p>
+	//		              		<p>讲课老师: ${data.data[i].teacher}</p>
+	//		              		<p class="star">课堂表现:
+	//		              			<img src="../../img/redxing.png"/>
+	//		              			<img src="../../img/redxing.png"/>
+	//		              			<img src="../../img/redxing.png"/>
+	//		              			<img src="../../img/redxing.png"/>
+	//		              			<img src="../../img/heixing.png"/>
+	//		              		</p>
+	//		              		<p style="color: rgb(103,103,103);">${commonTime} ${data.data[i].timeBucket}</p>
+	//		              		<p>课时总结: ${data.data[i].hourSum}</p>
+	//		              		<p>老师留言: ${data.data[i].teacherMess}</p>
+	//		              	</div></a></li>`
+	//					$('#myclass').append(sta)
+	//				}
+	//			},
+	//			error: function(XMLHttpRequest, textStatus, errorThrown) {
+	//				alert("请求失败！");
+	//			}
+	//		});
+	//	})
 
-		//mydetails.html 相关页面 翟勤
-		$.ajax({
-			type: "post",
-			url: activeUrl1 + "/cade/classRecordlist",
-			data: {
-				"yid": 1
-			},
-			async: false,
-			dataType: "json",
-			success: function(data) {
-				console.log(data)
-				for(var i = 0; i < data.data.length; i++) {
-					//获取时间和日期的相关代码
-					Date.prototype.toLocaleString = function() {
-						return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
-					};
-					var unixTimestap = new Date(data.data[i].schooldate); //获取日期
-					commonTime = unixTimestap.toLocaleString();
-					var unixTimestap = new Date(data.data[i].schooldate); //获取日期
-					commonTime = unixTimestap.toLocaleString();
+	//	//mydetails.html 相关页面 翟勤
+	//	$.ajax({
+	//		type: "post",
+	//		url: activeUrl1 + "/cade/classRecordlist",
+	//		data: {
+	//			"yid": 1
+	//		},
+	//		async: false,
+	//		dataType: "json",
+	//		success: function(data) {
+	//			console.log(data)
+	//			for(var i = 0; i < data.data.length; i++) {
+	//				//获取时间和日期的相关代码
+	//				Date.prototype.toLocaleString = function() {
+	//					return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+	//				};
+	//				var unixTimestap = new Date(data.data[i].schooldate); //获取日期
+	//				commonTime = unixTimestap.toLocaleString();
+	//				var unixTimestap = new Date(data.data[i].schooldate); //获取日期
+	//				commonTime = unixTimestap.toLocaleString();
+	//
+	//				var stb = ''
+	//				stb += `<div class="main_font clearfix">
+	//				<h4 style="padding: 1rem 0 0.5rem 0; color: rgb(102,102,102);">课程: ${data.data[i].hourName}</h4>
+	//				<p>学生: ${data.data[i].cadetcyd[i].study}</p>
+	//				<p>讲课老师: ${data.data[i].teacher}</p>
+	//				<p class="star">
+	//				课堂表现:<img src="../../img/redxing.png"/>
+	//	              		<img src="../../img/redxing.png"/>
+	//	              		<img src="../../img/redxing.png"/>
+	//	              		<img src="../../img/redxing.png"/>
+	//	              		<img src="../../img/heixing.png"/>
+	//	              	</p>
+	//	              	<p style="color: rgb(103,103,103);">${commonTime} ${data.data[i].timeBucket}</p>
+	//	          </div>
+	//	          <div class="main_section clearfix">
+	//	          	<p style="width: 90%; margin: 0.5rem auto;">
+	//	          		老师留言: ${data.data[i].hourSum}
+	//	          	</p>
+	//	          	<p style="width: 90%; margin: 0.5rem auto;">
+	//	          		老师留言: ${data.data[i].teacherMess}
+	//	          	</p>
+	//	          </div>`
+	//				$('#mainas').append(stb)
+	//			}
+	//		},
+	//		error: function(XMLHttpRequest, textStatus, errorThrown) {
+	//			alert("请求失败！");
+	//		}
+	//	});
 
-					var stb = ''
-					stb += `<div class="main_font clearfix">
-					<h4 style="padding: 1rem 0 0.5rem 0; color: rgb(102,102,102);">课程: ${data.data[i].hourName}</h4>
-					<p>学生: ${data.data[i].cadetcyd[i].study}</p>
-					<p>讲课老师: ${data.data[i].teacher}</p>
-					<p class="star">
-					课堂表现:<img src="../../img/redxing.png"/>
-		              		<img src="../../img/redxing.png"/>
-		              		<img src="../../img/redxing.png"/>
-		              		<img src="../../img/redxing.png"/>
-		              		<img src="../../img/heixing.png"/>
-		              	</p>
-		              	<p style="color: rgb(103,103,103);">${commonTime} ${data.data[i].timeBucket}</p>
-		          </div>
-		          <div class="main_section clearfix">
-		          	<p style="width: 90%; margin: 0.5rem auto;">
-		          		老师留言: ${data.data[i].hourSum}
-		          	</p>
-		          	<p style="width: 90%; margin: 0.5rem auto;">
-		          		老师留言: ${data.data[i].teacherMess}
-		          	</p>
-		          </div>`
-					$('#mainas').append(stb)
-				}
-			},
-			error: function(XMLHttpRequest, textStatus, errorThrown) {
-				alert("请求失败！");
-			}
-		});
-
-	//learning.html页面请求	景浩		
+	//learning.html页面请求	景浩
 	$.ajax({
 		type: "post",
 		url: activeUrl + "/cadetcy/queryCadetcyById",
@@ -205,14 +166,14 @@ $(function() {
 			stc += `
 								<div class="mui-row">
 						<div class="left mui-col-sm-9 mui-col-xs-9">
-							<img src="../../img/tou.png" />
+							<img src="../../img/tou.png"  onclick="onClickUserAvatar();"/>
 							<div class="hide clearfix">
 								<h1 class="names">${data.data[0].study}</h1>
 								<p>${data.data[0].classGrade.campus}</p>
 							</div>
 						</div>
 						<div class="right mui-col-sm-3 mui-col-xs-3">
-							<a href="bookingclass.html">
+							<a href="bookingclass.html" onclick="onClickClassAppoint();">
 								<img src="../../img/kes.png" />
 							</a>
 						</div>
@@ -238,7 +199,7 @@ $(function() {
 		}
 	});
 
-	//learning.html  课题大纲的接口  景浩 
+	//learning.html  课题大纲的接口  景浩
 	$.ajax({
 		type: "post",
 		url: activeUrl + "/course/queryAll",
@@ -271,13 +232,13 @@ $(function() {
 		console.log('学员id------>' + dataId)
 		$.ajax({
 			type: "post",
-			url: activeUrl + "/cadetcy/selectByCadetcyId",
+			url: activeUrl + "/course/queryClassConsumptionById",
 			data: {
-				"caId": dataId,
-				"ccId": ccId
+				"id": 1
 			},
 			dataType: "json",
 			success: function(data) {
+				console.log(data)
 				console.log('---->课程大纲')
 				cid = data.data[0].classConsumptions[0].id
 				console.log(cid)
@@ -286,7 +247,7 @@ $(function() {
 				str = ' '
 				for(var i = 0; i < data.data.length; i++) {
 					//					cid = data.data[i].classGrade.id
-					//获取时间和日期的相关代码	
+					//获取时间和日期的相关代码
 					var unixTimestap = new Date(data.data[i].classConsumptions[0].date); //获取日期
 					commonTime = unixTimestap.toLocaleString();
 					console.log(commonTime)
@@ -378,7 +339,7 @@ $(function() {
 	                      		<p>讲课老师: ${data.data[i].listeningTestManages[0].listenTeacher}</p>
 	                      		<p>地点:${data.data[i].listeningTestManages[0].address}</p>
 	                      		<p style="color: rgb(153,153,153);">${commonTime} ${commonTime1}-${commonTime1}</p>
-								    <div class="hr" style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0.3rem auto;"></div>	
+								    <div class="hr" style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0.3rem auto;"></div>
 									<textarea id="hcqk" class="form" rows="" placeholder="试听反馈">${data.data[i].listeningTestManages[0].listeningFeedback}</textarea>
 											</div>
 										</li>
@@ -394,7 +355,7 @@ $(function() {
 	});
 	console.log(dataId)
 	console.log(ccId)
-	//bookingClass.html  查询该学员预约课时  景浩 
+	//bookingClass.html  查询该学员预约课时  景浩
 	$(document).on("click", ".kcdg", function() {
 		$('#usera').html('')
 		//		alert($(this).attr('id'))
@@ -409,11 +370,10 @@ $(function() {
 			async: false,
 			dataType: "json",
 			success: function(data) {
-				cid = data.data[0].classConsumptions[0].id
-				console.log(cid)
+				//				cid = data.data[0].classConsumptions[0].id
+				//				console.log(cid)
 				for(var i = 0; i < data.data.length; i++) {
 					//获取时间和日期的相关代码
-
 					Date.prototype.toLocaleString = function() {
 						return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
 					};
@@ -431,7 +391,7 @@ $(function() {
 							        <p class="padd">${commonTime} ${commonTime1}-${data.data[i].classConsumptions[0].timeBucket}</p>
 							        <div class="btn">
 							        <button type="button" class="mui-btn mui-btn-outlined quxiao" style="background-color: rgb(255,139,54); color: white;" id="yuyue">预约</button>
-						        </div> 
+						        </div>
 						        </div>`
 					$('#usera').append(sts)
 
@@ -480,7 +440,7 @@ $(function() {
 			dataType: "json",
 			success: function(data) {
 				console.log(data)
-				
+
 				for(var i = 0; i < data.data.length; i++) {
 					//获取时间和日期的相关代码
 					Date.prototype.toLocaleString = function() {
@@ -518,6 +478,7 @@ $(function() {
 	$(document).on("click", ".quxiaoa", function() {
 		ccId = $(this).attr('type')
 		console.log(ccId)
+		alert(cid)
 		$.ajax({
 			url: activeUrl + "/cadetcy/deleteCadetcyHour",
 			type: "post",

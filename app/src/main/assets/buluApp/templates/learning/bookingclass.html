@@ -16,7 +16,7 @@
 	<body>
 		<div class="booking_header">
 			<header class="mui-bar mui-bar-nav">
-				<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+				<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
 				<h1 class="mui-title">课时预约</h1>
 			</header>
 			<div style="height: 1.5rem"></div>
@@ -36,18 +36,17 @@
 							<!--content-->
 				</div>
 			</div>
+		</div>
 			<script src="../../js/mui.min.js"></script>
 			<script src="../../js/zepto.min.js"></script>
 			<script src="../../js/booking.js"></script>
 			<script src="../../Urlroot.js"></script>
-			<script>
-			$(function() {
-					function aa(){
-						
-					}
-					
-			})
-			</script>
+		<script type="text/javascript">
+		<!-- 课时预约 返回 -->
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			};
+		</script>
 	</body>
 
 </html>

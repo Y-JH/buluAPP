@@ -128,7 +128,17 @@
 		<script src="../../Urlroot.js"></script>
 		<script type="text/javascript" >
 
+		<!--点击用户头像-->
+		function onClickUserAvatar(){
+		    var fileUrl = "file:///android_asset/buluApp/templates/me/mydetails.html";
+		     window.android.showAndroidHomeNewPage(fileUrl,3);
+		};
 
+		<!--点击课时预约按钮-->
+		function onClickClassAppoint(){
+			var fileUrl = "file:///android_asset/buluApp/templates/learning/bookingclass.html";
+		     window.android.showAndroidHomeNewPage(fileUrl,3);
+		}
 
 		</script>
 	</body>
