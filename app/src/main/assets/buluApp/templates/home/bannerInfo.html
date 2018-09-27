@@ -16,7 +16,7 @@
 		<div class="banner clearfix">
 			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return banner-back" onclick="onBack();"></a>
 			<img src="../../img/banner1.png" alt="" class="banner-img"/>
-			<a href="#" class="shares"><img src="../../img/shares.png" alt="" /></a>
+			<a onclick="shareWithSDK();" class="shares"><img src="../../img/shares.png" alt="" /></a>
 		</div>
 		<ul class="items bc-center">
 			<li>
@@ -26,36 +26,6 @@
 				</span>
 			</li>
 		</ul>
-
-		<div class="share-tip">
-			<div class="share-t">
-				<dl>
-					<dt>
-						<a href="#"><img src="../../images/weixin.png" alt="" /></a>
-					</dt>
-					<dd>微信好友</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="#"><img src="../../img/pengyquan.png" alt="" /></a>
-					</dt>
-					<dd>朋友圈</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="#"><img src="../../img/qq.png" alt="" /></a>
-					</dt>
-					<dd>QQ好友</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="#"><img src="../../img/weobo.png" alt="" /></a>
-					</dt>
-					<dd>微博</dd>
-				</dl>
-			</div>
-			<a href="#" class="share-b">取消</a>
-		</div>
 
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
@@ -67,16 +37,15 @@
 			})
 			
 			
-			$('.shares').click(function(){
-				$('.share-tip').show()
-			})
-			$('.share-b').click(function(){
-				$('.share-tip').hide()
-			})
 
 <!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);
+			}
+
+			<!--点击分享-->
+			function shareWithSDK(){
+				window.android.shareWithSDK();
 			}
 		</script>
 	</body>

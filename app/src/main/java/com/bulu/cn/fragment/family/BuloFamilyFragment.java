@@ -3,7 +3,6 @@ package com.bulu.cn.fragment.family;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -109,11 +108,18 @@ public class BuloFamilyFragment extends BaseMainFragment {
     @Subscribe
     public void onHomeShowPage(IAndroidHomePageEvent.NewPage event) {
         if(ConsActions.NEW_PAGE_EVENT.equals(event.NEW_PAGE_EVENT)  && event.mFlag == 2){
-//            startBrotherFragment(PublicFirstWebViewFragment.newInstance(event.pageUrl));
-            Log.e(TAG,"接收消息修改状态栏 跳转11111");
             Intent intent = new Intent(getActivity(), PublicSecondPageActivity.class);
             intent.putExtra("page_url", event.pageUrl);
             startActivity(intent);
+
+
+            //第三方分享功能
+            /*final String photo ="http://img.mukewang.com/5465af0c0001bb6706000338-590-330.jpg";
+                            new ShareDialog.Builder()
+                        .setmShareType(SHARE_IMAGE)
+                        .setmShareText("百万大奖等你拿")
+                        .setmSharePhoto(photo)
+                        .build(getActivity()).show();*/
         }
     }
 }

@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.webkit.JavascriptInterface;
-import android.widget.Toast;
 
-import com.bulu.cn.BaseApplication;
 import com.bulu.cn.event.IAndroidSecondPageEvent;
 import com.just.agentweb.AgentWeb;
 
@@ -40,7 +38,7 @@ public class IAndroidCallbackSecondAgent {
         deliver.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
+//                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
                 EventBusActivityScope.getDefault(mActivity)
                         .post(new IAndroidSecondPageEvent.NewPage(pageUrl));
             }

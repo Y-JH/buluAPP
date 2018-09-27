@@ -6,6 +6,7 @@ import com.bulu.cn.fragment.PublicFirstWebViewFragment;
 import com.bulu.cn.tool.AppManager;
 
 import me.yokeyword.fragmentation.SupportActivity;
+
 /**
  * @Title:PublicActivityForFragment
  * @Package:cn.com.zhongguancun.PublicActivityForFragment
@@ -28,7 +29,6 @@ public class PublicSecondPageActivity extends SupportActivity {
             loadRootFragment(R.id.fl_container, PublicFirstWebViewFragment.newInstance(file_url));
         }
     }
-
 
 
     @Override

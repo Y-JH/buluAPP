@@ -4,10 +4,9 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.webkit.JavascriptInterface;
-import android.widget.Toast;
 
-import com.bulu.cn.BaseApplication;
 import com.bulu.cn.event.IAndroidFirstPageEvent;
+import com.bulu.cn.event.IAndroidShareSDKEvent;
 import com.just.agentweb.AgentWeb;
 
 import me.yokeyword.eventbusactivityscope.EventBusActivityScope;
@@ -40,13 +39,22 @@ public class IAndroidCallbackFirstAgent {
         deliver.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
+//                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
                 EventBusActivityScope.getDefault(mActivity)
                         .post(new IAndroidFirstPageEvent.NewPage(pageUrl));
             }
         });
     }
 
+
+    /**
+     * 功能：使用sharesdk的分享功能 唤起分享
+     */
+    @JavascriptInterface
+    public void shareWithSDK() {
+        EventBusActivityScope.getDefault(mActivity)
+                .post(new IAndroidShareSDKEvent.ShareWithSDK());
+    }
 
     /**
      * 功能：Js调用Android->关闭当前的fragment页面调

@@ -41,4 +41,8 @@ public class ConsActions {
     public static final String USER_LOGIN_RECORD_KEY = "key-for-user-login-record";
     /** 用户使用记录的保存标识，记录用户是否是第一次使用 **/
     public static final String USER_USE_RECORD_KEY = "key-for-user-use-record";
+
+
+    /**shareSDK分享功能**/
+    public static final String SAHRE_SDK_EVENT = "SAHRE_SDK_EVENT";
 }

@@ -5,13 +5,13 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:background="@color/white"
+        android:background="@drawable/share_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:paddingTop="40px"
-        android:paddingBottom="30px">
+        android:paddingBottom="10px">
 
         <LinearLayout
             android:id="@+id/li_pengyouquan"
@@ -24,7 +24,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/comui_share_weixin_pengyou" />
+                android:src="@drawable/umeng_socialize_wxcircle" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/comui_share_weixin" />
+                android:src="@drawable/umeng_socialize_wechat" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/comui_share_qq" />
+                android:src="@drawable/umeng_socialize_qq" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/comui_share_qqzone" />
+                android:src="@drawable/umeng_socialize_qzone" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/comui_share_weibo" />
+                android:src="@drawable/umeng_socialize_sina" />
 
             <TextView
                 android:layout_width="match_parent"

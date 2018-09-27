@@ -51,7 +51,7 @@
 		<header class="mui-bar mui-bar-nav">
 			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return banner-back" onclick="onBack()"></a>
 			<h1 class="mui-title">活动详情</h1>
-			<a href="#" class="shares"><img src="../../img/shares.png"/></a>
+			<a onclick="shareWithSDK();" class="shares"><img src="../../img/shares.png"/></a>
 		</header>
 		<article class="actives" id="actives">
 			<div class="bc-center" class="active-list" id="activeList" style="width: 95%;">
@@ -100,6 +100,11 @@
 			<!--从二级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);
+			};
+
+			<!--点击分享-->
+			function shareWithSDK(){
+				window.android.shareWithSDK();
 			}
 		</script>
 	</body>

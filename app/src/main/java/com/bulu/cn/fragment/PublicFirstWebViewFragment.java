@@ -2,7 +2,6 @@ package com.bulu.cn.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.bulu.cn.agent.WebAgentFragmentImpl;
 import com.bulu.cn.base.BaseBackFragment;
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.IAndroidFirstPageEvent;
+import com.bulu.cn.event.IAndroidShareSDKEvent;
+import com.bulu.cn.share.ShareDialog;
 import com.bulu.cn.tool.AppManager;
 import com.just.agentweb.AgentWeb;
 
@@ -20,6 +21,8 @@ import org.greenrobot.eventbus.Subscribe;
 
 import me.yokeyword.eventbusactivityscope.EventBusActivityScope;
 import me.yokeyword.fragmentation.SupportFragment;
+
+import static com.bulu.cn.share.ShareDialog.SHARE_IMAGE;
 
 /**
  * @Auther: YJH
@@ -31,6 +34,7 @@ public class PublicFirstWebViewFragment extends BaseBackFragment {
     private static final String TAG = "PolicyPublicFragment";
     private WebAgentFragmentImpl mWebAgent;
     private static final String WEB_URL = "WEB_URL";
+
     public static PublicFirstWebViewFragment newInstance(String url) {
 
         Bundle args = new Bundle();
@@ -109,27 +113,45 @@ public class PublicFirstWebViewFragment extends BaseBackFragment {
 
     /**
      * 功能：eventbus 接收消息修改状态栏
+     *
      * @param event
      */
     @Subscribe
     public void showAndroidNewFirstPage(IAndroidFirstPageEvent.NewPage event) {
-        if(ConsActions.NEW_PAGE_EVENT.equals(event.NEW_PAGE_EVENT)){
+        if (ConsActions.NEW_PAGE_EVENT.equals(event.NEW_PAGE_EVENT)) {
             startBrotherFragment(PublicSecondWebViewFragment.newInstance(event.pageUrl));
+        }
+    }
+
+    @Subscribe
+    public void shareWithSDK(IAndroidShareSDKEvent.ShareWithSDK event) {
+//        Toast.makeText(getActivity(), "点击分享", Toast.LENGTH_SHORT).show();
+        if (ConsActions.SAHRE_SDK_EVENT.equals(event.SAHRE_SDK_EVENT)) {
+            //第三方分享功能
+//            final String photo = "http://img.mukewang.com/5465af0c0001bb6706000338-590-330.jpg";
+            final String photo = "https://github.com/Y-JH/buluAPP/blob/20180927/app/src/main/res/drawable/wel_1.png";
+            new ShareDialog.Builder()
+                    .setmShareType(SHARE_IMAGE)
+                    .setmShareText("百万大奖等你拿")
+                    .setmSharePhoto(photo)
+                    .build(getActivity()).show();
         }
     }
 
     /**
      * 功能：eventbus 接收消息修改状态栏
+     *
      * @param event
      */
     @Subscribe
     public void closeAndroidFirstPage(IAndroidFirstPageEvent.ClosePage event) {
-        if(ConsActions.CLOSE_PAGE_EVENT.equals(event.CLOSE_PAGE_EVENT)){
-            Log.e(TAG,"接收消息修改状态栏 关闭11111");
+        if (ConsActions.CLOSE_PAGE_EVENT.equals(event.CLOSE_PAGE_EVENT)) {
 //            getActivity().finish();
             AppManager.getInstance().finishAllActivity();
         }
     }
+
+
 
     /**
      * start other BrotherFragment

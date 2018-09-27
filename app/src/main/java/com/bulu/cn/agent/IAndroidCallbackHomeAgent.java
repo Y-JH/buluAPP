@@ -6,9 +6,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.webkit.JavascriptInterface;
-import android.widget.Toast;
 
-import com.bulu.cn.BaseApplication;
 import com.bulu.cn.event.IAndroidHomePageEvent;
 import com.just.agentweb.AgentWeb;
 
@@ -44,7 +42,7 @@ public class IAndroidCallbackHomeAgent {
         deliver.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
+//                Toast.makeText(BaseApplication.getsInstance(), "pageUrl=" + pageUrl, Toast.LENGTH_LONG).show();
                 EventBusActivityScope.getDefault(mActivity)
                         .post(new IAndroidHomePageEvent.NewPage(pageUrl,flag));
             }
