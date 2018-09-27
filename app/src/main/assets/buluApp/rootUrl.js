@@ -481,7 +481,7 @@ $(function() {
 								var teaStar='';
 								teaStar+=`
 										<div class="stars-items">
-											<a onclick="onClickStarTeacherItem(id=${datas[i].id})" class="stars-img">
+											<a onclick="onClickStarTeacherItem('id=${datas[i].id}')" class="stars-img">
 												<img src="../../img/jiaoshi1.png" alt="" />
 												<p class="star-text"> ${datas[i].teachername} <span> ${datas[i].label} </span></p>
 											</a>
@@ -498,65 +498,6 @@ $(function() {
 
 				});
 
-//			明星老师详情页
-			var  teacherId= getValue()['id'] || '';
-			$.ajax({
-				type: "post",
-				url: activeUrl+"/starTeachers/queryById",
-				data: {
-					"id": teacherId
-				},
-				async: false,
-				dataType: "json",
-				success: function(data) {
-						var data=data.data
-
-//						banner详情页
-							var teaban='';
-							teaban+=`
-									<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"  style="color: rgb(102,102,102);"></a>
-									<div class="banners"><img src="../../img/teachers.png" alt="" /></div>
-									<div class="banner-mask">
-										<span class="bulu-name">${data.teachername}</span>
-										<span class="bulu-names">${data.label}</span>
-									</div>
-							`
-							$('#banner').append(teaban)
-
-//						老师简介详情页
-							var introduce=''
-							introduce+=`
-									<div class="jieshao">
-										<img src="../../img/shu.png" alt="" />
-										<span>老师简介</span>
-									</div>
-									<p class="jieshao-text" >
-										${data.introduce}
-									</p>
-
-							`
-							$('#introduce').append(introduce)
-
-//						教师亮点
-							var lightspot=''
-							lightspot+=`
-									<div class="jieshao">
-										<img src="../../img/shu.png" alt="" />
-										<span>教学亮点</span>
-									</div>
-									<p class="jieshao-text">
-										${data.lightspot}
-									</p>
-							`
-							$('#lightspot').append(lightspot)
-
-
-					},
-				error: function(XMLHttpRequest, textStatus, errorThrown) {
-					alert("请求失败！");
-				}
-
-			});
 
 //			明星学员  starStudent/starStudentlist
 

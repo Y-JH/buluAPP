@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 .mui-plus.mui-android header.mui-bar{
 	display: none;
@@ -26,7 +27,7 @@
 	font-weight: normal;
 }
 .mui-segmented-control.mui-scroll-wrapper .mui-control-item{
-	padding: 0rem 2rem;
+	padding: 0rem 1.5rem;
 }
 /*banner*/
 .booking_header{
@@ -44,32 +45,6 @@
 }
 .mui-title{
 	color: white !important;
-}
-/*日历*/
-#box{
-	height: 4rem;
-	width: 90%;
-	margin: 1rem auto;
-}
-.boxa{
-	width: 14.25%;
-	float: left;
-	text-align: center;
-	line-height: 2rem;
-	font-size: 1rem;
-	color: white;
-}
-.boxa span{
-	width: 65%;
-	height: 2rem;
-	border-radius: 50%;
-	background-color: rgba(255,255,255,.5);;
-	float: left;
-	text-align: center;
-	line-height: 2rem;
-	font-size: 1rem;
-	color: white;
-	margin: 0 0.6rem;
 }
 /*声乐*/
 .main_font{
@@ -130,6 +105,41 @@
 	width: 4rem;
 	height: 2rem;
 }
+/*日历*/
+.time-kc{
+	margin-top: 1rem;
+	margin-bottom: 0.6rem;
+}
+.time-kc li{
+	float: left;
+	width: 14.2%;
+	text-align: center;
+	color:#fff;
+	font-size: 0.9rem;
+}
+.wcDate{
+	display: flex;
+}
+.wcDate li{
+	/*float: left;*/
+	width: 14.2%;
+	height:2.8rem;
+	line-height: 2.8rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.9rem;
+}
+ul.wcDate > li.active {
+    background: url(../img/yuan.png) no-repeat;
+    background-size: 50%;
+    background-position:1rem 0.5rem ;
+}
+ul.wcDate > li.today {
+     background: url(../img/yuan.png) no-repeat;
+    background-size: 50%;
+    background-position:1rem 0.5rem ;
+}
+
 /*公用样视*/
 .lines{
 	width: 100%;
@@ -138,4 +148,4 @@
 }
 .mui-slider-indicator.mui-segmented-control{
 	font-size: 1rem;
-}        
+} 
