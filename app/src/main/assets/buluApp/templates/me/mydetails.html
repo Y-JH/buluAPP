@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的课时-课时详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mydetails.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="float: left;">
+		    <a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+		    <h1 class="mui-title">课时详情</h1>
+		</header>
+		<div style="height: 1.8rem;"></div>
+		<div class="lines"></div>
+		<article class="main_max clearfix">
+			<div id="mainas">
+				
+			</div>
+		</article>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>		
+		<script src="../../Urlroot.js"></script>
+		<script type="text/javascript">
+			mui.init();
+	<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			}
+		</script>
+	</body>
+
+</html>

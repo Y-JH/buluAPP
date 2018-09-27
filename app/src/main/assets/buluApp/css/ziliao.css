@@ -1,0 +1,256 @@
+header a,h1{
+	color:rgb(102,102,102) !important;
+}
+.config-return{
+	
+}
+.lines{
+	margin-top:2.5rem;
+	margin-bottom: 0;
+}
+.mui-bar{
+	background: #fff;
+	box-shadow: none;
+}
+.ziliao-list li{
+	width: 90%;
+	margin:0 auto;
+	height: 3rem;
+	border-bottom: 1px solid rgb(240,240,240);
+	position: relative;
+}
+.ziliao-list li> p{
+	position: absolute;
+	left: 0;
+	font-size: 1rem;
+	color: rgb(102,102,102);
+	line-height: 3rem;
+}
+.ziliao-list li> span{
+	line-height: 3rem;
+	font-size: 1rem;
+	color: rgb(153,153,153);
+	position: absolute;
+	right: 0;
+}
+.qh{
+	line-height: 3rem;
+	
+}
+.qhzh{
+	color: rgb(102,102,102) !important;
+	font-size: 1rem;
+}
+.tellphones input::placeholder{
+	font-size: 1rem;
+}
+.tellphones{
+	margin-top:0.2rem;
+	height: 2.6rem;
+	line-height: 2.8rem;
+}
+#none{
+	border-bottom: none;
+}
+.head-photo{
+	position: absolute;
+	right: 0;
+	top: 40%;
+}
+.clear{
+	position: absolute;
+	top:-0.3rem;
+	right:1.4rem;
+	color: rgb(102,102,102);
+}
+.photos{
+	width: 100%;
+	border-radius: 50%;
+	height: 100%;
+}
+.head-photo img{
+	width: 50%;
+	display: inline-block;
+}
+.head-photos{
+	position: absolute;
+	right: 1.2rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	top: 15%;
+}
+.head-photos img{
+	width: 100%;
+}
+.tells{
+	display: inline-block;
+	float: right;
+	line-height: 3rem;
+	font-size: 1rem;
+	color: rgb(153,153,153);
+}
+.tells img,span{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+.tells img{
+	width: 0.45rem;
+}
+.tells span{
+	margin-right: 0.3rem;
+	font-size: 0.95rem;
+}
+
+/*修改手机号*/
+.replace-tell li{
+	width: 90%;
+	margin:0 auto;
+	height: 3rem;
+	border-bottom: 1px solid rgb(240,240,240);
+}
+.replace-tell input{
+	width: 70%;
+	outline: none;
+	border: none;
+	line-height: 2.8rem;
+	height:2.8rem;
+	padding: 0;
+	margin-bottom: 0;
+}
+.new-phone span,input{
+	float: left;
+	margin: 0;
+}
+.new-phone span{
+	width: 20%;
+	line-height: 3rem;
+	font-size: 0.9rem;
+	color: rgb(102,102,102);
+}
+
+
+.replace-tell input::placeholder{
+	color: rgb(204,204,204);
+	font-size: 0.95rem;
+}
+
+.yzm input,span{
+	float: left;
+}
+.huoqu-yzm{
+	float: left;
+}
+.yzm span{
+	width: 20%;
+	line-height: 2.8rem;
+	font-size: 1rem;
+	color: rgb(102,102,102);
+}
+.yzm input{
+	width: 50%;
+	padding: 0;
+	height: 2.8rem;
+	line-height: 2.5rem;
+}
+.yzm a{
+	width: 30%;
+	line-height: 3rem;
+	color: rgb(255,139,54);
+	font-size: 0.9rem;
+	text-align: right;
+}
+.amend{
+	color: #fff;
+    width: 80%;
+    height: 2.6rem;
+    background: rgb(255,139,54);
+    text-align: center;
+    line-height: 2.6rem;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+
+/*切换账号*/
+.qiehuan li{
+	width: 90%;
+	margin:0 auto;
+	height: 3rem;
+	border-bottom: 1px solid rgb(240,240,240);
+	line-height: 3rem;
+	font-size:1rem;
+	color:rgb(102,102,102) ;
+}
+.qh-photo img{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	margin-top:20%;
+}
+.qh-name{
+	margin-left: 0.5rem;
+}
+.qh-id{
+	margin-left: 0.5rem;
+}
+.add-zh{
+	margin:1rem auto;
+	width: 75%;
+}
+.add-zh input{
+	display: block;
+	margin: 0.5rem auto !important;
+	float: none;
+}
+.adds{
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+	height: 2.6rem;
+	line-height:2.6rem;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(to right, #ff913c ,#ff5500); 
+	border-radius: 0.5rem;
+}
+.right-pic{
+	background: url(../img/dui.png) no-repeat 95% 1rem;
+	background-size: 5%;
+}
+
+/*遮罩*/
+.masks{
+	display: none;
+}
+.mask{
+	width: 100%;
+	height: 100vh;
+	background:#d6d4d4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:100;
+	opacity: 0.3;
+}
+.mask-a{
+	position: absolute;
+	bottom: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 3rem;
+	background:white;
+	
+	z-index: 10100;
+}
+.mask-a li{
+	width: 100% !important;
+	
+}
+.mask-a a li {
+	color:rgb(102,102,102)!important;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="templates/home/home.html" title='首页'>
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="templates/learning/learning.html" title='学习天地'>
+				<span class="mui-icon mui-icon-starhalf"></span>
+				<span class="mui-tab-label">学习天地</span>
+			</a>
+			<a class="mui-tab-item" href="templates/bulu/bulu.html" title='咘噜家'>
+				<span class="mui-icon mui-icon-loop"></span>
+				<span class="mui-tab-label">咘噜家</span>
+			</a>
+			<a class="mui-tab-item" href="templates/me/me.html" title='我的'>
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			mui.plusReady(function(){
+				var page = [
+					"templates/home/home.html",
+					"templates/learning/learning.html",
+					"templates/bulu/bulu.html",
+					"templates/me/me.html"
+				];
+				var styles ={
+					top: "0px",
+					bottom: "50px"
+				}
+				var ws = plus.webview.currentWebview();
+
+				for(var i = 0; i < page.length; i++) {
+					var item = plus.webview.create(page[i], page[i], styles);
+					item.hide();
+					ws.append(item);
+					console.log(i)
+				}
+				plus.webview.show(page[0]);
+
+				mui('.mui-bar-tab').on('tap','a', function() {
+					var href = this.getAttribute("href");
+					plus.webview.show(href);
+
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

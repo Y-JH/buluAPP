@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/ziliao.css" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--头部-->
+			<header class="mui-bar mui-bar-nav">
+
+				<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+				<h1 class="mui-title">设置</h1>
+			</header>
+
+			<div class="lines" style="margin-top:2.4rem;"></div>
+			<!--列表-->
+			<ul class="ziliao-list">
+
+				<!--切换账号-->
+				<a onclick="switchAccount();" class="qh">
+					<li>
+						<p class="qhzh">切换账号</p>
+						<a  class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+					</li>
+				</a>
+
+				<!--修改密码-->
+
+				<a onclick="modifyPassWord();" class="qh">
+
+					<li class="no-border">
+						<p class="qhzh">修改密码</p>
+						<a  class="head-photo"><img src="../../img/more.png" alt="" /></a>
+					</li>
+				</a>
+
+				<div class="lines" style="margin-top: 0;"></div>
+
+				<!--清除缓存-->
+				<a onclick="clearCache();" class="qh ">
+					<li>
+						<p class="qhzh">清除缓存</p>
+						<a href="#" class="head-photo quzh"><span class="clear">16KB</span><img src="../../img/more.png" alt="" /></a>
+					</li>
+				</a>
+
+
+				<a href="#" class="qh"/>
+
+					<a onclick="aboutUs();" class="qh">
+
+						<li>
+							<p class="qhzh">关于我们</p>
+							<a  class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+						</li>
+					</a>
+					<a onclick="feedbackAndAdvice();" class="qh"/>
+						<li class="no-border">
+
+							<p class="qhzh">反馈与建议</p>
+							<a class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+						</li>
+					</a>
+
+				<a href="#" class="qh" />
+				<a onclick="aboutUs();" class="qh">
+					<li>
+						<p class="qhzh">关于我们</p>
+						<a onclick="aboutUs();" class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+					</li>
+				</a>
+
+				<a onclick="feedbackAndAdvice();" class="qh">
+					<li class="no-border">
+						<p class="qhzh">反馈与建议</p>
+						<a href="feedback.html" class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+					</li>
+				</a>
+
+
+					<div class="lines" style="margin-top: 0;"></div>
+
+					<a onclick="softWareUpdate();" class="qh">
+						<li class="no-border">
+							<p class="qhzh">软件版本</p>
+							<a href="#" class="head-photo quzh"><img src="../../img/more.png" alt="" /></a>
+						</li>
+					</a>
+
+					<div class="lines" style="margin-top: 0;"></div>
+
+            </ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			mui.plusReady(function() {
+				mui('.config-return')[0].addEventListener('tap', function() {
+
+					mui.openWindow('me.html', 'me.html');
+				});
+			})
+
+
+			mui.plusReady(function() {
+				//				mui('.config-return')[0].addEventListener('tap', function() {
+				//
+				//					mui.openWindow('me.html', 'me.html');
+				//				});
+			});
+
+			<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			};
+
+			<!-- 切换账号 -->
+			function switchAccount(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/feedback.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+			<!-- 修改密码 -->
+			function modifyPassWord(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/changePass.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+			<!-- 清除缓存 -->
+			function clearCache(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/feedback.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+			<!-- 关于我们 -->
+			function aboutUs(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/feedback.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+			<!-- 反馈与建议 -->
+			function feedbackAndAdvice(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/feedback.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+
+			<!-- 软件更新 -->
+			function softWareUpdate(){
+			    var fileUrl = "file:///android_asset/buluApp/templates/me/feedback.html";
+				window.android.showAndroidNewFirstPage(fileUrl);
+			};
+
+
+		</script>
+	</body>
+
+</html>

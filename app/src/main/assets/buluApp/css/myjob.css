@@ -1,0 +1,155 @@
+.mui-plus.mui-android header.mui-bar{
+	display: none;
+}
+.mui-plus.mui-android .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+.mui-bar-nav~.mui-content{
+	padding: 0 !important;
+}
+.head-photos{
+	width: 2rem;
+	height: 1.5rem;
+	margin: 0 auto 0.3rem;
+}
+.profile-photo{
+	position: absolute;
+	right: 3rem;
+	top: 2rem;
+}
+.profile-photo{
+	position: absolute;
+	right: 3rem;
+	bottom: 9rem;
+}
+.booking{
+	position: relative;
+}
+.make{
+	position: relative;
+}
+/*遮罩*/
+.masks{
+	display: NONE;
+}
+.mask{
+	width: 100%;
+	height: 100vh;
+	background:#d6d4d4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:100;
+	opacity: 0.3;
+}
+.mask-a{
+	position: absolute;
+	bottom: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 3rem;
+	background:white;
+	z-index: 10100;
+}
+.mask-a li{
+	width: 100% !important;
+}
+.mask-a li a{
+	color:rgb(102,102,102)!important;
+}
+.mask-a li:last-child{
+	border-top: 0.3rem solid rgb(240,240,240);
+}
+/*选项卡变换颜色*/
+.static-color{
+	color:rgb(102,102,102);
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #fff;
+    border-bottom: 2px solid #007aff;
+    background: 0 0;
+    background: rgb(255,139,54)!important;
+}
+.her{
+	color: rgb(102,102,102);
+	line-height: 2rem !important;
+	font-weight: normal;
+}
+/*未完成*/
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+	border: 0 !important;
+}
+.videos img{
+	width: 8rem !important;
+	height: 13rem;
+}
+.vide{
+	margin-bottom: 0.5rem !important;
+}
+/*公用样式*/
+.lines{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+	margin-top: 1rem;
+}
+.liness{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+}
+/*九宫格*/
+.ss li{
+	width: 33.3% !important;
+}
+.mui-plus.mui-android header.mui-bar{
+	display: none;
+}
+.mui-plus.mui-android .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+.mui-bar-nav~.mui-content{
+	padding: 0 !important;
+}
+.mui-content{
+	background: white !important;
+}
+.mui-grid-view.mui-grid-9{
+	background-color: white !important;
+	border:none !important;
+}
+.mui-content>.mui-table-view:first-child{
+	margin: 0 !important;
+}
+.mui-table-view .mui-table-view-cell{
+	border:none !important;
+}
+.mui-table-view-cell{
+	padding: 0.5rem 0.2rem !important;
+}
+.mobile{
+	width: 92% !important;
+}
+/*点评text*/
+.publish{
+	width: 90%;
+	margin: 0.5rem auto;
+}
+.form{
+	border: 0;
+}
+/*点评定位*/
+.dianping{
+	position: relative;
+}
+.dianpings{
+	position: absolute;
+	right: 3rem;
+    top: 2.5rem;
+    width: 3.5rem !important;
+}
+.scrolls{
+	width: 90%;
+	margin: 0 auto !important;
+}

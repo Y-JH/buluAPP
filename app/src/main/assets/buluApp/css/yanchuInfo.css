@@ -1,0 +1,116 @@
+.mui-bar-nav.mui-bar .mui-icon {
+    color: rgb(102,102,102) !important;
+    
+}
+.mui-bar-nav {
+    box-shadow: 0 0 8px #ccc !important;
+}
+
+.mui-title{
+	font-size: 1rem;
+	color: rgb(102,102,102) !important;
+	
+}
+.yanLists{
+	margin-top:3.3rem;
+}
+.yanList-l{
+	float: left;
+	width: 32%;
+	display: inline-block;
+}
+.yanList-l img{
+	width: 100%;
+	height: 100%;
+}
+.yanList-r{
+	float: right;
+	width: 66%;
+	font-size: 0.7rem;
+	margin-top: 0.5rem;
+}
+.yanList-r p{
+	font-size: 0.7rem;
+	color:rgb(102,102,102) ;
+	line-height: 1.4rem;
+	vertical-align: middle;
+}
+.ticketing{
+	position: relative;
+}
+.yanList-r p span{
+	font-size: 0.7rem;
+	color:rgb(153,153,153) ;
+	vertical-align: middle;
+}
+.yanList-r h5{
+	color: rgb(102,102,102);
+	margin-bottom: 0.6rem;
+	font-size:0.9rem;
+}
+.transp{
+	visibility: hidden;
+}
+.mui-bar-nav{
+	background: #fff !important;
+}
+
+.visibs{
+	visibility:hidden ;
+}
+/*演出详情页面css*/
+.actives{
+	margin-top: 2.8rem;
+}
+.piaowu{
+	color: rgb(102,102,102) !important;
+}
+.zhekou{
+	/*float: right;*/
+	/*width:15rem;*/
+	
+}
+.active-img{
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+.new-tit{
+	font-size:1rem !important;
+	color: rgb(102,102,102);
+	margin-bottom: 0.5rem;
+}
+.active-btn{
+	width: 55%;
+	margin:0.8rem auto;
+}
+.active-btn a{
+	padding: 0.4rem 1.5rem;
+	background: rgb(255,139,54);
+	color: #fff;
+	border-radius: 0.3rem;
+}
+.consult{
+	float: left;
+}
+.ticket{
+	float: right;
+}	
+.plot{
+	vertical-align: middle;
+}
+.plot img,span{
+	vertical-align: middle;
+	display: inline-block;
+}
+.plot img {
+	width: 0.15rem;
+	height:1rem;
+	margin-top: 0.2rem;
+}
+.plot span {
+	font-size: 1rem;
+}
+.act-txt{
+	margin: 0.5rem 0; 
+	font-size: 0.9rem;
+}

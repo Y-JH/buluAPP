@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>咘噜家</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/bulu.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			
+			<!--展示页面和商城页面的切换-->
+			<div id="slider" class="mui-slider" style="margin-bottom: 0.4rem;">
+				
+				<div class=" mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="segmented" style="border:0">
+					<div class="mui-scroll ">
+						<span class="drama">戏剧教育</span>
+						<div class="zs">
+							<a class="mui-control-item mui-active" href="#item1mobile">
+								展示
+							</a>
+							<a class="mui-control-item" href="#item2mobile">
+								商城
+							</a>
+						</div>
+						
+						<a onclick="onCallPhone();" class="tells"><img src="../../img/tell.png" alt="" /></a>
+	
+					</div>
+				</div>
+				
+				
+				<div class="mui-slider-group">
+					
+					<!--展示内容-->
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<ul class="mui-table-view">
+							<li class="">
+								<div class="bc-star bc-centers clearfix">
+									<i><img src="../../img/shu.png" alt="" /></i>
+									<p>明星教师</p>
+								</div>
+								<div class="star-teacher box">
+									
+									<div class="stars-box">
+										
+										<div class="stars-con stars-con1 ">
+											
+											<!--<div class="stars-items">
+												<a href="teacherInfo.html" class="stars-img">
+													<img src="../../img/jiaoshi1.png" alt="" />
+													<p class="star-text">李洋  <span>播音教师/3年</span></p>
+												</a>
+											</div>
+											<div class="stars-items">
+												<a href="teacherInfo.html" class="stars-img">
+													<img src="../../img/jiaoshi3.png" alt="" />
+													<p class="star-text">李洋  <span>播音教师/3年</span></p>
+												</a>
+											</div>
+											<div class="stars-items">
+												<a href="teacherInfo.html" class="stars-img">
+													<img src="../../img/jiaoshi2.png"/>
+													<p class="star-text">李洋  <span>播音教师/3年</span></p>
+												</a>
+											</div>-->
+											
+										</div>
+									</div>
+									
+								</div>
+								<!--star-teachers-->
+								
+								<div class="lines" style="margin-top: 0.6rem;margin-bottom: 0.5rem;"></div>
+								<div class="bc-star bc-centers clearfix">
+									<i><img src="../../img/shu.png" alt="" /></i>
+									<p>明星学员</p>
+								</div>
+								<!--明星学生-->
+								
+								<div class="star-teacher box">
+									
+									<div class="stars-box">
+										
+										<div class="stars-con stars-con2 clearfix">
+											
+											<!--<div class="stars-items">
+												<a href="studentInfo.html" class="stars-img">
+													<img src="../../img/xueyuan3.png" alt="" />
+													<p class="star-text">王梓欣  <span>戏剧表演优秀生</span></p>
+												</a>
+											</div>-->
+
+										</div>
+									</div>
+									
+								</div>	
+								<!--明星学生-->
+								
+								
+								<div class="lines" style="margin-top: 0.6rem;margin-bottom: 0.5rem;"></div>
+								
+								<!--优秀剧目-->
+								<div class="star-teacher bc-center">
+									<div class="bc-star clearfix">
+										<i><img src="../../img/shu.png" alt="" /></i>
+										<p>优秀剧目</p>
+									</div>
+									<div class="teachers students clearfix">
+										
+										<dl class="teachers-item no-border">
+											<dt class="jumu"><a onclick="onClickMove1();"><img src="../../img/jumu1.png"/></a></dt>
+											<dd>咘噜咘噜之勇闯谎话林</dd>
+										</dl>
+										
+										<dl class="teachers-item jumu no-border">
+											<dt class="jumu"><a onclick="onClickMove2();"><img src="../../img/jumu2.png"/></a></dt>
+											<dd>咘噜咘噜之魔幻假期</dd>
+										</dl>
+										
+									</div>
+								</div><!--优秀剧目-->
+								
+								<div class="lines"></div>
+								<!--上课实景-->
+								<div class="star-teacher bc-center">
+									<div class="bc-star clearfix">
+										<i><img src="../../img/shu.png" alt="" /></i>
+										<p>上课实景</p>
+									</div>
+									<div class="teachers students clearfix">
+										
+										<dl class="teachers-item no-border">
+											<dt class="jumu"><a onclick="onClickMove1();"><img src="../../img/xiju1.png"/></a></dt>
+											<dd>戏剧表演课程</dd>
+										</dl>
+										
+										<dl class="teachers-item jumu no-border">
+											<dt class="jumu"><a onclick="onClickMove2();"><img src="../../img/xiju2.png"/></a></dt>
+											<dd>戏剧表演课程 <span></span></dd>
+										</dl>
+										
+									</div>
+								</div><!--上课实景-->
+								
+								<div class="lines"></div>
+								
+								<!--学生分享-->
+								<div class="star-teacher bc-center">
+									<div class="bc-star clearfix">
+										<i><img src="../../img/shu.png" alt="" /></i>
+										<p>学生分享</p>
+									</div>
+									<div class="students clearfix shares">
+										
+										<dl class="teachers-items no-border">
+											<dt class="share"><a onclick="onClickMove1();"><img src="../../img/boyin1.png"/></a></dt>
+											<dd> <span>播音主持</span> 王梓欣</dd>
+										</dl>
+										<dl class="teachers-items no-border">
+											<dt class="share"><a onclick="onClickMove2();"><img src="../../img/boyin2.png"/></a></dt>
+											<dd> <span>播音主持</span> 王梓欣</dd>
+										</dl>
+										<dl class="teachers-items no-border">
+											<dt class="share"><a onclick="onClickMove1();"><img src="../../img/boyin3.png"/></a></dt>
+											<dd> <span>播音主持</span> 王梓欣</dd>
+										</dl>
+										<dl class="teachers-items no-border">
+											<dt class="share"><a onclick="onClickMove2();"><img src="../../img/boyin4.png"/></a></dt>
+											<dd> <span>播音主持</span> 王梓欣</dd>
+										</dl>
+									</div>
+									
+								</div><!--学生分享-->
+							</li>
+						</ul>
+					</div>
+				
+					<!--商城内容-->
+					<div id="item2mobile" class="mui-slider-item mui-control-content ">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								商城页面
+							</li>
+						</ul>
+					</div>
+	
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../rootUrl.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui('.mui-slider').slider().stopped = true;
+////			
+			$(function(){
+				  $.ajax({
+					type: "post",
+					url:"http://192.168.0.132:8080/starStudent/starStudentlist",
+					data: {
+	//					"id": 1
+					},
+					async: false,
+					dataType: "json",
+					success: function(data) {
+							console.log(data.data)
+							var datas=data.data
+							for(var i=0;i<datas.length;i++){
+								var stuStar='';
+								stuStar+=`
+										<div class="stars-items">
+											<a onclick="onClickStarStudentItem('id=${datas[i].id}')"  class="stars-img">
+												<img src="../../img/xueyuan1.png" alt="" />
+												<p class="star-text"> ${datas[i].studentName} <span> ${datas[i].label} </span></p>
+											</a>
+										</div>
+								`
+								$('.stars-con2 ').append(stuStar)
+
+							}
+
+						},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert("请求失败！");
+					}
+
+				});
+				function activeWidth (){
+					var con1=$('.stars-con1>.stars-items')
+					var con2=$('.stars-con2>.stars-items')
+	//				获取子盒子的宽度
+					var stars=con1.width()
+					var starsLength=con1.length
+					
+					var stars1=con2.width()
+					var starsLength1=con2.length
+	//				获取自盒子的margin
+					var mar=parseInt ( con1.css('margin-right') )
+						mar=mar*starsLength
+					var mar1=parseInt ( con2.css('margin-right') )
+						mar1=mar1*starsLength1
+	//				
+					var starsWidth=starsLength*stars+mar+8
+					var starsWidth1=starsLength1*stars1+mar1+8
+	
+					$('.stars-con1').width(starsWidth)
+					$('.stars-con2').width(starsWidth1)
+				}
+				activeWidth ();
+				
+
+			})
+
+			<!--点击第一个优秀剧目视频-->
+			function onClickMove1(){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/studentInfo.html";
+            	window.android.showAndroidHomeNewPage(fileUrl,2);
+			};
+
+			<!--点击第二个优秀剧目视频-->
+			function onClickMove2(){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/studentInfo.html";
+            	window.android.showAndroidHomeNewPage(fileUrl,2);
+			};
+
+			<!--点击明星教师横向列表 item-->
+			function onClickStarTeacherItem(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/teacherInfo.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2)
+			};
+
+			<!--点击明星学员横向列表 item-->
+			function onClickStarStudentItem(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/studentInfo.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2)
+			};
+
+			<!--点击打电话按钮-->
+			function onCallPhone(){
+				window.android.callPhone("17600523782");
+			};
+
+		</script>
+	</body>
+
+</html>

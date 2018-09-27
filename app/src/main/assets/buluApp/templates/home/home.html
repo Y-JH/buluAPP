@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/home.css"/>
+</head>
+<style>
+		html{
+			padding-bottom: 0.8rem;
+		}
+
+
+
+</style>
+<body>
+<!--<header class="mui-bar mui-bar-nav sao" >
+    <h1 class="mui-title">首页</h1>
+</header>-->
+
+<!--轮播图-->
+<article class="pt clearfix">
+
+    <div id="slider" class="mui-slider">
+
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item" onclick="onClickBanner();">
+                <a href="bannerInfo.html">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../../img/banner1.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator "></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+</article>
+
+<!--图文-->
+<article class="pic-class clearfix">
+    <!--<dl class="class-item">
+        <dt>
+            <a href="classInfo.html">
+                <img src="../../img/ke1.png" alt="" />
+            </a>
+        </dt>
+        <dd>戏剧教育课</dd>
+    </dl>-->
+    <!--<dl class="class-item">
+        <dt>
+            <a href="#">
+                <img src="../../img/ke2.png" alt="" />
+            </a>
+        </dt>
+        <dd>咘噜舞蹈课</dd>
+    </dl>
+    <dl class="class-item">
+        <dt>
+            <a href="#">
+                <img src="../../img/ke3.png" alt="" />
+            </a>
+        </dt>
+        <dd>咘噜声乐课</dd>
+    </dl>
+    <dl class="class-item">
+        <dt>
+            <a href="#">
+                <img src="../../img/ke4.png" alt="" />
+            </a>
+        </dt>
+        <dd>咘噜语言课</dd>
+    </dl>
+    <dl class="class-item">
+        <dt>
+            <a href="#">
+                <img src="../../img/ke5.png" alt="" />
+            </a>
+        </dt>
+        <dd>英文绘本剧</dd>
+    </dl>
+    <dl class="class-item">
+        <dt>
+            <a href="#">
+                <img src="../../img/ke6.png" alt="" />
+            </a>
+        </dt>
+        <dd>儿童艺术团</dd>
+    </dl>-->
+    <dl class="class-st">
+        <dt>
+            <a href="listenInfo.html">
+                <img src="../../img/ke7.png" alt=""/>
+            </a>
+        </dt>
+        <dd>试听课</dd>
+    </dl>
+</article>
+<div class="lines"></div>
+
+<!--精彩视频-->
+<div class="great-video clearfix">
+    <div class="bc-center">
+        <div class="clearfix">
+            <div class="left">
+                <i><img src="../../img/shu.png" alt=""/></i>
+                <span class="jcsp jcsp-left">精彩视频</span>
+            </div>
+            <div class="right ">
+                <a onclick="funMovesMore();" class="jcsp ck-mores">查看更多</a>
+                <a href="#" class="ck-more"><img src="../../img/more.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="great-videos" onclick="funMovesMore();">
+            <div class="jcsps">
+                <a href="#" class="jc-pic">
+                    <img src="../../img/fengmian1.png"/>
+                    <i class="plays"><img src="../../img/snajiao.png" alt=""/></i>
+                    <p class="clearfix"><img src="../../img/love.png" alt=""/> <span
+                            class="love-num">350</span></p>
+                </a>
+
+            </div>
+            <div class="jcsps" onclick="funMovesMore();">
+                <a href="#" class="jc-pic">
+                    <img src="../../img/fengmina2.png"/>
+                    <i class="plays"><img src="../../img/snajiao.png" alt=""/></i>
+                    <p class="clearfix"><img src="../../img/love.png" alt=""/> <span
+                            class="love-num">350</span></p>
+                </a>
+            </div>
+            <div class="jcsps" onclick="funMovesMore();">
+                <a href="#" class="jc-pic">
+                    <img src="../../img/fengmian3.png"/>
+                    <i class="plays"><img src="../../img/snajiao.png" alt=""/></i>
+                    <p class="clearfix"><img src="../../img/love.png" alt=""/> <span
+                            class="love-num">350</span></p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="lines"></div>
+
+<!--活动演出-->
+<div class="great-video clearfix">
+    <div class="bc-center clearfix">
+        <div class="clearfix">
+            <div class="left">
+                <i><img src="../../img/shu.png" alt=""/></i>
+                <span class="jcsp jcsp-left">活动演出</span>
+            </div>
+            <div class="right">
+                <a onclick="performMore();" class="jcsp ck-mores">查看更多</a>
+                <a href="#" class="ck-more"><img src="../../img/more.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="activity-yc clearfix" id="active">
+            <!--<dl class="yc-info">
+                <dt><a href="#"><img src="../../img/yanchu1.png"/></a></dt>
+                <dd>咘噜咘噜之深海奇遇记演出活动</dd>
+            </dl>-->
+            <!--<dl class="yc-info">
+                <dt><a href="#"><img src="../../img/yanchu2.png"/></a></dt>
+                <dd>咘噜咘噜与小小鲨</dd>
+            </dl>
+            <dl class="yc-info">
+                <dt><a href="#"><img src="../../img/yanchu3.png"/></a></dt>
+                <dd>咘噜咘噜之我是千里</dd>
+            </dl>
+            <dl class="yc-info">
+                <dt><a href="#"><img src="../../img/yanchu4.png"/></a></dt>
+                <dd>咘噜咘噜之向奇幻山口进发</dd>
+            </dl>-->
+        </div>
+
+    </div>
+</div>
+<div class="lines" style="margin-top: 0;"></div>
+
+
+<!--新闻动态-->
+<div class="great-video">
+    <div class="bc-center clearfix " id="news">
+        <div class="clearfix">
+            <div class="left">
+                <i><img src="../../img/shu.png" alt=""/></i>
+                <span class="jcsp jcsp-left">新闻动态</span>
+            </div>
+            <div class="right ck-mores">
+                <a onclick="newsMore();" class="jcsp ck-mores">查看更多</a>
+                <a href="#" class="ck-more"><img src="../../img/more.png" alt=""/></a>
+            </div>
+        </div>
+        <!--<a href="newCondition.html"><div class="consulta" style="margin-top: 0;">
+            <div class="consultas clearfix">
+                <div class="consulta-l">
+                    <img src="../../img/zixun1.png" alt="" />
+                </div>
+                <div class="consulta-r">
+                    <p>桃桃在海边遇到了咘噜咘噜因为岛屿的剧烈晃...</p>
+                    <div class="consulta-pic clearfix">
+                        <p><i><img src="../../img/zixun.png" alt="" /></i> 咘噜教育</p>
+                        <span>2018-7-24</span>
+                    </div>
+                </div>
+            </div>
+        </a>-->
+
+    </div>
+
+</div>
+</div>
+
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/zepto.min.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../rootUrl.js"></script>
+<script type="text/javascript">
+<!--       一级页面的调用                     -->
+<!--精彩视频 查看更多-->
+		function funMovesMore(){
+		    var fileUrl = "file:///android_asset/buluApp/templates/home/videoInfo.html";
+		    window.android.showAndroidHomeNewPage(fileUrl,0);
+		};
+
+<!--活动演出 查看更多-->
+		function performMore(){
+		    var fileUrl = "file:///android_asset/buluApp/templates/home/yanchuInfo.html";
+		     window.android.showAndroidHomeNewPage(fileUrl,0);
+		};
+
+<!--新闻动态 查看更多-->
+        function newsMore(){
+            var fileUrl = "file:///android_asset/buluApp/templates/home/newsInfo.html";
+            window.android.showAndroidHomeNewPage(fileUrl,0);
+        };
+
+<!--点击 轮播图的跳转-->
+        function onClickBanner(){
+            var fileUrl = "file:///android_asset/buluApp/templates/home/bannerInfo.html";
+            window.android.showAndroidHomeNewPage(fileUrl,0);
+        }
+
+<!--点击tab首页的课程图标-->
+        function onClickClassButton(location){
+            var fileUrl = "file:///android_asset/buluApp/templates/home/classInfo.html?"+location;
+            window.android.showAndroidHomeNewPage(fileUrl,0);
+        }
+
+<!--点击tab首页的活动演出列表item-->
+        function onClickPerformItem(location){
+            var fileUrl = "file:///android_asset/buluApp/templates/home/activeInfo.html?"+location;
+            window.android.showAndroidHomeNewPage(fileUrl,0);
+        }
+
+<!--点击tab首页的新闻动态列表item-->
+        function onClickNewsItem(location){
+            var fileUrl = "file:///android_asset/buluApp/templates/home/newsInfo.html?"+location;
+            window.android.showAndroidHomeNewPage(fileUrl,0);
+        }
+</script>
+</body>
+
+</html>

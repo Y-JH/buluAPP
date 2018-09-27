@@ -1,0 +1,44 @@
+ <!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/ziliao.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">修改密码</h1>
+		</header>
+
+		<div class="lines"></div>
+		<ul class="replace-tell">
+			<li class="new-phone clearfix">
+				<span>密码：</span>
+				<input type="text" placeholder="请输入旧密码" maxlength="11" />
+			</li>
+			<li class="new-phone clearfix">
+				<span>新密码：</span>
+				<input type="text" placeholder="密码由6-10位英文字母、数字组成" maxlength="10" style="width: 80%;"/>
+			</li>
+		</ul>
+
+		<a href="#" class="adds" style="margin-top: 1.2rem;">确认修改</a>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script type="text/javascript">
+		<!-- 修改密码 返回 -->
+			function onBack(){
+				window.android.closeAndroidSecondPage();
+			};
+		</script>
+	</body>
+
+</html>

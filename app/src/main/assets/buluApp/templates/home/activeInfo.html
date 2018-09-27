@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>活动详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/yanchuInfo.css" />
+	</head>
+	<style>
+		.lines{
+			margin-bottom: 0.6rem;
+		}
+		.shares{
+			position: absolute;
+			right:1rem;
+			top: 0.8rem;
+		}
+		.shares{
+			width: 5%;
+		}
+		.shares img{
+			width: 100%;
+			
+		}
+		.yanList-r{
+			width: 100%;
+			font-size: 1rem;
+		}
+		.yanList-r p{
+			font-size: 0.9rem;
+			line-height: 1.7rem;
+		}
+		.yanList-r p span{
+			font-size: 0.9rem;
+		}
+		.yanList-r p i{
+			visibility: hidden;
+		}
+		.lines{
+			margin: 0.5rem 0;
+		}
+		.bc-center{
+			width: 95% !important;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return banner-back" onclick="onBack()"></a>
+			<h1 class="mui-title">活动详情</h1>
+			<a href="#" class="shares"><img src="../../img/shares.png"/></a>
+		</header>
+		<article class="actives" id="actives">
+			<div class="bc-center" class="active-list" id="activeList" style="width: 95%;">
+				<!--<div class="clearfix">
+					<img src="../../img/news.png" alt="" class="active-img"/>
+					<div class="yanList-r clearfix">
+						<p class="new-tit">《咘噜戏剧教育之深海奇遇记》</p>
+						<p>演出时间：<span class="yanchu-time">2018-8-24</span>
+						</p>
+						<p><i>票务信息：</i><span class="yanchu-time">10:00</span>
+							<span>14:30</span>
+							<span>19:00</span>
+						</p>
+						<p>演出剧场：<span class="jc">北京东图剧场</span></p>
+						<p>剧场地址：<span class="dz">东城区交道口东大街85号</span></p>
+						<p class="ticketing clearfix">
+							<span class="piaowu">票务信息：</span><span class="xx yuanjia">原价：90元  180元 280元</span><br /><span class="transp">票务信息：</span><span class="xx zhekou">六折：54元  108元 168元(购买180元及280元档演出票两张以上可赠公仔一个)</span>  
+						</p>
+						<p>特别提示：<span>儿童成人均需购票入场,时间以现场为准</span></p>
+					</div>
+				</div>-->
+			</div>
+			<div class="active-btn clearfix">
+				<a href="#" class="consult">咨询</a>
+				<a href="#" class="ticket">购票</a>
+			</div>
+			<div class="lines"></div>	
+			<div class="active-main bc-center">
+				<p class="plot"><img src="../../img/shu.png" alt="" /> <span>剧情介绍</span></p>
+				<p class="act-txt">桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动</p>
+				<img src="../../img/news.png"/>
+				<p class="act-txt">在魔法洞中，桃桃和咘噜遇到了很多认识鱼的小伙伴，并且发生了一下搞笑的事情，并通过机械大家的力量</p>
+				<img src="../../img/news.png"/>
+				<p class="act-txt">在魔法洞中，桃桃和咘噜遇到了很多认识鱼的小伙伴，并且发生了一下搞笑的事情，并通过机械大家的力量</p>
+			</div>
+		</article>
+		
+	
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../rootUrl.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+
+			<!--从二级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(0);
+			}
+		</script>
+	</body>
+
+</html>

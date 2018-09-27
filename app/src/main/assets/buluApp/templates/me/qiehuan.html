@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>切换账号</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/ziliao.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<!--<a  href="javascript:history.back(-1)" class=" mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>-->
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<h1 class="mui-title">切换账号</h1>
+		</header>
+		
+		<div class="lines"></div>
+		<ul class="qiehuan">
+			<li class="right-pic">
+				<span class="qh-photo"><img src="../../img/students.png"/></span>
+				<span class="qh-name">王梓新</span>
+				<span class="qh-id">15499825</span>
+			</li>
+			<li>
+				<span class="qh-photo"><img src="../../img/students2.png"/></span>
+				<span class="qh-name">王梓新</span>
+				<span class="qh-id">25698712</span>
+			</li>
+		</ul>
+		
+		<div class="add-zh">
+			<input type="text" placeholder="请输入ID号"/>
+			<input type="text" placeholder="请输入密码"/>
+		</div>
+		
+		<a href="#" class="adds">添加账号</a>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			$('.qiehuan>li').click(function(){
+				$(this).addClass('right-pic').siblings('li').removeClass('right-pic')
+			})
+//			mui.plusReady(function() {
+//
+//				window.addEventListener('doit', function(e){
+//		        　    //获取参数值
+//		            var imagePath = e.detail.imagePath;
+//		        });
+//			})
+		</script>
+	</body>
+
+</html>

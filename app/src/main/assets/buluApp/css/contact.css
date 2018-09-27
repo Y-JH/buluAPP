@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hsr{
+	font-weight: normal;
+	margin: 1rem 0rem;
+	color: rgb(102,102,102);
+}
+.bc_center p{
+	text-indent:2rem;
+}
+.bc_footer{
+	text-align: center;
+	padding-top:2rem;
+	line-height: 3rem;
+	position: relative; 
+	height: 15rem;
+	padding-top: 2rem;
+}
+.bc_footer h4{
+	font-weight: normal;
+	color: rgb(102,102,102);
+}
+.tellphones{
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
+}
+.tellphones img{
+	width: 3rem;
+	height: 3rem;
+}
+.headera{
+	position: relative;
+}
+.share{
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+.share img{
+	width: 1rem;
+	height: 1rem;
+}

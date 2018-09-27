@@ -1,0 +1,44 @@
+.hui-bg{
+	width: 100%;
+	padding: 1rem 1.5rem;
+	background: #f0f0f0;
+	border-radius: 0.5rem;
+	position: relative;
+	margin-bottom: 1rem;
+}
+.hui-bg h5{
+	font-size: 1.05rem;
+	color: rgb(102,102,102);
+	font-family: "黑体";
+	/*font-weight: 600;*/
+	/*font-weight: bolder;*/
+}
+.hui-bg p{
+	font-size: 0.95rem;
+	color: rgb(102,102,102);
+	margin-bottom: 0;
+	margin-top: 0.6rem;
+	/*line-height:1.8rem;*/
+}
+.st-time{
+	
+}
+.st-time{
+	margin-right:0.6rem;
+	color: rgb(153,153,153) !important;
+}
+.subscribe{
+	position: absolute;
+	right: 1.2rem;
+	bottom:0.8rem;
+	color:#fff;
+	background: rgba(255, 130, 50, 0.9);
+	padding: 0.3rem 1.2rem;
+	border-radius:1.5rem;
+	font-size: 0.8rem;
+}
+.aa{
+	background:none;
+	border:1px solid rgba(255,130,50,0.9);
+	color: rgba(255,130,50,0.9);
+}

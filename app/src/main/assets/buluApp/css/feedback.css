@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.bc_main{
+	text-align: center;
+}
+.buttons{
+	background-color: #ff913c;
+	color: rgb(255,255,255);
+	width: 5rem;
+	font-size: 1rem;
+}
+.textsa{
+	color: rgb(102,102,102);
+	font-size: 0.9rem;
+}

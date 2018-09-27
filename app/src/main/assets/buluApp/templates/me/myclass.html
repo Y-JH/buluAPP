@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的课时-消耗课时</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/myclass.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="float: left;">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">我的课时</h1>
+		</header>
+		<div style="height: 1.8rem;"></div>
+		<div class="lines"></div>
+		<article class="main_max clearfix">
+			<div class="main_header mui-row">
+				<div class="header mui-col-sm-6 mui-col-xs-6">
+					总课时数80节
+				</div>
+				<div class="header mui-col-sm-6 mui-col-xs-6">
+					消耗课时40节
+				</div>
+			</div>
+			<div style="width: 100%; height: 3rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="segmented">
+				<div class="tabs mui-scroll">
+					<a style="width: 50%; margin-left: 2rem; color: rgb(204,204,204);" class="mui-control-item static-color mui-active" href="#item1mobile" id="scribe">
+						消耗课时
+					</a>
+					<a style="width: 50%; margin-left: 2rem; color: rgb(204,204,204);" class="mui-control-item static-color" href="#item2mobile" id="subscribe">
+						预约课时
+					</a>
+				</div>
+				<ul class="mui-table-view booking" id="mycalss">
+					<!--
+                    	作者：offline
+                    	时间：2018-09-18
+                    	描述：选项卡点击内容
+                    -->
+				</ul>
+			</div>
+			</div>
+		</article>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../Urlroot.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//获取时间和日期的相关代码
+			Date.prototype.toLocaleString = function() {
+				return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
+			};
+			Date.prototype.toLocaleString1 = function() {
+				return this.getHours() + ":" + this.getSeconds() + "";
+			};	
+
+		<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			};
+		</script>
+	</body>
+
+</html>

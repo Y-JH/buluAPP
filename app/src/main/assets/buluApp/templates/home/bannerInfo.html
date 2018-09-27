@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>banner详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/yanchuInfo.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bannerInfo.css"/>
+	</head>
+
+	<body>
+		<div class="banner clearfix">
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return banner-back" onclick="onBack();"></a>
+			<img src="../../img/banner1.png" alt="" class="banner-img"/>
+			<a href="#" class="shares"><img src="../../img/shares.png" alt="" /></a>
+		</div>
+		<ul class="items bc-center">
+			<li>
+				<img src="../../img/shu.png" alt="" />
+				<span>
+					2018上半年大型公演圆满结束
+				</span>
+			</li>
+		</ul>
+
+		<div class="share-tip">
+			<div class="share-t">
+				<dl>
+					<dt>
+						<a href="#"><img src="../../images/weixin.png" alt="" /></a>
+					</dt>
+					<dd>微信好友</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../../img/pengyquan.png" alt="" /></a>
+					</dt>
+					<dd>朋友圈</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../../img/qq.png" alt="" /></a>
+					</dt>
+					<dd>QQ好友</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="#"><img src="../../img/weobo.png" alt="" /></a>
+					</dt>
+					<dd>微博</dd>
+				</dl>
+			</div>
+			<a href="#" class="share-b">取消</a>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../rootUrl.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				
+			})
+			
+			
+			$('.shares').click(function(){
+				$('.share-tip').show()
+			})
+			$('.share-b').click(function(){
+				$('.share-tip').hide()
+			})
+
+<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(0);
+			}
+		</script>
+	</body>
+
+</html>

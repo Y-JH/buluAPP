@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>反馈与建议</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/feedback.css"/>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">反馈与建议</h1>
+		</header>
+		<div class="lines" style="margin-top:2.8rem;"></div>
+		<div class="bc-center bc_main">
+			<textarea class="textsa" name="textarea" rows="6">     我们不仅在努力打造专业人才，创新人才，培养优秀人才，为员工营造一种自我激励，自我改进的气氛；同时我们还尊重每一位员工的个人意愿，让员工每天都能快乐的工作，在轻松愉悦的环境中自觉地把工作做好，真正将员工的个人规划同公司的发展有机地结合起来！</textarea>
+			<button class="buttons">提交</button>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+
+			<!-- 反馈与建议 返回 -->
+			function onBack(){
+				window.android.closeAndroidSecondPage();
+			};
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/my.css" />
+</head>
+
+<body>
+<article class="bg clearfix">
+    <div class="bg-header clearfix">
+        <p style="" class="me-header">
+            <!--<a href=""><img src="../../img/return.png"/></a>-->
+            <span class="spanq">我的</span>
+            <a onclick="onClickSetting();"><span class="spana"><img src="../../img/shezhi.png" alt="" /> 设置</span></a>
+        </p>
+    </div>
+    <!--卡片-->
+    <div class="section mui-content" style="box-shadow: 0 0 5px rgba(153,153,153,0.5)">
+        <div class="mui-row">
+            <div class="left mui-col-sm-3 mui-col-xs-3">
+                <a onclick="onClickUserAvatar();"><img src="../../img/tou.png" /></a>
+            </div>
+            <div class="left1 mui-col-sm-9 mui-col-xs-9">
+                <div class="hide clearfix" style="line-height: 1rem; float: left;">
+                    <p style="margin-top: 1rem;">
+                        <a href="#" style="margin-top: 1rem; font-size: 1rem;color: rgb(255,85,0);">王梓欣</a>
+                        <a href="#" style="margin: 1rem 0 0 0.5rem; font-size: 1rem;color: red;">明星学员</a>
+                    </p>
+                    <p>戏剧教育一班</p>
+                    <p style="font-size: 1rem;" class="zan">
+                        <img src="../../img/zan.png"/> <a href="#" style="color: rgb(102,102,102);">收到的赞</a>
+                        <a href="#" style="color: red;">17</a>
+                        <img style="margin-left: 0.5rem;" src="../../img/xin.png"/> <a href="#" style="color: rgb(102,102,102); font-size: 1rem;">我喜欢的</a>
+                        <a href="#" style="color: red;">5</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<!--图文-->
+<div class="main clearfix" style="height: 10rem;">
+    <p style="padding: 4rem 0 0 1.5rem; font-size: 1rem;color: rgb(102,102,102);">学习天地</p>
+    <article class="pic-class clearfix my-class">
+        <dl onclick="onClickMyClass();">
+            <dt>
+                <a >
+                    <img src="../../img/kes1.png" alt="" />
+                </a>
+            </dt>
+            <dd><a onclick="onClickMyClass();" title="我的课时">我的课时</a></dd>
+        </dl>
+        <dl onclick="onClickMyHomework();">
+            <dt>
+                <a>
+                    <img src="../../img/kes2.png" alt="" />
+                </a>
+            </dt>
+            <dd><a href="myjob.html" title="我的作业">我的作业</a></dd>
+        </dl>
+        <dl onclick="onClickOfflineData();">
+            <dt>
+                <a >
+                    <img src="../../img/ziliao.png" alt="" />
+                </a>
+            </dt>
+            <dd><a href="unpublished.html" title="离线资料">离线资料</a></dd>
+        </dl>
+        <dl onclick="onClickDemoClass();">
+            <dt>
+                <a >
+                    <img src="../../img/sing.png" alt="" />
+                </a>
+            </dt>
+            <dd><a href="../home/listenInfo.html" title="试听课">试听课</a></dd>
+        </dl>
+    </article>
+</div>
+<div class="lines" style="margin-top: 1.3rem;"></div>
+<div class="main" style="height: 7rem;">
+    <p style="padding: 0 0 0 1.5rem; font-size: 1rem;color: rgb(102,102,102);">成长足迹</p>
+    <article class="pic-class clearfix my-class">
+        <dl>
+            <dt>
+                <a onclick="onClickFootprint();">
+                    <img src="../../img/zuji.png" alt="" />
+                </a>
+            </dt>
+            <dd>足迹总览</dd>
+        </dl>
+        <dl>
+            <dt>
+                <a onclick="onClickMyVideo();">
+                    <img src="../../img/video.png" alt="" />
+                </a>
+            </dt>
+            <dd><a href="myVideo.html" title="我的视频">我的视频</a></dd>
+        </dl>
+    </article>
+</div>
+<div class="lines" style="margin-top: 0;"></div>
+<div class="main">
+    <p style="padding: 0 0 0 1.5rem; font-size: 1rem;color: rgb(102,102,102);">消息中心
+        <span style="float: right; margin-right: 1rem;">
+        			<a style="color: rgb(153,153,153);" onclick="onClickMessageCenter();">查看更多</a>
+        			<img style="accelerator: 1rem; height: 1rem;" src="../../img/more.png" alt="" />
+        		</span>
+    </p>
+    <article class="pic-class clearfix">
+        <a onclick="onClickMessageInfo();">
+            <div class="news">
+                <p style="padding: 0.5rem 0 0 1rem;">学校通知<span style="float: right; margin-right: 0.5rem;vertical-align: middle;">2018-07-30 15:00</span></p>
+                <p style="padding: 0 0 0 1rem;">您在学校预约的声乐课程已经通过，请及时查看！</p>
+            </div>
+        </a>
+        <a onclick="onClickMessageInfo();">
+            <div class="news">
+                <p style="padding: 0.5rem 0 0 1rem;">互动消息<span style="float: right; margin-right: 0.5rem;">2018-07-30 15:00</span></p>
+                <p style="padding: 0 0 0 1rem;">微微老师已经回复了您的消息，请及时查看！</p>
+            </div>
+        </a>
+    </article>
+</div>
+
+<script type="text/javascript">
+<!--       一级页面的调用                     -->
+<!--点击个人中心的设置按钮-->
+		function onClickSetting(){
+		    var fileUrl = "file:///android_asset/buluApp/templates/me/config.html";
+		    window.android.showAndroidHomeNewPage(fileUrl,3);
+		};
+
+<!--点击用户头像-->
+		function onClickUserAvatar(){
+		    var fileUrl = "file:///android_asset/buluApp/templates/me/mydetails.html";
+		     window.android.showAndroidHomeNewPage(fileUrl,3);
+		};
+
+<!--我的课时 点击-->
+        function onClickMyClass(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/myclass.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        };
+
+<!--我的作业 点击-->
+        function onClickMyHomework(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/myjob.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        };
+
+
+<!--离线资料 点击-->
+        function onClickOfflineData(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/myjob.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        };
+
+<!--试听课 点击-->
+        function onClickDemoClass(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/Listen.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        };
+<!--足迹总览 点击-->
+        function onClickFootprint(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/myjob.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        };
+
+<!--我的视频 点击-->
+        function onClickMyVideo(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/myVideo.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        }
+
+<!--消息中心 查看更多-->
+        function onClickMessageCenter(){
+            var fileUrl = "file:///android_asset/buluApp/templates/me/messageCenter.html";
+            window.android.showAndroidHomeNewPage(fileUrl,3);
+        }
+
+<!--消息列表 消息详情-->
+			function onClickMessageInfo(){
+				var fileUrl = "file:///android_asset/buluApp/templates/me/msg.html";
+            	window.android.showAndroidHomeNewPage(fileUrl,3);
+			}
+</script>
+</body>
+
+</html>

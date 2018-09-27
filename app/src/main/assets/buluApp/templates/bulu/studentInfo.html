@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>明星学员</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/teacherInfo.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/voideInfo.css"/>
+	</head>
+
+	<body>
+		<div class="banner" id="stuBanner">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();" style="color: rgb(102,102,102);"></a>
+			<!--<div class="banners"><img src="../../img/studentsstar.png" alt="" /></div>
+			<div class="banner-mask">
+				<span class="bulu-name">王梓新</span>
+				<span class="bulu-names">戏剧表演优秀生</span>
+			</div>-->
+		</div>
+		<div class="bc-center" id="stuIntroduce">
+			<!--<div class="jieshao">
+				<img src="../../img/shu.png" alt="" />
+				<span>学员简介</span>
+			</div>
+			<p class="jieshao-text">
+				如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特
+			</p>-->
+		</div>
+		<div class="lines"></div>
+		<div class="bc-center" id="process">
+			<!--<div class="jieshao">
+				<img src="../../img/shu.png" alt="" />
+				<span>成长历程</span>
+			</div>
+			<p class="jieshao-text">
+				如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特如果你无法简单表达你的想法，那说明你还不够了解它。--阿尔伯特
+			</p>-->
+		</div>
+
+		<div class="lines"></div>
+
+		<!--成长经历-->
+		<div class="bc-center">
+			<div class="jc-videos">
+				<div class="jieshao">
+					<img src="../../img/shu.png" alt="" />
+					<span>学员作品</span>
+				</div>
+				<div class="videos jcsp">
+						<div id="isPlay" class="stop"><img src="../../img/play.png" alt="" class="isplays" /></div>
+						<video class="video_show" id="video_show" controls poster="../../img/shijin.jpg">
+							<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4" type="video/mp4" />
+						</video>
+						<!--<img src="../../img/shijin.jpg" alt="" />-->
+					</div>
+				<p class="p-description">
+					几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
+				</p>
+				<div class="userinfos clearfix">
+					<div class="userinfo-l">
+						<span class="userinfo-name">王梓欣</span>
+						<span class="userinfo-data">2018-8-24</span>
+					</div>
+					<div class="userinfo-r">
+						<a href="#" class="zan"> <img src="../../img/aixin.png" alt="" /> <span>5</span> </a>
+						<a href="#" class="pinglun"> <img src="../../img/pingluin.png" alt="" /> <span>3</span> </a>
+						<a href="#" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>3</span> </a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="lines"></div>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../rootUrl.js"></script>
+		
+		<script type="text/javascript">
+			mui.init()
+
+			<!--点击返回按钮-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(2);
+			}
+		</script>
+	</body>
+
+</html>

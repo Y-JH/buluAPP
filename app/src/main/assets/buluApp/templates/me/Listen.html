@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>试听记录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/Listen .css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">试听记录</h1>
+		</header>
+			<div style="height: 1.8rem;"></div>
+		<div class="lines"></div>
+		<div class="mui1">
+			<div id="slider" style="background-color: #FFFFFF;" class="mui-slider">
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active itema" style=" border: none;">
+						<div class="scroll1" id="oton">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../Urlroot.js"></script>
+		<script type="text/javascript">
+		<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage();
+			};
+
+		</script>
+	</body>
+
+</html>

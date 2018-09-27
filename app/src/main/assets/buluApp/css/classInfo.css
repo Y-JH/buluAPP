@@ -1,0 +1,163 @@
+.mui-bar-nav.mui-bar .mui-icon {
+    color: rgb(102,102,102) !important;
+    box-shadow: none !important;
+}
+
+.mui-title{
+	font-size: 1rem;
+	color: rgb(102,102,102) !important;
+	
+}
+.kc-info{
+	margin-top:2.7rem;
+}
+.kc-img{
+	width: 100%;
+	/*height: 4rem;*/
+}
+.kc-info img{
+	width: 100%;
+	display: block;
+}
+.kc-info p{
+	text-indent: 1.6rem;
+	margin-top: 0.5rem;
+	color: rgb(102,102,102);
+	line-height: 1.7rem;
+	font-size: 0.8rem;
+}
+.xgkc{
+	vertical-align: middle;
+	font-size: 1rem;
+}
+.b-xgkc p:nth-of-type(2){
+	color: rgba(255, 130, 20, 0.73);;
+}
+.xgkc i{
+	height: 1.1rem;
+    display: inline-block;
+    width: 0.15rem;
+    display: inline-block;
+    /*vertical-align: middle;*/
+}
+.xgkc img{
+	vertical-align: middle;
+	display: inline-block;
+	/*margin-right: 0.2rem;*/
+	height: 100%;
+	width: 100%;
+}
+.xgkc span{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(102,102,102) !important;
+	margin-left: 0.5rem;
+}
+.xgkc-img{
+	height:1rem !important;
+}
+.datas,.times {
+	display: inline-block;
+	vertical-align: middle;
+}
+.datas{
+	margin-right: 0.5rem;
+}
+.times img{
+	vertical-align: middle;
+	margin-right: 0.2rem;
+	width: 12%;
+}
+.b-xgkc{
+	position:relative;
+}
+.b-xgkc p{
+	margin-top: 0.25rem;
+}
+.appointment{
+	position:absolute;
+	top:0;
+	right:0.6rem;
+	width: 3rem;
+}
+.appointment img{
+	width: 100%;
+	margin-right: 0;
+}
+.sj-videos img{
+	width: 100%;
+	
+}
+.sj-videos {
+	margin-bottom: 0.5rem;
+}
+
+.mask{
+	width: 100%;
+	height:100%;
+	background:#d6d4d4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:100;
+	opacity: 0.3;
+}
+.massage{
+	display: none;
+}
+.white{
+	position: absolute;
+	top:30%;
+	left: 10%;
+	width: 80%;
+	/*padding:0.8rem 0.6rem;*/
+	background:#fff;
+	/*border-radius: 0.3rem;*/
+	z-index: 101;
+}
+.white p{
+	text-align: center;
+	margin-bottom: 0.8rem;
+	margin-top: 0.4rem;
+	font-size: 0.8rem;
+	color: rgb(102,102,102);
+}
+.input-mass{
+	width: 80%;
+	margin:0 auto;
+}
+.input-mass span ,input{
+	display: inline-block;
+}
+.input-mass span {
+	width: 18%;
+}
+.input-mass input{
+	width:79%;
+	height:2rem;
+	margin-bottom: 0;
+}
+.cencle-box{
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5rem;
+	border-top: 1px solid #ccc;
+	margin-top: 0.5rem;
+}
+.cencle-box a{
+	width: 49%;
+	text-align: center;
+	color: rgb(255,139,54);
+	display: inline-block;
+	box-sizing: border-box;
+	font-size:1rem;
+}
+.cencle-box a:first-child{
+	border-right: 1px solid #ccc;
+}
+.white{
+	top: 40% !important;
+}
+.tips{
+	display: none;
+}

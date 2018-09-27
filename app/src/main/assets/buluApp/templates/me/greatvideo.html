@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>精彩视频</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/greatvideo.css" />
+
+	</head>
+
+	<body id='pn'>
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<h1 class="mui-title">精彩视频</h1>
+		</header>
+		<!--1-->
+		<div class="comment" style="margin-top:2.8rem;">
+			
+
+			<div class="centerd">
+			<div class="bc-center">
+				
+				<div class="videos jcsp" >
+					<div id="isPlay" class="stop"><img src="../../img/play.png" alt=""  class="isplays"/></div>
+					<video class="video_show" id="video_show" controls  poster="../../img/shijin.jpg">
+						<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4"  type="video/mp4" />
+					</video>
+					
+				</div>
+				<p class="p-description">
+					几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
+				</p>
+				<div class="userinfos clearfix">
+					<div class="userinfo-l">
+						<span class="userinfo-name">王梓欣</span>
+						<span class="userinfo-data">2018-8-24</span>
+					</div>
+					
+					<div class="userinfo-r">
+						<a href="#" class="zan"> <img src="../../img/aixin.png" alt="" /> <span>5</span> </a>
+						<a href="#" class="pinglun"> <img src="../../img/pingluin.png" alt="" /> <span>3</span> </a>
+						<a href="#" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>3</span> </a>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="lines"></div>
+		<div class="bc-center" id="ping">
+				<div class="videosa">
+			<p class="prent" style="font-size: 1rem;">
+				<img style="vertical-align: middle !important; margin-right: 0.1rem;width: 1.8rem;
+					height: 1.8rem;" src="../../img/e.png"/>  
+				瑞瑞妈妈
+			</p>
+			<p class="prents" style="width: 90%; margin-left: 2rem;">
+					几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
+					几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
+			</p>
+			<p class="prents parent" style="width: 90%; margin-left: 2rem;">14分钟前</p>
+		    </div>
+		<div class="hr" style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+		</div>
+		<div class="textareas">
+				<textarea style="width: 90%;" placeholder="写评论" autocomplete="off" class="pl-text"></textarea>
+				<span class="styles"><a href="#" id="send_link">发送</a></span>
+			</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/video.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function() {
+
+			})
+
+			function praisebox() {
+				//获取赞数量容器
+				var praise = document.getElementsByClassName("zan-num")[0];
+				console.log(praise)
+				//获取容器当前total值
+				var total = parseInt(praise.getAttribute("total"));
+
+				//创建一个新的total存储用
+				var newtotal;
+				//判断点击的文字内容
+				if($('zan-img').attr('src', '../../img/aixin.png')) {
+					//total值+1 因为我还没点击赞，所以要点击的时候就多了一个人 total+1
+					newtotal = total + 1;
+					praise.innerHTML = newtotal
+					//                      praise.innerHTML = newtotal == 1 ? "我觉得很赞": "我和" + total + "个人觉得很赞";
+					//                      el.innerHTML = "取消赞";
+				} else {
+					//反之total值-1
+					newtotal = total - 1;
+					praise.innerHTML = newtotal
+					$('zan-img').attr('src', '../../img/aixin.png')
+				}
+				//更新total值
+				praise.setAttribute("total", newtotal);
+
+			}
+
+			//操作回复
+			function operateReply(el) {
+				//留言板的内容
+				var liuyan = $('.pl-text').val()
+				//留言区内容
+				var liuyanqu = $('.prents')
+
+				liuyanqu.text(liuyan)
+			}
+
+			var lists = $('#pn').children()
+			console.log(lists)
+			//遍历所有状态消息
+			for(var i = 0; i < lists.length; i++) {
+				//全部事件代理
+				lists[i].onclick = function(e) {
+					//获取当前点击事件
+					var e = e || window.event;
+					var el = e.srcElement;
+					if(!el) {
+						el = e.target; //兼容火狐
+					}
+					//判断点击的类名
+					switch(el.className) {
+						//关闭整个状态
+						case "pinglun":
+							$('.textareas').show()
+							break;
+							//上面的点赞
+						case "zan":
+							praisebox();
+							break;
+							//回复点击评论
+						case "pl-send":
+							operateReply();
+							$('.textareas').hide()
+							break;
+					}
+				}
+			}
+
+			$('.pinglun').click(function(){
+				console.log(1)
+			})
+			send_link.onclick = function(){
+				alert(2)
+			}
+		</script>
+	</body>
+
+</html>

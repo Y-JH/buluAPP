@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>消息中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/message.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav headers">
+		<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">消息详情</h1>
+		</header>
+		<div style="height: 1.8rem;"></div>
+		<div class="lines"></div>
+		<!--消息详情-->
+		<div class="message clearfix">
+			<p style="font-size: 1rem; color: rgb(102,102,102);">上课提醒</p>
+			<p style="font-size: 0.9rem;">2018-07-30 14:25 学校通知</p>
+			<p style="font-size: 1rem; color: rgb(102,102,102);">消息内容:</p>
+			<p class="ptn">如果你无法间接的表达你的想法，那只说明你还不够了解它阿尔伯特·爱因斯坦
+				如果你无法间接的表达你的想法，那只说明你还不够了解它</p>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			<!--点击返回按钮 返回-->
+			function onBack(){
+				window.android.closeAndroidSecondPage();
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+.box-center{
+	width: 70%;
+	margin:4rem auto;
+}
+.sex{
+	width: 100%;
+	height:2.5rem;
+	border: 1px solid #ccc;
+	border-radius: 0.3rem;
+	padding: 0 0 0 0.6rem;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	line-height: 2rem;
+	margin-top: 0.8rem;
+}
+.sex-xz{
+	width: 18%;
+	display: inline-block;
+}
+.sex-xingbie{
+	margin-right: 0.5rem;
+	float: left;
+}
+.forms{
+	float: left;
+}
+.forms select{
+	width:44px;
+	padding: 0;
+	display: inline-block;
+	margin: 0 !important;
+	text-align: center;
+	margin-left: 0.4rem;
+}
+.forms select:nth-child(2){
+	width:20px;
+}
+.forms select:nth-child(3){
+	width:30px;
+}
+.sexs{
+	width: 90%;
+	padding: 0;
+	line-height: 2rem;
+	position: absolute;
+	/*z-index: 10;*/
+	margin-left: 0.4rem;
+}
+.pull-down{
+	position: absolute;
+	top: 0rem;
+	right:0;
+	width: 2.5rem;
+	height: 2.4rem;
+}
+.pull-down img{
+	width: 30%;
+	display: inline-block;
+	margin-left:29%;
+	margin-top:37%;
+}
+.logins1{
+	width: 70%;
+    background: rgb(255,139,54);
+    border: none;
+    margin:0 auto;
+    height: 2.3rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    margin-top: 0.2rem;
+    display: block;
+    text-align: center;
+    line-height: 2.3rem;
+}
+.box-center {
+    width: 70%;
+    margin-bottom: 0.6rem;
+}

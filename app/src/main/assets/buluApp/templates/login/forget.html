@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>忘记密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/login.css" />
+		<link rel="stylesheet" href="../../css/login-xiugai.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">忘记密码</h1>
+		</header>
+		
+		<div class="center-box" style="margin-top:5rem;">
+			<input type="text" class="tells tellphone" placeholder="请输入手机号" />
+			<input type="password" class="tells yzm" value="" placeholder="请输入验证码" /><a href="#" class="huoqu">获取验证码</a>
+			<a onclick="setFrogetPasswdSuccess();" class="logins">确认</a>
+		</div>
+		
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/mui.js"></script>
+		
+		<script>
+			$('.logins').click(function(){
+				ycTips('密码已经成功修改 自动为您跳转登陆页','我知道了')
+			})
+
+		<!--关闭当前的页面-->
+			function onBack(){
+				window.android.closePage();
+			}
+
+		<!--完成重置 已忘记的密码 并跳转到登录页面-->
+			function setFrogetPasswdSuccess(){
+				window.android.setFrogetPasswdSuccess();
+			}
+		</script>
+	</body>
+
+</html>

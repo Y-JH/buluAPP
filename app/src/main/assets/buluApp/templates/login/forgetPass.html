@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>忘记密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/login.css" />
+		<link rel="stylesheet" href="../../css/login-xiugai.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<h1 class="mui-title">忘记密码</h1>
+		</header>
+		
+		<div class="center-box" style="margin-top:5rem;">
+			<input type="text" class="tells tellphone" placeholder="请输入6-13位密码" />
+			<input type="password" class="tells yzm" value="" placeholder="确认密码" />
+			<a href="login.html" class="logins">确认</a>
+		</div>
+		
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/mui.js"></script>
+		
+		<script>
+			$('.logins').click(function(){
+				ycTips('密码已经成功修改 自动为您跳转登陆页','我知道了')
+			})
+		</script>
+	</body>
+
+</html>

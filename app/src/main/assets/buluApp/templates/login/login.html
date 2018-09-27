@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/login.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<a href="#" class="logo"><img src="../../img/logo.png"/></a>
+			<div class="center-box">
+				<input type="text" class="tells" placeholder="请输入您的账号"/>
+				<input type="password" class="password" value="" placeholder="请输入密码" />
+				<a  class="logins">登录</a>
+				<div class="clearfix">
+					<a onclick="onClickForgetPasswd();" class="forget">忘记密码</a>
+					<a onclick="onClickRegister();" class="register">注册</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/login.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		
+			
+			//要包含数字的话是 new RegExp("^[a-zA-Z0-9]+$"); 
+			 
+//			
+//			$('.logins').click(function(){
+//				
+//				var accountNumbers=$('.tells').val()
+//				var passwd=$('.password').val()
+//				var tel=$('.tells').val()
+//				var s=accountNumbers
+////				var re = new RegExp("^[a-zA-Z0-9]+$"); 
+// 				var reg = /^[0-9]+.?[0-9]*$/;
+//				if ( reg.test(s) ) {
+//					alert('手机号登录')
+////						
+//				$.ajax({
+//		                    type:'post',
+//		                    url:activeUrl+'user/LoginUser',
+//		//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+//		                    data:{
+//		                        tel:accountNumbers,//账号登录
+//		                        passwd:passwd
+//		                   	},
+//		                   	
+//		                    dataType:'json',
+//		
+//		                    success:function(data){
+//		                    	var msg=data.msg
+//		                    	
+//								console.log(data.msg)
+//								if(data.code==10000){
+////									alert('登录成功')
+//								}
+//		                        
+//		                    }
+//	
+//	               })
+//				}
+//				else{
+//					alert('账号')
+//						$.ajax({
+//	                    type:'post',
+//	                    url:activeUrl+'user/LoginUser',
+//	//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+//	                    data:{
+//	                        accountNumber:accountNumbers,//账号登录
+//	                        passwd:passwd
+//	                   	},
+//	                    dataType:'json',
+//	
+//	                    success:function(data){
+//	//                  	var accountNumbers=$('.tells').val()
+//	                    	
+//	//                  	console.log(data)
+//							console.log(data.msg)
+//							if(data.code==10000){
+//								alert('登录成功')
+//							}
+//	                        
+//	                    }
+//	
+//	               })
+//				}
+//				
+//				
+//			})
+
+
+
+
+		<!--点击登录按钮-->
+		function onClickLogin(){
+		     window.android.loginToHome();
+		}
+
+		<!--点击注册按钮-->
+		function onClickRegister(){
+			window.android.registerToPage();
+		}
+
+		<!--点击忘记密码按钮-->
+		function onClickForgetPasswd(){
+			window.android.forgetPasswdToPage();
+		}
+		</script>
+
+	</body>
+
+</html>
+

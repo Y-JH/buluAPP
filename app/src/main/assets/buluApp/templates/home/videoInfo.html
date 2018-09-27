@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>精彩视频</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/greatvideo.css" />
+		<link rel="stylesheet" href="../../css/voideInfo.css" />
+
+	</head>
+
+	<body id='pn'>
+		<header class="mui-bar mui-bar-nav">
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<h1 class="mui-title">精彩视频</h1>
+		</header>
+		<!--1-->
+		<div class="comment" style="margin-top:2.4rem;">
+			<div class="bc-center">
+				<!--1-->
+				<div class="jc-videos">
+					<div class="videos jcsp">
+						<div id="isPlay" class="stop"><img src="../../img/play.png" alt="" class="isplays" /></div>
+						<video class="video_show" id="video_show" controls poster="../../img/shijin.jpg">
+							<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4" type="video/mp4" />
+						</video>
+
+					</div>
+					<p class="p-description">
+						几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
+					</p>
+					<div class="userinfos clearfix">
+						<div class="userinfo-l">
+							<span class="userinfo-name">王梓欣</span>
+							<span class="userinfo-data">2018-8-24</span>
+						</div>
+
+						<div class="userinfo-r">
+							<a href="#" class="zan"> <img src="../../img/aixin.png" alt="" /> <span>5</span> </a>
+							<a href="#" class="pinglun"> <img src="../../img/pingluin.png" alt="" /> <span>3</span> </a>
+							<a href="#" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>3</span> </a>
+						</div>
+					</div>
+				</div>
+
+			</div><!--bc-center-->
+			<div class="lines"></div>
+
+		</div>
+
+
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/video.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function() {
+
+			})
+
+			<!-- 看视频 返回 -->
+			function onBack(){
+				window.android.closeAndroidFirstPage(0);
+			}
+		</script>
+	</body>
+
+</html>

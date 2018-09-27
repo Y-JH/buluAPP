@@ -1,0 +1,197 @@
+* {
+	margin:0;
+	padding:0;
+}
+.bg{
+	width: 100%;
+	background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(orange), to(orangered));
+}
+.bg h1{
+	font-size: 1rem;
+	color: rgb(255,255,255);
+	margin: 1rem auto;
+}
+.bg-header{
+	width: 100%;
+	height: 13rem;
+	position: relative;
+}
+.section{
+	width: 90%;
+	height: 12rem;
+	background: white;
+	position: absolute;
+	top: 4rem;
+	left: 1rem;
+	border-radius: 1rem;
+	z-index: 9999999;
+}
+.left img{
+	width: 4rem;
+	height: 4rem;
+	margin: 1rem 0 0 1rem;
+	float: left;
+}
+.hide{
+	float: left;
+	margin-left: 1rem;
+	display: block !important;
+}
+.hide h1{
+	font-size: 1rem;
+	color: rgb(255,85,0);
+}
+.hide p{
+	margin-top: -0.5rem;
+}
+.right img{
+	width: 4.5rem;
+	height: 4.5rem;
+	margin: 1rem 1rem 0 0;
+}
+.font{
+	width: 92%;
+	margin: 0 auto;
+}
+.font p{
+	font-size: 0.9rem;
+	line-height: 0.8rem;
+}
+.font p:first-child{
+	color: rgb(255,139,54);
+	margin-bottom: 0.3rem;
+}
+.xuan{
+	width: 80%; 
+	margin: 1rem auto;
+	text-align: center;
+}
+.xuan span{
+	display:block;
+	font-size: 1rem;
+}
+.picture{
+	text-align: center;
+}
+.picture span{
+	display:block;
+}
+.picture img{
+	width: 4rem;
+	height: 4rem;
+}
+.pictures p:first-child{
+	color: rgb(255,139,54);
+	font-size: 1rem;
+}
+/* .mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+	font-size: 1rem;
+	padding: 0 1rem !important;
+} */
+.muixxk{
+	font-size: 1rem !important;
+	width:100%
+	padding-left:3rem !important;
+}
+.muixxk a{
+	width:25%;
+	margin:0 0.8rem;
+}
+.mui_xxk{
+	font-size: 1rem;
+	width:100%
+	padding-left:2rem !important;
+}
+.mui_xxk a{
+	width:25%;
+	margin:0 0.8rem;
+}	
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color: rgb(255,139,54);
+}
+/*公用样视*/
+.lines{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+}
+/*弹出框*/
+.btnteach{
+	border: 0;
+}
+/*相机*/
+.head-photos{
+	width: 2rem;
+	height: 1.5rem;
+	margin: 0 auto 0.3rem;
+}
+.profile-photo{
+	position: absolute;
+	right: 3rem;
+	top: 2rem;
+}
+.profile-photo{
+	position: absolute;
+	right: 3rem;
+	bottom: 9rem;
+}
+.booking{
+	position: relative;
+}
+.her{
+	color: rgb(102,102,102);
+	line-height: 2rem !important;
+	font-weight: normal;
+}
+/*五角星*/
+.star img{
+	width: 1rem;
+	height: 1rem;
+}
+.parent_text p{
+	line-height: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.fontsize{
+	color: rgb(102,102,102);
+	font-size: 0.95rem;
+}
+/*遮罩*/
+.masks{
+	display: NONE;
+}
+.mask{
+	width: 100%;
+	height: 100vh;
+	background:#d6d4d4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:100;
+	opacity: 0.3;
+}
+.mask-a{
+	position: absolute;
+	bottom: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 3rem;
+	background:white;
+	z-index: 10100;
+}
+.mask-a li{
+	width: 100% !important;
+}
+.mask-a li a{
+	color:rgb(102,102,102)!important;
+}
+.mask-a li:last-child{
+	border-top: 0.3rem solid rgb(240,240,240);
+}
+/*请假*/
+.tanchuk{
+	width: 2rem;
+	height: 1rem;
+	background-color: red;
+}

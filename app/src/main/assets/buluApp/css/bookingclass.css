@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.mui-plus.mui-android header.mui-bar{
+	display: none;
+}
+.mui-plus.mui-android .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+.mui-bar-nav~.mui-content{
+	padding: 0 !important;
+}
+/*选项卡变换颜色*/
+.static-color{
+	color: rgb(102,102,102) !important;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color:rgb(255,139,54) !important;
+    background: 0 0;
+    
+}
+.her{
+	color: rgb(102,102,102);
+	line-height: 2rem !important;
+	font-weight: normal;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+	padding: 0rem 2rem;
+}
+/*banner*/
+.booking_header{
+	background-image: url(../img/banner.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 7.5rem;
+}
+.mui-bar{
+	background: none !important;
+}
+.mui-bar-nav{
+	border: none !important;
+	box-shadow: none !important;
+}
+.mui-title{
+	color: white !important;
+}
+/*日历*/
+#box{
+	height: 4rem;
+	width: 90%;
+	margin: 1rem auto;
+}
+.boxa{
+	width: 14.25%;
+	float: left;
+	text-align: center;
+	line-height: 2rem;
+	font-size: 1rem;
+	color: white;
+}
+.boxa span{
+	width: 65%;
+	height: 2rem;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.5);;
+	float: left;
+	text-align: center;
+	line-height: 2rem;
+	font-size: 1rem;
+	color: white;
+	margin: 0 0.6rem;
+}
+/*声乐*/
+.main_font{
+	width: 90%;
+	height: auto;
+	margin: 0.8rem auto;
+	background-color: #E6E6E6;
+	text-indent: 1em; 
+	border-radius: 0.5rem;
+	position: relative;
+}
+.main_font p{
+	margin-bottom: 0.1rem !important;
+}
+.hdr{
+	padding: 1rem 0 0.5rem 0;
+	color: rgb(102,102,102);
+	font-size: 1rem;
+}
+.padd{
+	color: rgb(153,153,153); 
+	padding-bottom: 0.5rem;
+}
+/*预约button*/
+.btn{
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+	overflow: hidden;
+	
+}
+.btn button{
+	border-radius: 1rem;
+	width: 4rem;
+	height: 2rem;
+}
+.btn1{
+	position: absolute;
+	right: 2.5rem;
+	bottom: 12rem;
+	overflow: hidden;
+	
+}
+.btn1 button{
+	border-radius: 1rem;
+	width: 4rem;
+	height: 2rem;
+}
+.btn2{
+	position: absolute;
+	right: 2.5rem;
+	bottom: 2.5rem;
+	overflow: hidden;
+	
+}
+.btn2 button{
+	border-radius: 1rem;
+	width: 4rem;
+	height: 2rem;
+}
+/*公用样视*/
+.lines{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+}
+.mui-slider-indicator.mui-segmented-control{
+	font-size: 1rem;
+}        

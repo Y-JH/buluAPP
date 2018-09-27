@@ -1,0 +1,65 @@
+.banner{
+	position: relative;
+}
+.banners{
+	width: 100%;
+	height: 30%;
+}
+.banners img{
+	width: 100%;
+}
+.banner a{
+	position: absolute;
+	top: 1.2rem;
+	left: 1rem;
+	width: 3%;
+}
+.banner a img{
+	width: 100%;
+}
+.banner-mask{
+	width: 100%;
+	border-radius: 0.4rem 0.4rem 0 0 ;
+	padding: 0.6rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background:#2226;
+}
+.bulu-name{
+	font-weight: bold;
+	color: #fff;
+	font-size:1rem;
+	margin-right: 0.4rem;
+}
+.bulu-names{
+	font-size: 0.9rem;
+	color: #fff;
+}
+.jieshao img,span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.jieshao img{
+	width:0.65%;
+	height: 1%;
+	margin-right: 0.3rem;
+}
+.jieshao{
+	margin-top: 0.5rem;
+}
+.jieshao span{
+	font-size: 1.1rem;
+	color: rgb(102,102,102);
+	display: inline-block;
+}
+.jieshao-text{
+	line-height: 1.2rem;
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+	
+}
+.lines{
+	margin-top: 0.6rem;
+}
+

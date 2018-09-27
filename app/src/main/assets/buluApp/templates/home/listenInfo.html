@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>试听课</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/yanchuInfo.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/listenInfo.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<h1 class="mui-title">试听课</h1>
+		</header>
+		<div class="lines" style="margin-top:2.9rem;"></div>
+		<div class="bc-center stk-class clearfix">
+			<!--<div class="hui-bg">
+				<h5>戏剧试听课</h5>
+				<p>教师：<span>王老师</span></p>
+				<p>地址：<span>海淀区XX大厦XX号XX302室</span></p>
+				<p>
+					<span class="st-time">2018-7-25</span>
+					<span class="st-time">8:00-10:00</span>
+				</p>
+				<a href="#" class="subscribe">预约</a>
+			</div>-->
+	
+		</div>
+	
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		
+			Date.prototype.toLocaleString = function() {
+          		return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate() ;
+   			};
+   			Date.prototype.toLocaleString1 = function() {
+          		return  this.getHours() + ":" + this.getSeconds() + "";
+   			};
+   			 
+//			$(this).addClass('aa').siblings('.subscribe').removeClass('aa')
+		</script>
+	</body>
+
+</html>

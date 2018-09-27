@@ -1,0 +1,35 @@
+header a,
+h1 {
+	color: rgb(102, 102, 102) !important;
+}
+
+.mui-bar {
+	background: #fff;
+	box-shadow: none;
+}
+
+.center-box {
+	width: 75% !important;
+	position: relative;
+}
+
+.center-box input {
+	font-weight: 400;
+}
+.center-box input::placeholder{
+	color: rgb(204,204,204);
+}
+
+.yzm{
+	position: relative;
+}
+.huoqu{
+	position: absolute;
+	right: 0;
+	top:42%;
+	color: rgb(255,139,54);
+	border: none;
+	outline:none;
+	font-size: 0.95rem;
+}
+

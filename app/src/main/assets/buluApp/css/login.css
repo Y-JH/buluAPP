@@ -1,0 +1,84 @@
+.logo{
+	display: block;
+	margin: 28% auto;
+	width: 35%;
+}
+.center-box{
+	width: 70%;
+	margin: 0 auto;
+}
+.center-box input{
+	border:none;
+	border-bottom: 1px solid #ccc;
+	border-radius:0px;
+}
+.center-box input::placeholder{
+	color: rgb(204,204,204);
+	font-size: 1rem;
+}
+
+.logins{
+	width: 100%;
+	background: rgb(255,139,54);
+	border: none;
+	height: 2.4rem;
+	border-radius: 0.3rem;
+	color: #fff;
+	margin-top: 0.2rem;
+	display: block;
+	text-align: center;
+	line-height: 2.4rem;
+	font-size: 1rem;
+}
+.forget, .register{
+	color: rgb(255,139,54);
+	display: inline-block;
+	margin-top: 0.6rem;
+}
+.forget{
+	float: left;
+}
+.register{
+	float: right;
+	
+}
+.binding{
+	width: 100%;
+	background: rgb(255,139,54);
+	border: none;
+	height: 2.2rem;
+	border-radius: 0.3rem;
+	color: #fff;
+	margin-top: 0.2rem;
+	display: block;
+	text-align: center;
+	line-height: 2.2rem;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

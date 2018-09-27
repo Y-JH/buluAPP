@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>演出列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/yanchuInfo.css" />
+	</head>
+	<style>
+		.lines{
+			margin-bottom: 0.6rem;
+		}
+		.bc-center{
+			width: 95%;
+		}
+		.yanList-r p{
+			line-height: 1.6rem;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="onBack()"></a>
+			<h1 class="mui-title">演出列表</h1>
+		</header>
+		<div class="yanLists"></div>
+		<div class="yanList" id="actMore">
+			<!--<div class="bc-center clearfix">
+				<a href="#" class="yanList-l"> <img src="../../img/yanchu.png" alt="" /> </a>
+				<div class="yanList-r">
+					<h5>《咘噜戏剧教育之深海奇遇记》</h5>
+					<p>演出时间：<span class="yanchu-time">2018-8-24</span>
+					</p>
+					<p>票务信息：<span class="yanchu-time">10:00</span>
+						<span>14:30</span>
+						<span>19:00</span>
+					</p>
+					<p>演出剧场：<span class="jc">北京东图剧场</span></p>
+					<p>剧场地址：<span class="dz">东城区交道口东大街85号</span></p>
+					<p class="clearfix ticketing">票务信息： 原价：
+						<span class="xx yuanjia">90元  180元 280元</span><br />
+					</p>
+					
+				</div>
+			</div>
+			<div class="lines" style="margin-top: 0rem;"></div>-->
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../rootUrl.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+			function onBack(){
+				window.android.closeAndroidFirstPage(0);
+			}
+		</script>
+	</body>
+
+</html>

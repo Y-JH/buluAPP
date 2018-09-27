@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.headers{
+	line-height: 3rem;
+	font-size: 1rem;
+}
+.headers a:first-child{
+	float: left;
+	color: #777777;
+}
+.headers a:last-child{
+	float: right;
+	color: rgb(255,139,54);
+}
+.publish{
+	width: 90%;
+	margin: 0 auto;
+}
+.form{
+	border: 0;
+}
+.texts img{
+	width: 5rem;
+	height: 5rem
+}
+/*公用样式*/
+.lines{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+	margin-top: 1rem;
+}

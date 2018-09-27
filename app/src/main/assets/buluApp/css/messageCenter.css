@@ -1,0 +1,109 @@
+.bianjia{
+	position: relative;
+}
+.bianji{
+	position: absolute;
+	top: 0.8rem;
+	right: 1rem;
+	font-size: 1rem;
+}
+.bianji a {
+	color: rgb(102,102,102);
+}
+.gray{
+	width: 96%;
+	height: 4.5rem;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	background-color: #E6E6E6;
+	font-size: 0.5rem !important;
+}
+.mui-checkbox label, .mui-radio label{
+	width: 65% !important;
+}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{
+	left: 0.3rem  !important;
+	top:0.5rem;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-size: 1rem !important;
+}
+.chec{
+	width: 90%;
+	margin: -1rem 0 0 1.5rem;
+}
+.mui-checkbox.mui-left label, .mui-radio.mui-left label{
+	    padding-left: 24px;
+}
+/*公用样式*/
+.lines{
+	width: 100%;
+	height: 1rem;
+	background:rgb(240,240,240);
+	margin: 0 !important;
+}
+
+/*全选反选*/
+#bian{
+	position: absolute;
+	top: 0.2rem;
+	right: 1rem;
+	font-size: 1rem;
+	border: 0;
+	background: 0 0 !important;
+}
+ .quanxuan {
+ 	height: 3rem;
+ 	line-height: 3rem;
+ 	font-size: 1rem;
+ 	border-top: 1px #EFEFF4 solid;
+ }
+ 
+ .rightbox {
+ 	width: 4rem;
+ 	height: 3rem;
+ 	float: right;
+ 	color: white;
+ 	border: 0;
+ 	text-align: center;
+ 	background: rgb(255, 139, 54);
+ }
+body {
+	background-image: url(text.txt);
+	background-attachment: fixed;
+}
+/*$("#bian").click(function() {
+	if($(".inpt,.quanxuan").css("display") == "none") {
+		$(this).html('完成')
+		$(".inpt,.quanxuan").show();
+	} else {
+		$(".inpt,.quanxuan").hide();
+		$(this).html('编辑')
+	}
+});*/
+.quanxuan {
+	z-index: 999;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	_position: absolute;
+	_top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+	overflow: visible;
+}
+#theadInp{
+	margin-left: 1rem;
+}
+.div {
+	background-color: black;
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+	display: none
+}
+.inpt{
+	position: absolute;
+	top: 0.8rem;
+	left: 0.5rem;
+}
+

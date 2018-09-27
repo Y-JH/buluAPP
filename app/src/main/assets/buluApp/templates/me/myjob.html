@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>我的作业</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../../css/myjob.css"/>
+</head>
+
+<body>
+
+<style>
+			.mui-control-content {
+				background-color: white;
+				min-height: 215px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			.mui-slider-item img {
+			     height: auto; 
+			}
+			.jcsps p {
+			    position: absolute;
+			    left: 0.5rem;
+			    bottom: 0.5rem;
+			    vertical-align: middle;
+			    width: 100%;
+			}
+
+</style>
+
+<header class="mui-bar mui-bar-nav">
+    <a class=" mui-icon mui-icon-left-nav mui-pull-left config-return"
+       onclick="onBack();"></a>
+    <h1 class="mui-title">我的作业</h1>
+</header>
+<div style="height: 1.8rem;"></div>
+<div class="lines"></div>
+<div class="mui-content">
+    <div id="slider" style="background-color: #FFFFFF;" class="mui-slider">
+        <div id="sliderSegmentedControl" style="margin: 0 auto; width: 50%; padding: 0.8rem 0;"
+             class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item static-color mui-active" href="#item1mobile"
+               style="border: 1px solid #CCCCCC; border-radius: 0.5rem 0 0 0.5rem;">
+                待完成
+            </a>
+            <a class="mui-control-item static-color" href="#item2mobile"
+               style="border: 1px solid #CCCCCC;border-radius:  0 0.5rem 0.5rem 0; ">
+                已完成
+            </a>
+        </div>
+        <div class="mui-slider-group">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active"
+                 style=" border: none;">
+                <div class="scroll1">
+                    <div class="hr"
+                         style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                    <div class="scrolls">
+                        <ul class="mui-table-view booking">
+                            <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                <div class="main_booking ">
+                                    <h4 class="her">声乐一班 声乐基础教学</h4>
+                                    <p>讲课老师: 李薇薇、李洋</p>
+                                    <p>教室: 教学楼302</p>
+                                    <p>学生: 王梓欣</p>
+                                    <p>作业要求: 巩固老师上课讲解的基础知识，练习所有乐器拍成视频上传</p>
+                                    <p style="color: rgb(153,153,153);">2018-06-18 14:30-16:30</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="profile-photo">
+                            <div class="head-photos"><img src="../../img/camera.png"/></div>
+                            上传作业
+                        </div>
+                        <div class="lines"></div>
+                        <ul class="mui-table-view booking make">
+                            <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                <div class="main_booking ">
+                                    <h4 class="her">声乐一班 声乐基础教学</h4>
+                                    <p>讲课老师: 李薇薇、李洋</p>
+                                    <p>教室: 教学楼302</p>
+                                    <p>学生: 王梓欣</p>
+                                    <p>作业要求: 巩固老师上课讲解的基础知识，练习所有乐器拍成视频上传</p>
+                                    <p style="color: rgb(153,153,153);">2018-06-18 14:30-16:30</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--<div class="cameras">
+                            <div class="camera_p"><img src="../../img/camera.png"/></div>
+                            上传作业
+                        </div>-->
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="item2mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll2">
+                    <div class="scroll1">
+                        <div class="hr"
+                             style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                        <div class="scrolls dianping">
+                            <ul class="mui-table-view booking">
+                                <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                    <div class="main_booking ">
+                                        <h4 class="her">声乐一班 声乐基础教学</h4>
+                                        <p>讲课老师: 李薇薇、李洋</p>
+                                        <p>教室: 教学楼302</p>
+                                        <p>学生: 王梓欣</p>
+                                        <p style="color: rgb(153,153,153);">2018-06-18
+                                            14:30-16:30</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <img class="dianpings" src="../../img/jiaji.png"/>
+                        </div>
+                        <div class="hr"
+                             style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                        <div class="scrolls">
+                            <ul class="mui-table-view booking">
+                                <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                    <div class="main_booking ">
+                                        <p class="vide">作业描述: 这是奶奶监督我完成作业，还帮我拍的视频</p>
+                                        <div class="videos">
+                                            <img src="../../img/fengmian3.png"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hr"
+                             style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                        <div class="scrolls">
+                            <ul class="mui-table-view booking">
+                                <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                    <p class="vide">作业点评: 王梓欣上课很认真，完成的非常好，课后作业也完成的非常好，每节课都积极发言，很勇敢的
+                                        展现自己，希望以后继续保持！</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="liness"></div>
+                        <div class="scroll1">
+                            <div class="hr"
+                                 style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                            <div class="scrolls dianping">
+                                <ul class="mui-table-view booking">
+                                    <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                        <div class="main_booking ">
+                                            <h4 class="her">声乐一班 声乐基础教学</h4>
+                                            <p>讲课老师: 李薇薇、李洋</p>
+                                            <p>教室: 教学楼302</p>
+                                            <p>学生: 王梓欣</p>
+                                            <p style="color: rgb(153,153,153);">2018-06-18
+                                                14:30-16:30</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <img class="dianpings" src="../../img/dianping.png"/>
+                            </div>
+                            <div class="hr"
+                                 style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                            <div class="scrolls">
+                                <ul class="mui-table-view booking">
+                                    <li class="mui-table-view-cell" style="line-height: 1.5rem;">
+                                        <div class="main_booking ">
+                                            <p class="vide">作业描述: 这是奶奶监督我完成作业，还帮我拍的视频</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mui-slider-item mui-control-content mui-active mobile"
+                                 style="margin-left: 1rem !important;">
+                                <ul class="mui-table-view mui-grid-view mui-grid-9 ss">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3 jcsps">
+                                        <img src="../../img/fengmian1.png" alt=""/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hr"
+                                 style="width: 95%; height: 0.1rem; border-bottom: 0.1rem solid #EEEEEE; margin: 0 auto;"></div>
+                            <div class="publish">
+                                <textarea id="hcqk" class="form" rows="5"
+                                          placeholder="作业点评:请填写作业点评"></textarea>
+                            </div>
+                            <div class="liness"></div>
+                            <div class="publish">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--拍照-->
+    <div class="masks">
+        <div class="mask"></div>
+        <ul class="mask-a">
+            <li class="photo-btn"><a href="#" class="photo-btn">拍照</a></li>
+            <li class="album-btn"><a href="#" class="album-btn">从相册中选择</a></li>
+            <li class="cancel"><a href="#" class="cancel">取消</a></li>
+        </ul>
+    </div>
+</div>
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script src="../../js/ziliao.js"></script>
+<script type="text/javascript">
+<!-- 我的作业 返回 -->
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			};
+
+</script>
+</body>
+
+</html>

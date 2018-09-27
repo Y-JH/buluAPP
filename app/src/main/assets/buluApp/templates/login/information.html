@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>宝宝信息完善</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/login-xiugai.css" />
+		<link rel="stylesheet" type="text/css" href=""/>
+		<link rel="stylesheet" href="../../css/information.css" />
+		
+	</head>
+	<style>
+		
+	</style>
+	<body id="reg">
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<h1 class="mui-title">宝宝信息完善</h1>
+		</header>
+		<article class="box-center">
+			<div class="sex">
+				<span class="sex-xingbie">性别:</span>
+				<select name="" id="selected" class="sexs">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+				<div class="pull-down"><img src="../../img/pull.png"/></div>
+			</div>
+
+			<div class="sex">
+				<span class="sex-xingbie">生日:</span>
+				
+				<form name=form1  class="forms">
+					<select name=YYYY onchange="YYYYMM(this.value)" class="birthday">
+						<option></option>
+					</select>
+					<select name=MM onchange="MMDD(this.value)" class="birthday1">
+						<option>月</option>
+					</select>
+					<select name=DD class="birthday2">
+						<option>日</option>
+					</select>
+					<div class="pull-down"><img src="../../img/pull.png"/></div>
+				</form>
+			</div>
+		</article>
+		<a href="#" class="logins1 finish">完成</a>
+		<!--<script src="../../js/zepto.min.js"></script>-->
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/data.js"></script>
+		<!--<script src="../../js/login.js"></script>-->
+		<script>
+			var activeUrl="http://192.168.0.215:8080/";
+			var id = getValue()['id'] || ''; 
+			function getValue(){
+				  var str = decodeURIComponent( window.location.search ),
+				    obj = {},
+				    item = [];
+				  if(str && ~str.indexOf('?')){ str = str.slice(1) }  
+				  if(str !=null && str !=""){
+				    if(str.indexOf("&") != -1){
+				      item = str.split("&");
+				      for(var i=0;i<item.length;i++){
+				        var itemValue = item[i].split("=");
+				        obj[itemValue[0]]=itemValue[1];
+				      }
+				    }else{
+				      item = str.split("=");
+				      obj[item[0]]=item[1];
+				    }
+				    return obj;
+				  }
+				}
+//			$('.finish').click(function(){
+//				var sex= $('#selected').find('option:selected').val() 
+//				var years= $('.birthday').find('option:selected').val()
+//				var month= $('.birthday1').find('option:selected').val()
+//				var month=	month < 10 ? '0' + month: month;
+//				var day= $('.birthday2').find('option:selected').val() 
+//				var day=day < 10 ? '0' + day: day;
+//				var birthDate=(years+'/'+month+'/'+day)
+////				console.log(birthday)
+////				console.log(sex)
+//              $.ajax({
+//                  type:'post',
+//                  url:activeUrl+'user/completion',
+////                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+//                  data:{
+//                      sex:sex,
+//                      birthDate:birthDate,
+//                      id:id
+//                 	},
+//                  dataType:'json',
+//                 
+//                  success:function(data){
+//                  	console.log(data)
+//						if(data.code==10000){
+//							window.location.href="login.html?sex="+sex+"&birthDate="+birthDate+'&id='+id;
+//						}
+//                      
+//                  }
+//
+//              })
+//			})
+		</script>
+	</body>
+
+</html>
