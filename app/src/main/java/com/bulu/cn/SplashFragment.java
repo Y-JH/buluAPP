@@ -9,10 +9,6 @@ import android.view.ViewGroup;
 
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.TabStatusEvent;
-import com.bulu.cn.fragment.login.LoginFragment;
-import com.bulu.cn.tool.SharedPreferencesHelper;
-import com.bulu.cn.tool.StringUtils;
-import com.bulu.cn.welcome.WelcomeFragment;
 
 import me.yokeyword.eventbusactivityscope.EventBusActivityScope;
 import me.yokeyword.fragmentation.SupportFragment;
@@ -45,13 +41,12 @@ public class SplashFragment extends SupportFragment {
         super.onActivityCreated(savedInstanceState);
 
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 EventBusActivityScope.getDefault(_mActivity).post(new TabStatusEvent(ConsActions.I_TAB_PAGE_HOME));
-//                startBrotherFragment(MainFragment.newInstance());
-                String used = (String) SharedPreferencesHelper.getSharedPreferences(getActivity(), ConsActions.USER_USE_RECORD_KEY, "");
+                startBrotherFragment(MainFragment.newInstance());
+                /*String used = (String) SharedPreferencesHelper.getSharedPreferences(getActivity(), ConsActions.USER_USE_RECORD_KEY, "");
                 if(StringUtils.isEmpty(used)){
                     //为空，表示用户是第一次登录
                     startBrotherFragment(WelcomeFragment.newInstance());
@@ -68,7 +63,7 @@ public class SplashFragment extends SupportFragment {
                         startBrotherFragment(MainFragment.newInstance());
                     }
                 }
-
+*/
             }
         }, 1500);
     }
