@@ -49,7 +49,8 @@ public class SplashFragment extends SupportFragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                EventBusActivityScope.getDefault(_mActivity).post(new TabStatusEvent(ConsActions.I_TAB_PAGE_HOME));
+//                startBrotherFragment(MainFragment.newInstance());
                 String used = (String) SharedPreferencesHelper.getSharedPreferences(getActivity(), ConsActions.USER_USE_RECORD_KEY, "");
                 if(StringUtils.isEmpty(used)){
                     //为空，表示用户是第一次登录

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/fl_tab_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/bottombar_wechat_height" />
-
     <com.bulu.cn.wiget.bottomview.BottomBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottombar_wechat_height"
-        android:layout_gravity="bottom" />
+        android:layout_alignParentBottom="true" />
 
     <ImageView
+        android:id="@+id/img_line"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/bottombar_wechat_height"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomBar"
         android:background="@drawable/actionbar_shadow_up" />
-</FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/img_line" />
+</RelativeLayout>

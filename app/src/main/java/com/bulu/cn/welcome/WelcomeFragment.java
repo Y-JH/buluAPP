@@ -17,7 +17,6 @@ import com.bulu.cn.MainFragment;
 import com.bulu.cn.R;
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.IWelcomeEvent;
-import com.bulu.cn.event.TabStatusEvent;
 import com.bulu.cn.fragment.login.LoginFragment;
 import com.bulu.cn.tool.SharedPreferencesHelper;
 import com.bulu.cn.tool.StringUtils;
@@ -80,7 +79,6 @@ public class WelcomeFragment extends SupportFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        EventBusActivityScope.getDefault(_mActivity).post(new TabStatusEvent(ConsActions.SPLASH_FRAGMENT));
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
         return view;
     }
