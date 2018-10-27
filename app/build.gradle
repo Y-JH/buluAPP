@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion build_versions.target_sdk
+
     defaultConfig {
         applicationId "com.bulu.cn"
         minSdkVersion build_versions.min_sdk

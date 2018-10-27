@@ -1,5 +1,5 @@
-var activeUrl = "http://192.168.0.132:8080";
-var activeUrl1 = "http://192.168.0.132:8080"; //翟勤
+var activeUrl = "http://c.service.bulu.aikaoen.com/buluc";
+var activeUrl1 = "http://c.service.bulu.aikaoen.com/buluc"; //翟勤
 dataId = 0; //学员id
 cid = 0; //课时id
 ccId = 0; //课程大纲id

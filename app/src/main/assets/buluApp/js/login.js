@@ -69,6 +69,7 @@ $(function() {
 	//			点击注册
 
 	function submits() {
+	registerSuccessToHomePage();//这是我的注册成功的跳转
 		var $name = $('.stud-name').val();
 		var $accountNumber = $('.zhanghao').val();
 		var $password = $('.passwords').val();
@@ -255,6 +256,7 @@ $(function() {
 	//          登录
 	//			user/LoginUser?accountNumber=jh123456&password=123456
 	$('.logins').click(function() {
+	onClickLogin();//这个是我的登录方法
 //	alert(1)
 		var accountNumbers = $('.tells').val()
 		var passwd = $('.password').val()

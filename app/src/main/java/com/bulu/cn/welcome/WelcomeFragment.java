@@ -35,8 +35,10 @@ import me.yokeyword.fragmentation.SupportFragment;
 public class WelcomeFragment extends SupportFragment {
 
     private final String TAG = "WelcomeFragment";
-    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_2,
-            R.drawable.wel_3, R.drawable.wel_4};
+//    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_2,
+//            R.drawable.wel_3, R.drawable.wel_4};
+
+    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_4};
 
     public static WelcomeFragment newInstance() {
         Bundle args = new Bundle();
@@ -48,27 +50,25 @@ public class WelcomeFragment extends SupportFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        EventBusActivityScope.getDefault(getActivity()).register(this);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        EventBusActivityScope.getDefault(getActivity()).unregister(this);
     }
 
     @Subscribe
     public void welToXX(IWelcomeEvent.Experience event) {
-        if(ConsActions.WELCOME_EXPERIENCE.equals(event.WELCOME_EXPERIENCE)){
+        if (ConsActions.WELCOME_EXPERIENCE.equals(event.WELCOME_EXPERIENCE)) {
             //点击欢迎页的立即体验
             //判断当前用户是否已经登录
             //登录过了，直接进入home首页
             //没有登录，则进入登录页面
-            String valid = (String) SharedPreferencesHelper.getSharedPreferences(getActivity(),ConsActions.USER_LOGIN_RECORD_KEY, "");
-            if(StringUtils.isEmpty(valid)){
+            String valid = (String) SharedPreferencesHelper.getSharedPreferences(getActivity(), ConsActions.USER_LOGIN_RECORD_KEY, "");
+            if (StringUtils.isEmpty(valid)) {
                 //空值，没登陆过
                 startBrotherFragment(LoginFragment.newInstance());
-            }else {
+            } else {
                 //有值，已登录
                 startBrotherFragment(MainFragment.newInstance());
             }
@@ -152,6 +152,34 @@ public class WelcomeFragment extends SupportFragment {
     public static class MyFragment extends Fragment {
         private int position;
 
+        /**
+         * 质量压缩方法          * @param image          * @return
+         */
+//        private Bitmap compressImage(int resImg) {
+//            Resources res = getActivity().getResources();
+//            Bitmap bmp = BitmapFactory.decodeResource(res, resImg);
+//
+//
+//            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//            bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//            // 质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
+//            int options = 90;
+//            while (baos.toByteArray().length / 1024 > 100) {
+//            // 循环判断如果压缩后图片是否大于100kb,大于继续压缩
+//                baos.reset(); // 重置baos即清空baos
+//                bmp.compress(Bitmap.CompressFormat.JPEG, options, baos);
+//            // 这里压缩options%，把压缩后的数据存放到baos中
+//                options -= 10;// 每次都减少10
+//            }
+//            ByteArrayInputStream isBm = new ByteArrayInputStream(baos.toByteArray());
+//            // 把压缩后的数据baos存放到ByteArrayInputStream中
+//            Bitmap bitmap = BitmapFactory.decodeStream(isBm, null, null);
+//            // 把ByteArrayInputStream数据生成图片
+//            return bitmap;
+//
+//
+//        }
+
         public MyFragment(int position) {
             this.position = position;
         }
@@ -160,6 +188,7 @@ public class WelcomeFragment extends SupportFragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             ImageView imageView = new ImageView(getActivity());
             imageView.setImageResource(resource[position]);
+//            imageView.setImageBitmap(compressImage(resource[position]));
             if (3 == position) {
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -173,4 +202,6 @@ public class WelcomeFragment extends SupportFragment {
             return imageView;
         }
     }
+
+
 }
