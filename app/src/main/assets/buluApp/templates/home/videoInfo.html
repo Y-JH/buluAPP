@@ -68,6 +68,12 @@
 				window.android.closeAndroidFirstPage(0);
 			}
 
+			<!-- 进入视频播放页面 -->
+			function viewMovie(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/me/greatvideo2.html?"+location;
+				window.android.showAndroidNewFirstPage(fileUrl);
+			}
+
 		</script>
 	</body>
 

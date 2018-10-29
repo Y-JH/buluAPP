@@ -19,7 +19,7 @@ $(function(){
 //						banner详情页
 							var stuBanner='';
 							stuBanner+=`
-									<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)" style="color: rgb(102,102,102);"></a>
+									<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()" style="color: rgb(102,102,102);"></a>
 									<div class="banners"><img src="${imgSrc}${datas.studentinfo.cover}" alt="" class='stuImg'/></div>
 									<div class="banner-mask">
 										<span class="bulu-name">${datas.studentinfo.studentName}</span>
@@ -117,7 +117,7 @@ $(function(){
 //						banner详情页
 							var teaban='';
 							teaban+=`
-									<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)" style="color: rgb(102,102,102);"></a>
+									<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()" style="color: rgb(102,102,102);"></a>
 									<div class="banners"><img src="${imgSrc}${data.cover}" alt="" class='teaImg'/></div>
 									<div class="banner-mask">
 										<span class="bulu-name">${data.teachername}</span>

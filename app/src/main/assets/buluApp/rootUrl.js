@@ -70,7 +70,7 @@ $(function() {
 				str += `
 						<dl class="class-item">
 							<dt>
-								<a onclick="onClickClassButton(id=${data.data[i].id})"  class='class-items'>
+								<a onclick="onClickClassButton('id=${data.data[i].id}')"  class='class-items'>
 									<img src="${imgSrc}${data.data[i].logo}" alt="" />
 								</a>
 							</dt>
@@ -105,7 +105,7 @@ $(function() {
 				var act = '';
 				act += `
 					<dl class="yc-info">
-						<dt><a onclick="onClickPerformItem(id=${data.data[i].id})"><img src="${imgSrc}${data.data[0].activitieCover}" alt="" /></a></dt>
+						<dt><a onclick="onClickPerformItem('id=${data.data[i].id}')"><img src="${imgSrc}${data.data[0].activitieCover}" alt="" /></a></dt>
 						<dd>${data.data[i].activityName}</dd>	
 					</dl>
 					`
@@ -134,7 +134,7 @@ $(function() {
 				var actMore = '';
 				actMore += `
 						<div class="bc-center clearfix">
-							<a onclick="onClickPerformItem(id=${data.data[i].id})" class="yanList-l"> <img src="${imgSrc}${data.data[0].activitieCover}" alt="" /> </a>
+							<a onclick="onClickPerformItem('id=${data.data[i].id}')" class="yanList-l"> <img src="${imgSrc}${data.data[0].activitieCover}" alt="" /> </a>
 							<div class="yanList-r">
 								<h5>《${data.data[i].activityName}》</h5>
 								<p>
@@ -178,7 +178,7 @@ $(function() {
 				var aa = (data.data[i].createTime).substr(0, 10)
 				var news = '';
 				news += `
-								<a onclick="onClickNewsCondition(id=${data.data[i].id})"><div class="consulta" style="margin-top: 0;">
+								<a onclick="onClickNewsCondition('id=${data.data[i].id}')"><div class="consulta" style="margin-top: 0;">
 									<div class="consultas clearfix">
 										<div class="consulta-l">
 											<img src="${imgSrc}${data.data[i].newimg}" alt="" />

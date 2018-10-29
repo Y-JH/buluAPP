@@ -39,7 +39,7 @@
 							</a>
 						</div>
 						
-						<a href="#" class="tells"><img src="../../img/tell.png" alt="" /></a>
+						<a onclick="onCallPhone()" class="tells"><img src="../../img/tell.png" alt="" /></a>
 	
 					</div>
 				</div>
@@ -243,6 +243,46 @@
 		<script type="text/javascript">
 			mui.init()
 			mui('.mui-slider').slider().stopped = true;
+
+			<!--进入明星学员详情-->
+			function viewStartStudentInfo(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/studentInfo.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2);
+			}
+
+
+			<!--进入明星学教师详情-->
+			function viewStartTeacherInfo(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/bulu/teacherInfo.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2);
+			}
+
+			<!--进入优秀剧目详情-->
+			function viewStartActiveInfoInfo(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/home/activeInfo2.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2);
+			}
+
+
+			<!--进入上课实景详情-->
+			function viewStarClassVideoInfo(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/me/greatvideo3.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2);
+			}
+
+			<!--进入学生分享详情-->
+			function viewStartStudentShareVideoInfo(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/me/greatvideo3.html?"+location;
+				window.android.showAndroidHomeNewPage(fileUrl,2);
+			}
+
+
+			<!--点击打电话按钮-->
+			function onCallPhone(){
+				window.android.callPhone("17600523782");
+			};
+
+
 ////			
 			$(function(){
 //				var activeUrl="http://c.service.bulu.aikaoen.com/buluc";
@@ -263,7 +303,7 @@
 								var stuStar='';
 								stuStar+=`
 										<div class="stars-items">
-											<a href="studentInfo.html?id=${datas[i].id}" class="stars-img">
+											<a onclick="viewStartStudentInfo('id=${datas[i].id}')" class="stars-img">
 												<img src="${imgSrc}${datas[i].cover}" alt="" />
 												<p class="star-text"> ${datas[i].studentName} <span> ${datas[i].label} </span></p>
 											</a>
@@ -308,7 +348,7 @@
 
 			})
 
-			
+
 		</script>
 	</body>
 

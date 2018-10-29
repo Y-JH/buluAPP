@@ -25,7 +25,7 @@ $(function(){
 				async: false,
 				dataType: "json",
 				success: function(data) {
-	
+//				alert('成功了==>>'+data.data.course.id)
 							if(data.data.course.id==classInfoId){
 //								console.log(data.data.course)
 								$('.kc-title').text(data.data.course.courseName)

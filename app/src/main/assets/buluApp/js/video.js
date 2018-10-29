@@ -23,7 +23,7 @@ ispraise=0;
 						var str=''
 						str+=`
 						<div class='gVideo' style='height:6.5rem;'>
-							<a href='../me/greatvideo.html?videoId=${data.data[i].id}' style='display:inline-block;'>
+							<a onclick="viewMovie('videoId=${data.data[i].id}')" style='display:inline-block;'>
 								<div class="jcsps">
 									<div class="jc-pic homeVideos">
 										<img src='${imgSrc}${data.data[i].videoimg}' class='videoimg'/>
@@ -66,7 +66,7 @@ ispraise=0;
 //				console.log(ispraise)
 				var moreVideo='';
 				moreVideo+=`
-					<a href='../me/greatvideo.html?videoId=${data.data[i].id}'>
+					<a onclick="viewMovie('videoId=${data.data[i].id}')">
 					<div class="videos jcsp">
 						<div id="isPlay" class="stop"><img src="../../img/play.png" alt="" class="isplays" style='border-radius:0.4rem;' /></div>
 							
@@ -82,9 +82,9 @@ ispraise=0;
 							</div>
 	
 							<div class="userinfo-r">
-								<a href="../me/greatvideo.html?videoId=${data.data[i].id}" class="zan"> <img src="../../img/hieixing1.png" alt="" class="img"/> <span class="z-num">${data.data[i].like_number}</span> </a>
-								<a href="../me/greatvideo.html?videoId=${data.data[i].id}" class="pinglun "> <img src="../../img/pingluin.png" alt="" /> <span>${data.data[i].comentcount}</span> </a>
-								<a href="../me/greatvideo.html?videoId=${data.data[i].id}" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>${data.data[i].fxcount}</span> </a>
+								<a onclick="viewMovie('videoId=${data.data[i].id}')" class="zan"> <img src="../../img/hieixing1.png" alt="" class="img"/> <span class="z-num">${data.data[i].like_number}</span> </a>
+								<a onclick="viewMovie('videoId=${data.data[i].id}')" class="pinglun "> <img src="../../img/pingluin.png" alt="" /> <span>${data.data[i].comentcount}</span> </a>
+								<a onclick="viewMovie('videoId=${data.data[i].id}')" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>${data.data[i].fxcount}</span> </a>
 							</div>
 						</div>
 						</div>
@@ -148,7 +148,7 @@ ispraise=0;
 								<div class="userinfo-r">
 									<a href="#" class="zan"> <img src="" alt=""  class="img"/> <span class="z-num">${data.data.like_number}</span> </a>
 									<a href="#" class="pinglun comments"> <img src="../../img/pingluin.png" alt="" /> <span>${data.data.comentcount}</span> </a>
-									<a href="#" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>${data.data.fxcount}</span> </a>
+									<a onclick="shareWithSDK()" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>${data.data.fxcount}</span> </a>
 									
 								</div>
 							</div>
@@ -388,3 +388,8 @@ ispraise=0;
 		})
     
 })
+
+
+
+
+

@@ -19,7 +19,7 @@ $(function(){
 					var teaStar = '';
 					teaStar += `
 							<div class="stars-items">
-								<a href="teacherInfo.html?id=${datas[i].id}" class="stars-img">
+								<a onclick="viewStartTeacherInfo('id=${datas[i].id}')" class="stars-img">
 									<img src="${imgSrc}${datas[i].cover}" alt="" />
 									<p class="star-text"> ${datas[i].teachername} <span> ${datas[i].label} </span></p>
 								</a>
@@ -52,7 +52,7 @@ $(function(){
 						var str=''
 						str+=`
 						<dl class="teachers-item no-border youxiu">
-							<a href="../home/activeInfo.html?id=${data.data[i].id}">
+							<a onclick="viewStartActiveInfoInfo('id=${data.data[i].id}')">
 								<dt class="jumu">
 									<img src='${imgSrc}${data.data[i].activitieCover}'/>
 								</dt>
@@ -93,7 +93,7 @@ $(function(){
 				str+=`
 					<dl class="teachers-item no-border">
 						<dt class="jumu jumnn">
-							<a href='../me/greatvideo.html?videoId=${data.data[i].id}'>
+							<a onclick="viewStarClassVideoInfo('videoId=${data.data[i].id}')">
 								<img src='${imgSrc}${data.data[i].videoimg}'/>
 							</a>
 						</dt>
@@ -130,7 +130,7 @@ $(function(){
 				str+=`
 					<dl class="teachers-item no-border">
 						<dt class="jumu" style="height: 6.5rem;">
-							<a href='../me/greatvideo.html?videoId=${data.data[i].id}'>
+							<a onclick="viewStartStudentShareVideoInfo('videoId=${data.data[i].id}')">
 								
 									<img src='${imgSrc}${data.data[i].videoimg}'/>
 							</a>

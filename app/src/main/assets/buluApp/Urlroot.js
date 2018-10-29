@@ -1,4 +1,5 @@
-var activeUrl = "http://192.168.0.159:8080";
+var activeUrl = "http://192.168.0.132:8080";
+//var activeUrl = "http://192.168.0.159:8080";
 //var activeUrl ="http://c.service.bulu.aikaoen.com";
 //var activeUrl = "http://c.service.bulu.aikaoen.com/buluc";
 //var activeUrl1 = "http://c.service.bulu.aikaoen.com/buluc";
