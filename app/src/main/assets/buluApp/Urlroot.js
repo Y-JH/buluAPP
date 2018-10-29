@@ -24,10 +24,10 @@ $(function() {
 			stz += `<div class="left mui-col-sm-3 mui-col-xs-3">`
 			if(data.data.userinfo.picture == null){
 				stz += `
-						<a href="ziliao.html"><img src="../../img/tou.png" /></a>`
+						<a onclick="viewProfile()" href="ziliao.html"><img src="../../img/tou.png" /></a>`
 			}else{
 				stz += `
-						<a href="ziliao.html"><img src='${imgSrc}${data.data.userinfo.picture}'/></a>`
+						<a onclick="viewProfile()" href="ziliao.html"><img src='${imgSrc}${data.data.userinfo.picture}'/></a>`
 			}
 			stz += `
 					</div>

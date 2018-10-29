@@ -14,7 +14,7 @@
 		<div class="wrap">
 			<!--头部-->
 			<header class="mui-bar mui-bar-nav">
-				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()"></a>
 				<h1 class="mui-title">资料编辑</h1>
 			</header>
 
@@ -95,6 +95,11 @@
 		<script src="../../js/ziliaos.js"></script>
 		<script src="../../js/app.js"></script>
 		<script src="../../Urlroot.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function onBack(){
+				window.android.closeAndroidFirstPage(1);
+			};
+		</script>
 	</body>
 
 </html>

@@ -47,9 +47,12 @@
 		<script src="../../js/login.js"></script>
 		<script>
 			<!--点击完成注册-->
-			function registerSuccessToHomePage(){
-				window.android.registerSuccessToHomePage();
+			function registerSuccessToInformation(url){
+				<!--window.android.registerSuccessToHomePage();-->
+				var fileUrl = "file:///android_asset/buluApp/templates/login/information.html?"+url;
+				window.android.showAndroidHomeNewPage(fileUrl,6);
 			}
+
 
 			<!--关闭当前的页面-->
 			function onBack(){

@@ -18,7 +18,7 @@
 	<body id="reg">
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav">
-			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()"></a>
 			<h1 class="mui-title">宝宝信息完善</h1>
 		</header>
 		<article class="box-center">
@@ -51,62 +51,57 @@
 		<a href="#" class="logins1 finish">完成</a>
 		<!--<script src="../../js/zepto.min.js"></script>-->
 		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/app.js"></script>
 		<script src="../../js/mui.js"></script>
 		<script src="../../js/data.js"></script>
 		<script src="../../js/login.js"></script>
 		<script>
-			var activeUrl="http://c.service.bulu.aikaoen.com/buluc/";
-			var id = getValue()['id'] || ''; 
-			function getValue(){
-				  var str = decodeURIComponent( window.location.search ),
-				    obj = {},
-				    item = [];
-				  if(str && ~str.indexOf('?')){ str = str.slice(1) }  
-				  if(str !=null && str !=""){
-				    if(str.indexOf("&") != -1){
-				      item = str.split("&");
-				      for(var i=0;i<item.length;i++){
-				        var itemValue = item[i].split("=");
-				        obj[itemValue[0]]=itemValue[1];
-				      }
-				    }else{
-				      item = str.split("=");
-				      obj[item[0]]=item[1];
-				    }
-				    return obj;
-				  }
-				}
-			$('.finish').click(function(){
-				var sex= $('#selected').find('option:selected').val() 
-				var years= $('.birthday').find('option:selected').val()
-				var month= $('.birthday1').find('option:selected').val()
-				var month=	month < 10 ? '0' + month: month;
-				var day= $('.birthday2').find('option:selected').val() 
-				var day=day < 10 ? '0' + day: day;
-				var birthDate=(years+'/'+month+'/'+day)
-//				console.log(birthday)
-//				console.log(sex)
-                $.ajax({
-                    type:'post',
-                    url:activeUrl+'user/completion',
-//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
-                    data:{
-                        sex:sex,
-                        birthDate:birthDate,
-                        id:id
-                   	},
-                    dataType:'json',
-                   
-                    success:function(data){
-                    	console.log(data)
-						if(data.code==10000){
-							window.location.href="login.html?sex="+sex+"&birthDate="+birthDate+'&id='+id;
-						}
-                        
-                    }
 
-                })
-			})
+		function registerSuccessToHomePage(){
+			window.android.registerSuccessToHomePage();
+		}
+		function onBack(){
+			window.android.closeAndroidFirstPage(6);
+		};
+
+			//			修改信息 出生日期和性别
+	    var id = getValue()['id'] || '';
+	          console.log(id)
+	$('.finish').click(function() {
+//		alert(1)
+		var sex = $('#selected').find('option:selected').val()
+		console.log(sex)
+		var years = $('.birthday').find('option:selected').val()
+		var month = $('.birthday1').find('option:selected').val()
+		var month = month < 10 ? '0' + month : month;
+		var day = $('.birthday2').find('option:selected').val()
+//		console.log(day )
+		var day = day < 10 ? '0' + day : day;
+		var birthDate = (years + '-' + month + '-' + day)
+		//				console.log(birthday)
+		//				console.log(sex)
+		$.ajax({
+			type: 'post',
+			url: activeUrl +'user/completion',
+			//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+			data: {
+				sex: sex,
+				birthDate: birthDate,
+				id: id
+			},
+			dataType: 'json',
+
+			success: function(data) {
+				console.log(data)
+				if(data.code == 10000) {
+					<!--window.location.href = "login.html?sex=" + sex + "&birthDate=" + birthDate + '&id=' + id;-->
+					registerSuccessToHomePage()
+				}
+
+			}
+
+		})
+	})
 		</script>
 	</body>
 

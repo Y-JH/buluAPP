@@ -17,7 +17,7 @@
 	<body>
 		<div class="booking_header">
 			<header class="mui-bar mui-bar-nav">
-				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()"></a>
 				<h1 class="mui-title">课时预约</h1>
 			</header>
 			<div style="height: 1.5rem"></div>
@@ -90,6 +90,11 @@
 					$('.mui_xxk').width(starsWidth)
 				}
 				activeWidth()
+
+
+				function onBack(){
+				window.android.closeAndroidFirstPage(1);
+			};
 			</script>
 	</body>
 

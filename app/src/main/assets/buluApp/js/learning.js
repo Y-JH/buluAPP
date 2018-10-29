@@ -61,8 +61,9 @@ $(function() {
 				stc += `		<p>${data.data.jrskinfo[0].campusname}</p>
 							</div>
 						</div>
+
 						<div class="right mui-col-sm-3 mui-col-xs-3">
-							<a href="bookingclass.html" class="pic">
+							<a onclick="classApply()" href="bookingclass.html" class="pic">
 								<img src="../../img/kes.png" />
 							</a>
 						</div>
