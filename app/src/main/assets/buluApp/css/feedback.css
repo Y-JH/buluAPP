@@ -8,10 +8,14 @@
 .buttons{
 	background-color: #ff913c;
 	color: rgb(255,255,255);
-	width: 5rem;
+	width: 5.5rem;
 	font-size: 1rem;
+	border-radius: 0.5rem;
+	height: 2rem;
+	line-height: 0.8rem;
 }
 .textsa{
 	color: rgb(102,102,102);
 	font-size: 0.9rem;
+	margin-top: 1rem;
 }

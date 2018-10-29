@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>消息中心</title>
@@ -10,104 +11,28 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav bianjia">
-			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
 			<h1 class="mui-title">消息中心</h1>
 			<button id="bian">编辑</button>
 			<button id="wan" style="display: none;">完成</button>
 		</header>
 		<div class="lines"></div>
-		<div class="main_fonts clearfix">
-			<a onclick="onClickMessageInfo();">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
-			<a onclick="onClickMessageInfo();">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
-			<a onclick="onClickMessageInfo();">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
-			<a onclick="onClickMessageInfo();">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
-			<a href="message.html">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
-			<a onclick="onClickMessageInfo();">
-			<div class="gray clearfix">
-				<div class="mui-input-row mui-checkbox mui-left">
-					<p>
-						<label class="labela">学校通知</label>
-					<input class="inpt" type="checkbox" />
-					2018-07-30 14:25
-					</p>
-				</div>
-				<p class="chec">您在本学校预约的声乐课程已经通过，请及时查看！</p>
-			</div>
-			</a>
+		<div class="main_fonts clearfix" id="messagecenters">
+			<!--消息列表-->
 		</div>
 		<div class="quanxuan">
 			<input type="checkbox" id="theadInp" /> 全选
-			<div class="rightbox">删除</div>
+			<div class="rightbox deletexiaoxi">删除</div>
+			
 		</div>
 		<script src="../../js/mui.min.js"></script>
-		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../js/messageCenter.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-		<!-- 消息中心 返回 -->
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/messageCenter.js"></script>
+		<script src="../../Urlroot.js"></script>
+		<script >
 			function onBack(){
 				window.android.closeAndroidFirstPage(3);
 			};
-
-<!--消息中心 消息详情-->
-			function onClickMessageInfo(){
-				var fileUrl = "file:///android_asset/buluApp/templates/me/message.html";
-            	window.android.showAndroidNewFirstPage(fileUrl);
-			}
 		</script>
 	</body>
 

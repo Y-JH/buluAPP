@@ -10,16 +10,23 @@
 		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/contact.css"/>
 	</head>
-
+	<style>
+		.bc-center {
+		    padding-bottom: 0.6rem;
+		}
+		.main_headers img{
+			width: 100%;
+		}
+	</style>
 	<body>
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav headera">
-			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
 			<h1 class="mui-title">咘噜戏剧教育</h1>
-			<a href="#" class="share"> <img src="../../img/fenx.png" alt="" /></a>
+			<a onclick="shareWithSDK();" class="share"> <img src="../../img/fenx.png" alt="" /></a>
 		</header>
 		<div class="main_headers">
-			<img src="../../img/banner1.png"/>
+			<img src="../../img/jiaoshi1.png"/>
 		</div>
 		<div class="bc-center bc_center">
 			<h4 class="hsr">关于我们</h4>
@@ -58,6 +65,14 @@
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+
+			function onBack(){
+				window.android.closeAndroidSecondPage();
+			};
+			<!--点击分享-->
+			function shareWithSDK(){
+				window.android.shareWithSDK();
+			}
 		</script>
 	</body>
 

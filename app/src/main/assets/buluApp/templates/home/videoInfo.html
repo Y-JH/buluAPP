@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>精彩视频</title>
@@ -9,8 +8,6 @@
 		<link rel="stylesheet" href="../../css/mui.css" />
 		<link rel="stylesheet" href="../../css/base.css" />
 		<link rel="stylesheet" href="../../css/greatvideo.css" />
-		<link rel="stylesheet" href="../../css/voideInfo.css" />
-
 	</head>
 
 	<body id='pn'>
@@ -22,13 +19,15 @@
 		<div class="comment" style="margin-top:2.4rem;">
 			<div class="bc-center">
 				<!--1-->
-				<div class="jc-videos">
-					<div class="videos jcsp">
-						<div id="isPlay" class="stop"><img src="../../img/play.png" alt="" class="isplays" /></div>
-						<video class="video_show" id="video_show" controls poster="../../img/shijin.jpg">
-							<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4" type="video/mp4" />
-						</video>
-
+				<div class="jc-videos" id="moreVideo">
+					<!--<a href="../me/greatvideo.html"><div class="videos jcsp videoView">
+						<div class="videos jcsp videoView">
+							<div id="isPlay" class="stop"><img src="../../img/play.png" alt="" class="isplays" /></div>
+							<video class="video_show"  id="video_show" controls poster="../../img/shijin.jpg">
+								<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4" type="video/mp4" />
+							</video>
+						</div>
+					</a>
 					</div>
 					<p class="p-description">
 						几个月的排练没白费，今天舞台上的效果很不错，谢谢老师的细心教导。
@@ -41,20 +40,20 @@
 
 						<div class="userinfo-r">
 							<a href="#" class="zan"> <img src="../../img/aixin.png" alt="" /> <span>5</span> </a>
-							<a href="#" class="pinglun"> <img src="../../img/pingluin.png" alt="" /> <span>3</span> </a>
+							<a href="../me/greatvideo.html" class="pinglun"> <img src="../../img/pingluin.png" alt="" /> <span>3</span> </a>
 							<a href="#" class="share"> <img src="../../img/zhuanfa.png" alt="" /> <span>3</span> </a>
 						</div>
-					</div>
+					</div>-->
 				</div>
 
 			</div><!--bc-center-->
-			<div class="lines"></div>
+			<!--<div class="lines"></div>-->
 
 		</div>
 
 
-
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/app.js"></script>
 		<script src="../../js/zepto.min.js"></script>
 		<script src="../../js/video.js"></script>
 		<script type="text/javascript">
@@ -63,10 +62,12 @@
 
 			})
 
+
 			<!-- 看视频 返回 -->
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);
 			}
+
 		</script>
 	</body>
 

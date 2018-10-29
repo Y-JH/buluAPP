@@ -30,18 +30,18 @@
 	background:rgb(240,240,240);
 	margin: 0 !important;
 }
-.ss li{
-	width: 33.3% !important;
-	
+.tabs{
+	width: 50%;
+	margin: 1rem auto;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	height: 2rem;
 }
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-    color: #fff;
-    border-bottom: 2px solid #007aff;
-    background: 0 0;
-    background: rgb(255,139,54)!important;
-}
-.static-color{
-	color:rgb(102,102,102);
+.tabs li {
+	float: left;
+	list-style: none;
+	width: 50%;
+	text-align: center;
 }
 .bianjia{
 	position: relative;
@@ -96,10 +96,26 @@ body {
 #theadInp{
 	margin-left: 1rem;
 }
-.div {
+.div{
 	background-color: black;
 	border: 1px solid red;
 	width: 100px;
 	height: 100px;
 	display: none
+}
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+.lis{
+	color: rgb(255, 139, 54);
+}
+.tab-list li.tab-on a{
+	color: white !important;
+}
+.tab-list li.tab-on{
+	background: rgb(255,139,54) !important;
 }

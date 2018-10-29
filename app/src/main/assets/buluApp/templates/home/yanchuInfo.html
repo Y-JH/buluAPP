@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>演出列表</title>
@@ -20,6 +19,9 @@
 		.yanList-r p{
 			line-height: 1.6rem;
 		}
+		.yanList >.lines :{
+			margin-bottom:100px;
+		}
 	</style>
 	<body>
 		<header class="mui-bar mui-bar-nav">
@@ -28,6 +30,7 @@
 		</header>
 		<div class="yanLists"></div>
 		<div class="yanList" id="actMore">
+			
 			<!--<div class="bc-center clearfix">
 				<a href="#" class="yanList-l"> <img src="../../img/yanchu.png" alt="" /> </a>
 				<div class="yanList-r">
@@ -42,7 +45,7 @@
 					<p>剧场地址：<span class="dz">东城区交道口东大街85号</span></p>
 					<p class="clearfix ticketing">票务信息： 原价：
 						<span class="xx yuanjia">90元  180元 280元</span><br />
-					</p>
+					</p>	
 					
 				</div>
 			</div>
@@ -51,10 +54,10 @@
 		
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/app.js"></script>
 		<script src="../../rootUrl.js"></script>
 		<script type="text/javascript">
 			mui.init()
-
 			<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);

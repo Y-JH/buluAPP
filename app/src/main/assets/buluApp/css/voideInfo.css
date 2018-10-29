@@ -19,7 +19,8 @@ header{
 	position: relative;
 }
 .jcsp{
-	
+	width: 100%;
+	/*height: 12rem;*/
 }
 .videos img{
 	width: 100%;
@@ -27,7 +28,7 @@ header{
 }
 .p-description{
 	border-bottom:1px solid rgb(240,240,240);
-	margin:0.5rem 0 0.5rem 0;
+	margin:0rem 0 0.5rem 0;
 	line-height: 1.6rem;
 	padding-bottom: 0.4rem;
 }
@@ -49,12 +50,12 @@ header{
 .userinfo-r{
 	float: right;
 	vertical-align: middle;
-	width: 34%;
+/*	width: 34%;*/
 }
 .userinfo-r a{
 	display:inline-block;
 	vertical-align: middle;
-	width: 30%;
+	/*width: 30%;*/
 }
 .userinfo-r a span{
 	vertical-align: middle;
@@ -68,8 +69,13 @@ header{
 	width: 38%;
 }
 .videos .video_show{
-	width: 100%;
+	width: 100%;	
+	/*height: 12rem;*/
+	border-radius: 0.4rem;
 }
+/*.videoView{
+	height: 10rem;
+}*/
 #isPlay{
 	width: 11%;
 	/*height: 30px;*/
@@ -135,34 +141,7 @@ video::-webkit-media-controls {
 	display: none;
 	background: #fff;
 	margin: 0 auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
-=======
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
->>>>>>> 5258c458f70badd50452b86755d7241405469c2f
-=======
-=======
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
-=======
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
->>>>>>> 9431a1c279105c3b6d4479c6025272977e17ab9d
-<<<<<<< HEAD
->>>>>>> 060be0182d303342c8797b15e61d4deaf605a929
-=======
-=======
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
-=======
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
->>>>>>> 5258c458f70badd50452b86755d7241405469c2f
->>>>>>> ea6b7b4d45854a079789066b4fa9a07462d841cc
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
+}
 
 /*留言板*/
 .bc-center{
@@ -172,118 +151,14 @@ video::-webkit-media-controls {
 	position: absolute;
 	top: 21.3rem;
 	width: 100%;
-	
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
-=======
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 060be0182d303342c8797b15e61d4deaf605a929
-=======
->>>>>>> ea6b7b4d45854a079789066b4fa9a07462d841cc
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
-=======
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5258c458f70badd50452b86755d7241405469c2f
-=======
-=======
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
-=======
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
-=======
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
->>>>>>> 9431a1c279105c3b6d4479c6025272977e17ab9d
-<<<<<<< HEAD
->>>>>>> 060be0182d303342c8797b15e61d4deaf605a929
-=======
-=======
->>>>>>> 5258c458f70badd50452b86755d7241405469c2f
->>>>>>> ea6b7b4d45854a079789066b4fa9a07462d841cc
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
 }
 .textareas .pl-text{
 	padding: 0.5rem;
 	min-height: 6rem;
 	width: 85%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
 
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
-=======
-<<<<<<< HEAD
->>>>>>> 060be0182d303342c8797b15e61d4deaf605a929
-=======
-=======
->>>>>>> ea6b7b4d45854a079789066b4fa9a07462d841cc
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
-=======
-
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
-=======
-=======
-
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
->>>>>>> 9431a1c279105c3b6d4479c6025272977e17ab9d
-=======
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
-=======
-
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
-=======
-=======
-
->>>>>>> 00af5e1435b9f9ce3ed1af3bac52fa0f76ad7ba0
->>>>>>> 18eba5a27cbc9328ae2b290c0818ae0090670fd8
->>>>>>> 5258c458f70badd50452b86755d7241405469c2f
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 80bba16d2038c00fb470c2a2aff918433bde1ec9
->>>>>>> 5eff5a28dec9973b8eda773fdc5d921f51d2d371
->>>>>>> 9431a1c279105c3b6d4479c6025272977e17ab9d
->>>>>>> 060be0182d303342c8797b15e61d4deaf605a929
-=======
->>>>>>> ea6b7b4d45854a079789066b4fa9a07462d841cc
->>>>>>> 33e570a04492c4126a4100447dc8b0ef9171896c
 .textareas .pl-send{
 	display: inline-block;
 	font-size: 0.9rem;

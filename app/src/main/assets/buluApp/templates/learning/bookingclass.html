@@ -1,81 +1,96 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<title>课时预约</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!--标准mui.css-->
-	<link href="../../css/mui.min.css" rel="stylesheet" />
-	<!--App自定义的css-->
-	<link rel="stylesheet" type="text/css" href="../../css/base.css" />
-	<link rel="stylesheet" type="text/css" href="../../css/bookingclass.css" />
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>课时预约</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bookingclass.css" />
+	</head>
 
-<body>
-<div class="booking_header">
-	<header class="mui-bar mui-bar-nav">
-		<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
-		<h1 class="mui-title">课时预约</h1>
-	</header>
-	<div style="height: 1.5rem"></div>
-	<!--<div id="box">
+	<body>
+		<div class="booking_header">
+			<header class="mui-bar mui-bar-nav">
+				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+				<h1 class="mui-title">课时预约</h1>
+			</header>
+			<div style="height: 1.5rem"></div>
+			<!--<div id="box">
 
-    </div>-->
-	<div class="timetable">
-		<ul class="time-kc clearfix">
-			<li>日</li>
-			<li>一</li>
-			<li>二</li>
-			<li>三</li>
-			<li>四</li>
-			<li>五</li>
-			<li>六</li>
+			</div>-->
+			<div class="timetable">
+				<ul class="time-kc clearfix">
+					<li>日</li>
+					<li>一</li>
+					<li>二</li>
+					<li>三</li>
+					<li>四</li>
+					<li>五</li>
+					<li>六</li>
 
-		</ul>
-		<ul class="wcDate clearfix">
-			<!--<li>&lt;上周</li>-->
-			<li><span>周日</span></li>
-			<li><span>周一</span></li>
-			<li><span>周二</span></li>
-			<li><span>周三</span></li>
-			<li><span>周四</span></li>
-			<li><span>周五</span></li>
-			<li><span>周六</span></li>
-			<!--<li>下周&gt;</li>-->
-		</ul>
-	</div>
-</div>
-<div class="mui-content">
-	<div id="slider" style="background-color: #FFFFFF;" class="mui-slider">
-		<div style="width:100%; height: 2rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-			<div style="font-size: 0.8rem;width:100%;margin:0 auto;" class="mui-scroll mui_xxk" id="sliderSegmentedControl">
-				<!--课时大纲-->
+				</ul>
+				<ul class="wcDate clearfix">
+					<!--<li>&lt;上周</li>-->
+					<li><span>周日</span></li>
+					<li><span>周一</span></li>
+					<li><span>周二</span></li>
+					<li><span>周三</span></li>
+					<li><span>周四</span></li>
+					<li><span>周五</span></li>
+					<li><span>周六</span></li>
+					<!--<li>下周&gt;</li>-->
+				</ul>
 			</div>
 		</div>
-		<div class="lines"></div>
-		<div id="usera">
-			<!--content-->
-		</div>
-	</div>
-</div>
-	<script src="../../js/mui.min.js"></script>
-	<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../Urlroot.js"></script>
-	<script src="../../js/weekCalendar.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
+		<div class="mui-content">
+			<div id="slider" style="background-color: #FFFFFF;" class="mui-slider">
+				<div style="width:100%; height: 2rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll" id="sliderSegmentedControl">
+						<!--课时大纲-->
+							<div class="boxslider">
+								<div class="stars-con mui_xxk ">
+								
+								</div>
+							</div>
+
+					</div>
+				</div>
+				<div class="lines"></div>
+				<div id="usera">
+					<!--content-->
+				</div>
+			</div>
+			<script src="../../js/mui.min.js"></script>
+			<script src="../../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../../Urlroot.js"></script>
+			<script src="../../js/weekCalendar.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
 				mui.init()
 				mui('#sheet1').popover('toggle');
-
 				WeekCalendar();
 
-				<!-- 课时预约 返回 -->
-				function onBack(){
-					window.android.closeAndroidFirstPage(3);
-				};
+				function activeWidth() {
+					var muixxk = $('.mui_xxk>.slide')
+					//				获取子盒子的宽度
+					var stars = muixxk.width()
+					var starsLength = muixxk.length
+
+					//				获取自盒子的margin
+					var mar = parseInt(muixxk.css('margin-right'))
+					mar = mar * starsLength
+					//				
+					var starsWidth = starsLength * stars + mar + 8
+
+					$('.mui_xxk').width(starsWidth)
+				}
+				activeWidth()
 			</script>
-</body>
+	</body>
 
 </html>

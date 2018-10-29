@@ -9,6 +9,7 @@
 .ptn{
 	line-height: 1.4rem;
 	color: rgb(102,102,102);
+	word-wrap:break-word;
 }
 p{
 	margin-bottom: 0.5rem !important;

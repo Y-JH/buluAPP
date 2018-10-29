@@ -29,13 +29,16 @@
 }
 .subscribe{
 	position: absolute;
-	right: 1.2rem;
+	right: 0.8rem;
 	bottom:0.8rem;
 	color:#fff;
 	background: rgba(255, 130, 50, 0.9);
 	padding: 0.3rem 1.2rem;
 	border-radius:1.5rem;
 	font-size: 0.8rem;
+}
+.hui{
+	background: #bbb;
 }
 .aa{
 	background:none;

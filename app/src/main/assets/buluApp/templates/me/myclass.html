@@ -8,57 +8,92 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../../css/myclass.css" />
 	</head>
-
-	<body>
+	<style type="text/css">
+		.booking{
+			border-top: none !important;
+		}
+		.mui-table-view-cell {
+		    position: relative;
+		    overflow: hidden;
+		    padding: 1px 15px !important;
+		    -webkit-touch-callout: none;
+		}
+		.booking li{
+			margin-top: 0.8rem;
+		}
+		.booking li:nth-child(1){
+			margin-top: 0;
+		}
+		.booking li p:nth-child(5){
+			margin-bottom: 0.5rem;
+		}
+		.main_booking h4{
+			font-size: 1rem;
+		}
+		
+	</style>
+	<body class="body">
 		<header class="mui-bar mui-bar-nav" style="float: left;">
-			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
 			<h1 class="mui-title">我的课时</h1>
 		</header>
 		<div style="height: 1.8rem;"></div>
 		<div class="lines"></div>
 		<article class="main_max clearfix">
 			<div class="main_header mui-row">
-				<div class="header mui-col-sm-6 mui-col-xs-6">
+				<div class="header mui-col-sm-6 mui-col-xs-6 allClass">
 					总课时数80节
 				</div>
-				<div class="header mui-col-sm-6 mui-col-xs-6">
+				<div class="header mui-col-sm-6 mui-col-xs-6 consume">
 					消耗课时40节
 				</div>
 			</div>
-			<div style="width: 100%; height: 3rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="segmented">
-				<div class="tabs mui-scroll">
-					<a style="width: 50%; margin-left: 2rem; color: rgb(204,204,204);" class="mui-control-item static-color mui-active" href="#item1mobile" id="scribe">
-						消耗课时
-					</a>
-					<a style="width: 50%; margin-left: 2rem; color: rgb(204,204,204);" class="mui-control-item static-color" href="#item2mobile" id="subscribe">
-						预约课时
-					</a>
-				</div>
-				<ul class="mui-table-view booking" id="mycalss">
-					<!--
-                    	作者：offline
-                    	时间：2018-09-18
-                    	描述：选项卡点击内容
-                    -->
-				</ul>
-			</div>
+			<ul class="tab-list tabs clearfix" id="tab-list">
+                <li class="tab-on">
+                    <a style="color: rgb(204,204,204);" href="#" class='lis yy' data-type='2'>消耗课时</a>
+                    <img class="show yellow" src="../../img/yellow.png"/>
+                </li>
+                <li >
+                    <a style="color: rgb(204,204,204);" href="#" class="yy" data-type='3'>预约课时</a>
+                     <img class="hide" src="../../img/yellow.png"/>
+                </li>
+
+            </ul>
+             <div class="tab-con">
+             	<ul class="myxiao booking show">
+             		
+             	</ul>
+             	<ul class="myclass booking hide">
+             		
+             	</ul>
+             </div>
 			</div>
 		</article>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/app.js"></script>
+		<script src="../../js/myclass.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../Urlroot.js"></script>
-		<script type="text/javascript">
-			mui.init()
-			//获取时间和日期的相关代码
-			Date.prototype.toLocaleString = function() {
-				return this.getFullYear() + "-" + (this.getMonth() + 1) + "-" + this.getDate();
-			};
-			Date.prototype.toLocaleString1 = function() {
-				return this.getHours() + ":" + this.getSeconds() + "";
-			};	
+		<script>
+			var tab = {
+            $el: $(".body"),
+            init: function(){
+                var me = this;
+                var items = me.$el.find(".tab-list>li");
+                var oDiv = me.$el.find(".tab-con>ul");
+                $.each(items,function(i){
+                    items.eq(i).click(function(){
+                        $(oDiv).eq(i).show().siblings().hide()
+                        $(this).addClass('tab-on').siblings().removeClass('tab-on')
+                    })
 
-		<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
-			function onBack(){
+                })
+            },
+            
+        }
+        tab.init();
+
+        function onBack(){
 				window.android.closeAndroidFirstPage(3);
 			};
 		</script>

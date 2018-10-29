@@ -11,7 +11,7 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav headers">
-			<a href="myjob.html">取消</a>
+			<a onclick="onBack();">取消</a>
 			<a href="#">发表</a>
 		</header>
 		<div style="height: 1.8rem;"></div>
@@ -22,12 +22,12 @@
 				<div><img src="../../img/fengmian3.png"/></div>
 			    <div><img src="../../img/fengmian3.png"/></div>
 			    <div><img src="../../img/fengmian3.png"/></div>
-			    <div><img src="../../img/fengmian3.png"/></div>
-			    <div><img src="../../img/fengmian3.png"/></div>
-			    <div><img src="../../img/fengmian3.png"/></div>
-			    <div><img src="../../img/fengmian3.png"/></div>
-			    <div><img src="../../img/fengmian3.png"/></div>
-			    <a href="#" class="head-photos" onclick=""><div class="texts profile-photo"><img src="../../img/jiahao.png"/ class="photos"></div>
+			    <div></div>
+			    <div></div>
+			    <div></div>
+			    <div></div>
+			    <div></div>
+				<a href="#" class="head-photos" onclick=""><div class="texts profile-photo"><img src="../../img/jiahao.png" class="photos"></div></a>
 			</div>
 		</div>
 		<div class="masks">
@@ -43,6 +43,11 @@
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
 		<script src="../../js/ziliao.js"></script>
+		<script>
+			function onBack(){
+				window.android.closeAndroidFirstPage(3);
+			};
+		</script>
 	</body>
 
 </html>

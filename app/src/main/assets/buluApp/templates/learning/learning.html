@@ -7,9 +7,20 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../../css/learning.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<!--		<link rel="stylesheet" type="text/css" href="../../css/base.css" />-->
 	</head>
-
+	<style>
+		.learn-star span i{
+			display: inline-block;
+			width: 1rem;
+		}
+		.mui-table-view:after {
+		    background-color: transparent !important; 
+		}
+		.mui-table-view-cell:after {
+		    background-color: transparent !important;
+		}
+	</style>
 	<body>
 		<article class="bg clearfix">
 			<div class="bg-header clearfix">
@@ -22,17 +33,17 @@
 		</article>
 		<!--选项卡-->
 		<div style="width:100%; height: 5rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="segmented">
-			<div style="margin-top: 2.9rem;font-size: 0.9rem;" class="mui-scroll">
-				<a class="mui-control-item mui-active muixxk" href="#item1mobile">
+			<div style="margin: 2.9rem auto;font-size: 0.9rem; width: 100%;" class="mui-scroll">
+				<a class="mui-control-item muixxk">
 					我的课程
 				</a>
-				<a class="mui-control-item" href="#item2mobile">
+				<a class="mui-control-item shisheng">
 					师生互动
 				</a>
-				<a class="mui-control-item" href="#item3mobile">
+				<a class="mui-control-item workss">
 					我的作业
 				</a>
-				<a class="mui-control-item" href="#item4mobile">
+				<a class="mui-control-item ziliaoa">
 					课时资料
 				</a>
 			</div>
@@ -43,18 +54,26 @@
 				<ul id="mains" class="mui-table-view">
 					<!--课程名字-->
 					<div style="width:100%; height: 2rem;background: white;" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-						<div style="font-size: 0.8rem;" class="mui-scroll mui_xxk"  id="xxks">
-							
+						<div class="mui-scroll">
+							<!--课时大纲-->
+							<div class="boxslider">
+								<div class="mui_xxk" id="xxks">
+
+								</div>
+							</div>
 						</div>
+
 					</div>
-					<div id="kecheng"></div>
+					<div id="kecheng">
+
+					</div>
 				</ul>
 			</div>
 			<!--标题-->
 			<div id="item2mobile" class="mui-slider-item mui-control-content ">
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
-						内容2惹急了，吗那边v从vv你爸爸美女
+						暂未开通
 					</li>
 				</ul>
 			</div>
@@ -62,37 +81,8 @@
 			<div id="item3mobile" class="mui-slider-item mui-control-content ">
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
-						<div class="scrolls">
-							<ul class="mui-table-view booking">
-								<li class="mui-table-view-cell" style="line-height: 1.5rem;">
-									<div class="main_booking ">
-										<h4 class="her">声乐一班   声乐基础教学</h4>
-										<p>讲课老师: 李薇薇、李洋</p>
-										<p>教室: 教学楼302</p>
-										<p>学生: 王梓欣</p>
-										<p class="star">课堂表现:
-											<img src="../../img/redxing.png" />
-											<img src="../../img/redxing.png" />
-											<img src="../../img/redxing.png" />
-											<img src="../../img/redxing.png" />
-											<img src="../../img/heixing.png" />
-										</p>
-										<p style="color: rgb(153,153,153);">2018-06-18 14:30-16:30</p>
-									</div>
-								</li>
-								<li class="mui-table-view-cell parent_text">
-									<p>
-										<a class="fontsize" href="#">作业要求:</a> 巩固老师上课讲解的基础知识，练习所有乐器拍成视频上传</p>
-									<p>
-										<a class="fontsize" href="#">课时总结:</a> 少儿播音主持教学内容安排少儿播音安排少儿播音安排少儿播音安排少儿播音</p>
-									<p>
-										<a class="fontsize" href="#">教师留言:</a> 巩固老师上课讲解的基础知识，练习所有乐器拍成视频上传</p>
-								</li>
-							</ul>
-							<div class="profile-photo">
-								<div class="head-photos"><img src="../../img/camera.png" /></div>
-								上传作业
-							</div>
+						<div class="scrolls" id="work">
+							<!--我的作业-->
 						</div>
 					</li>
 				</ul>
@@ -101,7 +91,7 @@
 			<div id="item4mobile" class="mui-slider-item mui-control-content ">
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
-						内容4
+						暂未开通
 					</li>
 				</ul>
 			</div>
@@ -125,22 +115,9 @@
 		<script src="../../js/zepto.min.js"></script>
 		<script src="../../js/ziliao.js"></script>
 		<script src="../../js/learning.js"></script>
+		<script src="../../js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../Urlroot.js"></script>
-		<script type="text/javascript" >
 
-		<!--点击用户头像-->
-		function onClickUserAvatar(){
-		    var fileUrl = "file:///android_asset/buluApp/templates/me/mydetails.html";
-		     window.android.showAndroidHomeNewPage(fileUrl,3);
-		};
-
-		<!--点击课时预约按钮-->
-		function onClickClassAppoint(){
-			var fileUrl = "file:///android_asset/buluApp/templates/learning/bookingclass.html";
-		     window.android.showAndroidHomeNewPage(fileUrl,3);
-		}
-
-		</script>
 	</body>
 
 </html>

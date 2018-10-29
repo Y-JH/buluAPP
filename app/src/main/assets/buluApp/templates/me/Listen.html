@@ -19,7 +19,7 @@
 		<div class="mui1">
 			<div id="slider" style="background-color: #FFFFFF;" class="mui-slider">
 				<div class="mui-slider-group">
-					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active itema" style=" border: none;">
+					<div class="itema" style=" border: none;">
 						<div class="scroll1" id="oton">
 							
 						</div>
@@ -29,13 +29,12 @@
 		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/listen.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../Urlroot.js"></script>
-		<script type="text/javascript">
-		<!-- 从一级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
+		<script>
 			function onBack(){
-				window.android.closeAndroidFirstPage();
+				window.android.closeAndroidFirstPage(3);
 			};
-
 		</script>
 	</body>
 

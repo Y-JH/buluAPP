@@ -1,6 +1,29 @@
-var activeUrl = "http://192.168.0.215:8080/";
+//var activeUrl = "http://c.service.bulu.aikaoen.com/buluc/";
+var activeUrl="http://192.168.0.159:8080/";
 var codes = -1;
 var ids;
+zcid=sessionStorage.getItem('zcid') ; // c端注册用户id
+xyid= sessionStorage.getItem('xyid') ;// 学员id;
+console.log('注册用户id为'+zcid)
+console.log('学员id为'+xyid)
+
+function ycTips(text) {
+	//       	$(".tips-wrap").show()
+	if(timer) {
+		clearTimeout(timer);
+	}
+	if($(".tips-wrap")) {
+		$(".tips-wrap").remove();
+	}
+	var w = -parseInt(text.length * 14 / 2) + "px";
+	//          var p="<section class='tips-wrap'><p class='tips-boxs'>"+text+"</p></section>";
+	var p = "<div class='tips-wrap'><div class='tips-boxs'><p>提示</p><p class='tipss'>" + text + "</p><a href='#' class='isee'>我知道了</a></div></div>";
+	$("body").append(p);
+
+	var timer = setTimeout(function() {
+		$(".tips-wrap").remove();
+	}, 2000)
+}
 
 function getValue() {
 	var str = decodeURIComponent(window.location.search),
@@ -44,12 +67,12 @@ $(function() {
 			}
 			$('.huoqu').text(this.time + 's后重发');
 
-		}, 1000)
+		}, 1500)
 		$('.huoqu').attr("disabled", true)
 		var oldPhone = $('.tellphone').val();
 		$.ajax({
 			type: "get",
-			url: activeUrl + "/user/SendVerificationCode",
+			url: activeUrl + "/user/SendVerificationCode", 
 			data: {
 				oldPhone: oldPhone
 			},
@@ -61,15 +84,14 @@ $(function() {
 				console.log(codes)
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
-				alert("请求失败！");
+				mui.alert('服务器开小差了 请稍后重试');
 			}
 		});
 	}
-
+	
 	//			点击注册
 
-	function submits() {
-	registerSuccessToHomePage();//这是我的注册成功的跳转
+	$('#registers').click(function(){
 		var $name = $('.stud-name').val();
 		var $accountNumber = $('.zhanghao').val();
 		var $password = $('.passwords').val();
@@ -103,7 +125,7 @@ $(function() {
 					return false;
 				}
 				if(!/^([a-zA-Z]*\d+[a-zA-Z]+)|(\d*[a-zA-Z]+\d+)$/.test($accountNumber)) {
-					ycTips('账号必须包含英文和数字哦', '确定')
+					ycTips('账号必须包含英文和数字  不能有空格', '确定')
 					return false;
 				}
 				if(!$password) {
@@ -130,7 +152,7 @@ $(function() {
 					return false;
 				}
 
-				if(!/^1[3,5,7,8]\d{9}$/.test($tel)) {
+				if(!/^1[3,5,6,4,7,8]\d{9}$/.test($tel)) {
 					ycTips('请输入正确的手机号', '确定')
 					return false;
 				}
@@ -154,16 +176,17 @@ $(function() {
 				ycTips(msg, '确定')
 
 				if(data.code == 10000) {
-				registerSuccessToHomePage();//这是我的注册成功的跳转
-//					window.location.href = "information.html?userName=" + $name + "&accountNumber=" + $accountNumber + "&passwd=" + $password + "&patriarch" + $patriarch + "&tel" + $tel + '&id=' + ids;
+					window.location.href = "information.html?userName=" + $name + "&accountNumber=" + $accountNumber + "&passwd=" + $password + "&patriarch" + $patriarch + "&tel" + $tel + '&id=' + ids;
 				}
 
 			},
 
 		})
-	}
+	 
+	})//	点击注册结束
 
-	// 			学号绑定
+
+	// 学号绑定
 	function binding() {
 		var xhName = $('.xh-name').val();
 		var xhTell = $('.xh-tell').val();
@@ -191,8 +214,8 @@ $(function() {
 		}
 
 	}
-
-	var lists = $('#reg').children()
+ 	
+	var lists = $('.reg').children()
 	console.log(lists)
 	//遍历所有状态消息
 	for(var i = 0; i < lists.length; i++) {
@@ -209,24 +232,29 @@ $(function() {
 				case "huoqu":
 					yzm()
 					break;
-				case "logins":
-					submits()
+				case 'forgetPass':
+					yzm()
 					break;
 				case 'binding':
 					binding()
 			}
 		}
 	}
+	$('.forgetPass').click(function(){
+		yzm()
+	})
 
 	//			修改信息 出生日期和性别
 	//          var id = getValue()['id'] || ''; 
 	//          console.log(id)
 	$('.finish').click(function() {
 		var sex = $('#selected').find('option:selected').val()
+		console.log(sex)
 		var years = $('.birthday').find('option:selected').val()
 		var month = $('.birthday1').find('option:selected').val()
 		var month = month < 10 ? '0' + month : month;
 		var day = $('.birthday2').find('option:selected').val()
+//		console.log(day )
 		var day = day < 10 ? '0' + day : day;
 		var birthDate = (years + '/' + month + '/' + day)
 		//				console.log(birthday)
@@ -253,74 +281,168 @@ $(function() {
 		})
 	})
 
-	//          登录
-	//			user/LoginUser?accountNumber=jh123456&password=123456
-	$('.logins').click(function() {
-	onClickLogin();//这个是我的登录方法
-//	alert(1)
+	// 登录
+	// user/LoginUser?accountNumber=jh123456&password=123456
+	$('#login').click(function() {
+
 		var accountNumbers = $('.tells').val()
 		var passwd = $('.password').val()
 		var tel = $('.tells').val()
-		var s = accountNumbers
-		//				var re = new RegExp("^[a-zA-Z0-9]+$"); 
-		var reg = /^[0-9]+.?[0-9]*$/;
-		if(reg.test(s)) {
-//			alert('手机号登录')
-			//
-			$.ajax({
+		localStorage.setItem('hello',"world hello") 
+		
+		$.ajax({
 				type: 'post',
-				url: activeUrl + 'user/LoginUser',
+				url: activeUrl + 'user/LoginNew',
 				//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
 				data: {
-					tel: accountNumbers, //账号登录
+					accountNumber: accountNumbers, 
 					passwd: passwd
 				},
-
 				dataType: 'json',
 
 				success: function(data) {
+					console.log(data)		
 					var msg = data.msg
-
-//					alert(999999999)
-					console.log(data.msg)
+					ycTips(msg)
 					if(data.code == 10000) {
-					    onClickLogin();//这个是我的登录方法
-//					window.location.href ='../home/home.html';
-					}else {
-					    alert("请输入正确的手机号");
-					}
+						ycTips('登录成功')
+						var zcid=data.data.cid
+						var xyid=data.data.xyid
+						localStorage.setItem('zcid',zcid) 	 // 存入一个值
+						localStorage.setItem('xyid',xyid) 
 
+						window.location.href ='../home/home.html';
+						console.log(zcid)
+						var xyid=data.data.xyid
+						localStorage.setItem('zcid',zcid) 
+						localStorage.setItem('xyid',xyid)
+
+						onClickLogin();//这个是我的登录方法
+					}
+					
 				}
 
 			})
-		} else {
-//			alert('账号')
-			$.ajax({
-				type: 'post',
-				url: activeUrl + 'user/LoginUser',
-				//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
-				data: {
-					accountNumber: accountNumbers, //账号登录
-					passwd: passwd
-				},
-				dataType: 'json',
+		
 
-				success: function(data) {
-					//                  	var accountNumbers=$('.tells').val()
+		//				var re = new RegExp("^[a-zA-Z0-9]+$"); 
+//		var reg = /^[0-9]+.?[0-9]*$/;
+//		if(reg.test(s)) {
+//			ycTips('手机号登录')
+//			//						
+//			$.ajax({
+//				type: 'post',
+//				url: activeUrl + 'user/LoginNew',
+//				//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+//				data: {
+//					tel: accountNumbers, //账号登录
+//					passwd: passwd
+//				},
+//
+//				dataType: 'json',
+//
+//				success: function(data) {
+//					var msg = data.msg
+//					ycTips(msg)
+//					console.log(data.msg)
+//					if(data.code == 10000) {
+//						//					window.location.href ='../home/home.html';
+//					}
+//
+//				}
+//
+//			})
+//		} else {
 
-					//                  	console.log(data)
-					console.log(data.msg)
-					if(data.code == 10000) {
-						alert('登录成功')
-					}
-
-				}
-
-			})
-		}
+			
+//		}
 
 	})
-
+//	zcid=sessionStorage.getItem('zcid') ; // c端注册用户id
+//	xyid= sessionStorage.getItem('xyid') ;// 学员id;
+	
+	zcid=localStorage.getItem('zcid')
+	xyid=localStorage.getItem('xyid')
+	console.log('注册用户id为' +zcid)
+	console.log('学员id为' +xyid)
 	// 		})
+	
+//	忘记密码 forget.html
+	$('#forgets').click(function(){
+		
+		var $tel=$('.tells').val();
+		var $code=$('.yzm').val();
+		if(!$tel) {
+			ycTips('手机号不能为空', "确定")
+			return false;
+		}
+		if(!/^1[3,5,7,8]\d{9}$/.test($tel)) {
+			ycTips('请输入正确的手机号', '确定')
+			return false;
+		}
+		if(!$code) {
+			ycTips('验证码不能为空', '确定')
+			return false;
+		}01
+
+		if($code != codes) {
+			ycTips('验证码输入不正确', '确定')
+			return false;
+		}
+		
+		window.location.href = "forgetPass.html?tel=" + $tel ;
+	})
+	
+
+//	忘记密码 forgetPass.html
+	
+	var  tel = getValue()['tel'] ||'';
+	
+	console.log(tel)
+	$('#forget').click(function(){
+		var  $passwords=$('.tellphone').val()
+		var  $zcPassword=$('.password').val()
+		$.ajax({
+				type: 'post',
+				url: activeUrl + 'user/forgotPwd',
+				//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+				data: {
+					'tel': tel, 
+					'passwd': $zcPassword
+				},
+				dataType: 'json',
+				beforeSend: function() {
+				
+					if(!$passwords) {
+						ycTips('密码不能为空', "确定");
+						return false;
+					}
+					//判断密码输入的长度是否为6~11之间
+					if($passwords.length < 6 || $passwords.length > 11) {
+						ycTips('请输入6-13位的密码', "确定")
+						return false;
+					}
+	
+					//                        判断密码和确认密码是否一致
+					if($passwords != $zcPassword) {
+						ycTips('两次密码不一致', "确定")
+						return false;
+					}
+				
+
+			},
+				success: function(data) {
+					//console.log(data)
+					var msg = data.msg
+					ycTips(msg)
+					if(data.code == 10000) {
+						ycTips('修改成功')
+					 window.location.href ='../login/login.html';
+					}
+					
+				}
+
+			})
+	})
 
 })

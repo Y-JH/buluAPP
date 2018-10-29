@@ -1,0 +1,73 @@
+html部分
+-----------------------
+<div class="masks">
+					<div class="mask"></div>
+					<ul class="mask-a">
+						<li><a href="#" class="photo-btn">拍照</a></li>
+						<li><a href="#" class="album-btn">从相册中选择</a></li>
+						<li><a href="#" class="cancel">取消</a></li>
+					</ul>
+				</div>
+
+css部分
+---------------------------------------------
+/*遮罩*/
+.masks{
+	display: NONE;
+}
+.mask{
+	width: 100%;
+	height: 100vh;
+	background:#d6d4d4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:100;
+	opacity: 0.3;
+}
+.mask-a{
+	position: absolute;
+	bottom: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 3rem;
+	background:white;
+	
+	z-index: 10100;
+}
+.mask-a li{
+	width: 100% !important;
+}
+.mask-a li a{
+	color:rgb(102,102,102)!important;
+}
+.mask-a li:last-child{
+	border-top: 0.3rem solid rgb(240,240,240);
+}
+---------------------------------------------------
+js部分
+点击你要点的盒子让这个选择的东西出来 
+mui('.album-btn')[0].addEventListener('tap',function(){
+	$('.masks').show()
+}
+
+点击取消让选择的东西消失
+mui('.album-btn')[0].addEventListener('tap',function(){
+	$('.masks').show()
+}
+	//点击从相册中选择更换头像  
+	mui('.album-btn')[0].addEventListener('tap',function(){
+		plus.gallery.pick(function(url){
+			var path=plus.io.convertLocalFileSystemURL(url);
+			mui('.photos')[0].src="file://" +path
+			plus.storage.setItem('src',"file://" + plus.io.convertLocalFileSystemURL(url))
+			$('.masks').hide()
+			
+		}, {filter:"image"})
+
+	})
+	
+})
+
+					

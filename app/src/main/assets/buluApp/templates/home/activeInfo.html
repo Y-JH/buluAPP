@@ -46,6 +46,8 @@
 		.bc-center{
 			width: 95% !important;
 		}
+		
+		
 	</style>
 	<body>
 		<header class="mui-bar mui-bar-nav">
@@ -55,8 +57,8 @@
 		</header>
 		<article class="actives" id="actives">
 			<div class="bc-center" class="active-list" id="activeList" style="width: 95%;">
-				<!--<div class="clearfix">
-					<img src="../../img/news.png" alt="" class="active-img"/>
+				<!--<div class="clearfix" class='activebox'>
+					<p class="active-imgs"><img src="../../img/news.png" alt="" /></p>
 					<div class="yanList-r clearfix">
 						<p class="new-tit">《咘噜戏剧教育之深海奇遇记》</p>
 						<p>演出时间：<span class="yanchu-time">2018-8-24</span>
@@ -79,23 +81,22 @@
 				<a href="#" class="ticket">购票</a>
 			</div>
 			<div class="lines"></div>	
-			<div class="active-main bc-center">
-				<p class="plot"><img src="../../img/shu.png" alt="" /> <span>剧情介绍</span></p>
+			<div class="active-main bc-center jqjs" >
+				<p class="plot" style="margin-bottom: 0.5rem;"><img src="../../img/shu.png" alt="" /> <span>剧情介绍</span></p>
+				<!--<p class="plot"><img src="../../img/shu.png" alt="" /> <span>剧情介绍</span></p>
 				<p class="act-txt">桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动桃桃和爸爸在海边度假的时候遇到了咘噜咘噜，因为岛屿的剧烈晃动</p>
-				<img src="../../img/news.png"/>
-				<p class="act-txt">在魔法洞中，桃桃和咘噜遇到了很多认识鱼的小伙伴，并且发生了一下搞笑的事情，并通过机械大家的力量</p>
-				<img src="../../img/news.png"/>
-				<p class="act-txt">在魔法洞中，桃桃和咘噜遇到了很多认识鱼的小伙伴，并且发生了一下搞笑的事情，并通过机械大家的力量</p>
+				<img src="../../img/news.png"/>-->
+				
 			</div>
 		</article>
 		
 	
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/app.js"></script>
 		<script src="../../js/zepto.min.js"></script>
-		<script src="../../rootUrl.js"></script>
+		<script src="../../js/activeInfo.js"></script>
 		<script type="text/javascript">
 			mui.init()
-
 
 			<!--从二级页面跳转进来 点击当前页面的头部按钮，返回上一个activity-->
 			function onBack(){

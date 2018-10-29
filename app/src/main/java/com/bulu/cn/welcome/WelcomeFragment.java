@@ -35,10 +35,10 @@ import me.yokeyword.fragmentation.SupportFragment;
 public class WelcomeFragment extends SupportFragment {
 
     private final String TAG = "WelcomeFragment";
-//    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_2,
-//            R.drawable.wel_3, R.drawable.wel_4};
+    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_2,
+            R.drawable.wel_3, R.drawable.wel_4};
 
-    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_4};
+//    private static final int[] resource = new int[]{R.drawable.wel_1, R.drawable.wel_4};
 
     public static WelcomeFragment newInstance() {
         Bundle args = new Bundle();
@@ -86,7 +86,7 @@ public class WelcomeFragment extends SupportFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        EventBusActivityScope.getDefault(getActivity()).register(this);
         startWelcome();
     }
 
@@ -203,5 +203,9 @@ public class WelcomeFragment extends SupportFragment {
         }
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBusActivityScope.getDefault(getActivity()).unregister(this);
+    }
 }

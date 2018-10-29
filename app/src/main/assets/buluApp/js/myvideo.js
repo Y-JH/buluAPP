@@ -11,7 +11,7 @@ $(function() {
 			$("#theadInp").prop("checked", false);
 		}
 	})
-})
+
 $('.inpt, .quanxuan').hide()
 $("#bian").click(function(e) {
 
@@ -25,7 +25,6 @@ $("#bian").click(function(e) {
 		$('.inpt').hide()
 	}
 });
-$()
 $('.delete').click(function(){
 	
 	if( $('.inpt').is(':checked')) {
@@ -33,4 +32,66 @@ $('.delete').click(function(){
     	$(that).parent().remove();
     	
 	}
+})
+	function activeVideo(videoType,startPages,endPage){
+		$.ajax({
+				type: "post",
+				url: activeUrl + "/mine/VideoList",
+				data: {
+					"cid": zcid,
+					"xyid": xyid,
+					"type": videoType,
+					"startPage": startPages,
+					"endPage":endPage
+				},
+				async: false,
+				dataType: "json",
+				success: function(data) {
+					if(videoType == 0) {
+						$('.myfabu').html('')
+						for(var i = 0; i < data.data.length; i++) {
+							var stq = ''
+							stq += `
+							<li class="mui-table-view-cell mui-media jcsps" style='width:33.3%; height:7rem;'>
+								<a href='greatvideo.html?videoId=${data.data[i].id}' class="a">
+									<img src="${imgSrc}${data.data[i].videoimg}" alt="" />
+								</a>
+								
+								<p class="clearfix" class="p"><img src="../../img/love.png" alt=""  class="img"/> <span class="z-num love-num">${data.data[i].like_number}</span></p>
+							</li>
+							`
+							$('.myfabu').append(stq)
+	
+						}
+					} else {
+						$('.mylike').html('')
+						for(var i = 0; i < data.data.length; i++) {
+							var stp = ''
+							stp += `<li class="mui-table-view-cell mui-media jcsps" style='width:33.3%; height:7rem;'>
+								<a href='greatvideo.html?videoId=${data.data[i].id}' class="a">
+									<img src="${imgSrc}${data.data[i].videoimg}" alt="" />
+								</a>
+								
+								<p class="clearfix" class="p"><img src="../../img/love.png" alt=""  class="img"/> <span class="z-num love-num">${data.data[i].like_number}</span></p>
+							</li>`
+							$('.mylike').append(stp)
+						}
+						
+					}
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+					alert("服务器开小差了 请稍后重试！");
+				}
+			});
+		
+	}
+	activeVideo(0,0,10)
+	
+
+//	myVideo.html 我的视频 
+	$('.hh').click(function() {
+		var types = $(this).attr('data_type')
+		activeVideo(types,0,10)
+	})
+
 })

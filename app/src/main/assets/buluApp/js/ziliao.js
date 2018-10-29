@@ -20,7 +20,6 @@ mui.plusReady(function() {
 			plus.storage.setItem("src", "file://" + plus.io.convertLocalFileSystemURL(path));
 			$('.masks').hide()
 		});
-
 	})
 
 

@@ -14,7 +14,7 @@
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav">
 			<!--<a  href="javascript:history.back(-1)" class=" mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>-->
-			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" href="javascript:history.back(-1)"></a>
+			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
 			<h1 class="mui-title">切换账号</h1>
 		</header>
 		
@@ -53,6 +53,9 @@
 //		            var imagePath = e.detail.imagePath;
 //		        });
 //			})
+			function onBack(){
+				window.android.closeAndroidSecondPage();
+			};
 		</script>
 	</body>
 

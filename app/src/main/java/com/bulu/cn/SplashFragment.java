@@ -1,7 +1,6 @@
 package com.bulu.cn;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +9,6 @@ import android.view.ViewGroup;
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.TabStatusEvent;
 import com.bulu.cn.fragment.login.LoginFragment;
-import com.bulu.cn.tool.SharedPreferencesHelper;
-import com.bulu.cn.tool.StringUtils;
-import com.bulu.cn.welcome.WelcomeFragment;
 
 import me.yokeyword.eventbusactivityscope.EventBusActivityScope;
 import me.yokeyword.fragmentation.SupportFragment;
@@ -44,8 +40,9 @@ public class SplashFragment extends SupportFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-        new Handler().postDelayed(new Runnable() {
+//用户没有登陆，需要进入到登录页面
+        startBrotherFragment(LoginFragment.newInstance());
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 EventBusActivityScope.getDefault(_mActivity).post(new TabStatusEvent(ConsActions.I_TAB_PAGE_HOME));
@@ -69,7 +66,7 @@ public class SplashFragment extends SupportFragment {
                 }
 
             }
-        }, 1500);
+        }, 800);*/
     }
 
 

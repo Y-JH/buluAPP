@@ -18,20 +18,20 @@
 		<div class="lines"></div>
 		<!--消息详情-->
 		<div class="message clearfix">
-			<p style="font-size: 1rem; color: rgb(102,102,102);">上课提醒</p>
-			<p style="font-size: 0.9rem;">2018-07-30 14:25 学校通知</p>
+			<p style="font-size: 1rem; color: rgb(102,102,102);" class="type"></p>
+			<p style="font-size: 0.9rem;" class="date"></p>
 			<p style="font-size: 1rem; color: rgb(102,102,102);">消息内容:</p>
-			<p class="ptn">如果你无法间接的表达你的想法，那只说明你还不够了解它阿尔伯特·爱因斯坦
-				如果你无法间接的表达你的想法，那只说明你还不够了解它</p>
+			<p class="ptn content"></p>
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/message.js"></script>
+		<script src="../../Urlroot.js"></script>
 		<script type="text/javascript">
 			mui.init()
-
-			<!--点击返回按钮 返回-->
 			function onBack(){
-				window.android.closeAndroidSecondPage();
-			}
+				window.android.closeAndroidFirstPage(0);
+			};
 		</script>
 	</body>
 

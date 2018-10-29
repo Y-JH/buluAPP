@@ -20,21 +20,22 @@
 		<div class="lines"></div>
 		<ul class="replace-tell">
 			<li class="new-phone clearfix">
-				<span>密码：</span>
-				<input type="text" placeholder="请输入旧密码" maxlength="11" />
+				<span>旧密码：</span>
+				<input type="text" placeholder="请输入旧密码" maxlength="11" class="oldpass"/>
 			</li>
 			<li class="new-phone clearfix">
 				<span>新密码：</span>
-				<input type="text" placeholder="密码由6-10位英文字母、数字组成" maxlength="10" style="width: 80%;"/>
+				<input type="text" placeholder="密码由6-10位英文字母、数字组成" maxlength="10" style="width: 80%;" class="newpass"/>
 			</li>
 		</ul>
 
-		<a href="#" class="adds" style="margin-top: 1.2rem;">确认修改</a>
+		<a href="#" class="adds" id="change" style="margin-top: 1.2rem;">确认修改</a>
 
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
+		<script src="../../js/app.js"></script>
+		<script src="../../js/changePass.js"></script>
 		<script type="text/javascript">
-		<!-- 修改密码 返回 -->
 			function onBack(){
 				window.android.closeAndroidSecondPage();
 			};

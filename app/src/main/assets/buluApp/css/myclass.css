@@ -1,81 +1,123 @@
 * {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
-.main_max{
+
+.main_max {
 	width: 100%;
 }
-.main_header{
+.butn{
+	width: 4.5rem;
+	padding: 0 0;
+	text-align: center;
+	line-height: 1.5rem;
+}
+.main_header {
 	width: 100%;
 	height: 3rem;
 	background: white;
 	border-bottom: #E6E6E6 solid 2px;
 }
-.header{
+
+.header {
 	text-align: center;
 	line-height: 3rem;
 	height: 3rem;
 	font-size: 1rem;
 }
-.tabs{
+
+.tabs {
 	font-size: 1rem;
 	height: 3rem;
 	line-height: 3rem;
 	width: 100%;
 }
-.main_font{
-	width: 90%;
+
+.tabs li {
+	float: left;
+	list-style: none;
+	width: 50%;
+	text-align: center;
+}
+.main_font {
+	width: 100%;
 	height: 15rem;
 	margin: 0 auto;
 	background-image: url(../img/daoke.png);
 	background-repeat: no-repeat;
-	background-position: right 3rem top 2rem ;
+	background-position: right 3rem top 2rem;
 	background-color: #E6E6E6;
 	background-size: 4rem 4rem;
-	text-indent: 1em; 
+	text-indent: 1em;
 	border-radius: 0.5rem;
 }
-.main_booking{
+
+.main_booking {
 	width: 100%;
-	height: 7.5rem;
 	margin: 0 auto;
 	position: relative;
 }
-.booking{
+
+.booking {
 	width: 90%;
-	margin: 3rem auto;
+	margin-top: 1rem auto;
+	border-top: 1px solid rgb(204,204,204);
+	margin: 0 auto;
 }
-.star img{
+.star img {
 	width: 1rem;
 	height: 1rem;
 }
-.btn{
+
+.btn {
 	position: absolute;
 	right: -0.5rem;
-	bottom: 0.5rem;
+	bottom: 0.3rem;
 	overflow: hidden;
-	
 }
-.btn button{
+
+.btn button {
 	border-radius: 1rem;
 }
+
+
 /*公用样视*/
-.lines{
+
+.lines {
 	width: 100%;
 	height: 1rem;
-	background:rgb(240,240,240);
-	margin:1rem 0 0.8rem 0 ;
+	background: rgb(240, 240, 240);
+	margin: 1rem 0 0.8rem 0;
 }
+
+
 /*选项卡变换颜色*/
-.static-color{
-	color:rgb(102,102,102);
+
+.hide {
+	display: none;
 }
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-    color: rgb(255,139,54) !important;
+
+.show {
+	display: block;
 }
-.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
-	border-bottom: 1px solid rgb(255,139,54) !important;
+.lis{
+	color: rgb(255, 139, 54);
 }
-.mui-slider-indicator{
-	text-align: left !important;
+.yellow{
+	position: absolute;
+	top:10rem;
+	right: 18%;
+	width: 3rem;
+}
+.tab-list li.tab-on li{
+	position: relative;
+}
+.tab-list li.tab-on a{
+	color: rgb(255,139,54) !important;
+}
+.tab-list li.tab-on img{
+	position: absolute;
+	top:10rem;
+	left: 18%;
+	width: 3rem;
 }

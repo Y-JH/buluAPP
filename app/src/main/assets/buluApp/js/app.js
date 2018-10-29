@@ -3,25 +3,83 @@
  * 当您要参考这个演示程序进行相关 app 的开发时，
  * 请注意将相关方法调整成 “基于服务端Service” 的实现。
  **/
-function getValue(){
-  var str = decodeURIComponent( window.location.search ),
-    obj = {},
-    item = [];
-  if(str && ~str.indexOf('?')){ str = str.slice(1) }  
-  if(str !=null && str !=""){
-    if(str.indexOf("&") != -1){
-      item = str.split("&");
-      for(var i=0;i<item.length;i++){
-        var itemValue = item[i].split("=");
-        obj[itemValue[0]]=itemValue[1];
-      }
-    }else{
-      item = str.split("=");
-      obj[item[0]]=item[1];
-    }
-    return obj;
-  }
+function getValue() {
+	var str = decodeURIComponent(window.location.search),
+		obj = {},
+		item = [];
+	if(str && ~str.indexOf('?')) {
+		str = str.slice(1)
+	}
+	if(str != null && str != "") {
+		if(str.indexOf("&") != -1) {
+			item = str.split("&");
+			for(var i = 0; i < item.length; i++) {
+				var itemValue = item[i].split("=");
+				obj[itemValue[0]] = itemValue[1];
+			}
+		} else {
+			item = str.split("=");
+			obj[item[0]] = item[1];
+		}
+		return obj;
+	}
 }
+   function ycTips(text){
+//       	$(".tips-wrap").show()
+            if(timer){clearTimeout(timer);}
+            if($(".tips-wrap")){$(".tips-wrap").remove();}
+            var w = - parseInt(text.length*14/2)+"px";
+//          var p="<section class='tips-wrap'><p class='tips-boxs'>"+text+"</p></section>";
+            var p="<div class='tips-wrap'><div class='tips-boxs'><p>提示</p><p class='tipss'>"+text+"</p><a href='#' class='isee'>我知道了</a></div></div>";
+            $("body").append(p);
+          
+            var timer = setTimeout(function(){
+                $(".tips-wrap").remove();
+            },2000)
+        }
+//var activeUrl = "http://c.service.bulu.aikaoen.com/buluc";
+//var activeZq = "http://c.service.bulu.aikaoen.com/buluc/";
+var imgSrc = "http://file.bulu.aikaoen.com/";
+var activeUrl = "http://192.168.0.159:8080";
+//var activeUrl = "http://c.service.bulu.aikaoen.com";
+
+//zcid=localStorage.getItem('zcid')
+//xyid=localStorage.getItem('xyid')
+//console.log('注册用户id为' +zcid)
+//console.log('学员id为' +xyid)
+// 删除节点
+function remodeNode(node) {
+	node.parentNode.removeChild(node);
+}
+
+function getScrollTop() {
+	var scrollTop = 0;
+	if(document.documentElement && document.documentElement.scrollTop) {
+		scrollTop = document.documentElement.scrollTop;
+	} else if(document.body) {
+		scrollTop = document.body.scrollTop;
+	}
+	return scrollTop;
+}
+
+//获取当前可视范围的高度
+function getClientHeight() {
+	var clientHeight = 0;
+	if(document.body.clientHeight && document.documentElement.clientHeight) {
+		clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+	} else {
+		clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+	}
+	return clientHeight;
+}
+
+//获取文档完整的高度
+function getScrollHeight() {
+	return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+}
+//var activeUrl="http://c.service.bulu.aikaoen.com/buluc";
+//var activeZq="http://c.service.bulu.aikaoen.com/buluc/";
+//var imgSrc="http://file.bulu.aikaoen.com/";
 (function($, owner) {
 	/**
 	 * 用户登录

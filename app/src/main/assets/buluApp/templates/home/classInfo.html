@@ -1,6 +1,5 @@
 <!doctype html>
-<html >
-
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title>试听教育课</title>
@@ -11,7 +10,14 @@
 		<link rel="stylesheet" href="../../css/base.css" />
 		<link rel="stylesheet" href="../../css/voideInfo.css" />
 	</head>
-
+	<style type="text/css">
+		
+		/*.bc-center {
+		    width: 94%;
+		    margin: 0 auto;
+		}
+		*/
+	</style>
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a  class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack();"></a>
@@ -26,11 +32,11 @@
 		</div>
 		<div class="lines"></div>
 
-		<div class="bc-center b-xgkc jc-videos jc-class-info">
-			<!--<p class="xgkc">
-				<img src="../../img/shu.png" alt="" class="xgkc-img" /> 相关试听课程
+		<div class="bc-center b-xgkc jc-videos kc">
+			<p class="xgkc">
+				<i><img src="../../img/shu.png" alt="" class="xgkc-img" /></i><span>相关试听课程</span>
 			</p>
-			<p>课程：<span class="stk">戏剧试听课</span></p>
+			<!--<p>课程：<span class="stk">戏剧试听课</span></p>
 			<p>教师：<span class="teachers">王老师</span></p>
 			<p>地址：<span class="address">北京市海淀区xx大厦xx号302室</span></p>
 			<p>
@@ -47,11 +53,11 @@
 				<span>相关上课实景</span>
 			</p>
 
-			<div class="videos jcsp" style="margin-top: 0.3rem;">
-					<div id="isPlay" class="stop"><img src="../../img/play.png" alt=""  class="isplays"/></div>
+			<div class="videos jcsp sksj" style="margin-top: 0.3rem;">
+					<!--<div id="isPlay" class="stop"><img src="../../img/play.png" alt=""  class="isplays"/></div>
 					<video class="video_show" id="video_show" controls  poster="../../img/shijin.jpg">
 						<source src="http://fairee.vicp.net:83/2016rm/0116/baishi160116.mp4"  type="video/mp4" />
-					</video>
+					</video>-->
 					<!--<img src="../../img/shijin.jpg" alt="" />-->
 				</div>
 		</div>
@@ -62,15 +68,15 @@
 			<div class="white">
 				<p>信息填写</p>
 				<p class="input-mass">
-					<span>姓名:</span><input type="text" />
+					<span>姓名:</span><input type="text" class="names"/>
 				</p>
 				<p class="input-mass" >
-					<span>电话:</span><input type="text"/>
+					<span>电话:</span><input type="number" class="tells"  oninput=" value=value.replace(/[^\d]/g,'')"/>
 				</p>
 				
 				<div class="cencle-box">
-					<a href="#">取消</a>
-					<a href="#">确认</a>
+					<a href="#" class="cancels">取消</a>
+					<a href="#" class="affirm">确认</a>
 				</div>
 			</div>
 		</div>
@@ -89,9 +95,8 @@
 		
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/zepto.min.js"></script>
-		<script src="../../js/video.js"></script>
 		<script src="../../js/app.js"></script>
-		<script src="../../rootUrl.js"></script>
+		<script src="../../js/classInfo.js"></script>
 		<script>
 			var classInfoId = getValue()['id'] || '';
 

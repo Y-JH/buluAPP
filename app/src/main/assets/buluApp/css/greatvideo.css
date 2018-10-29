@@ -21,13 +21,14 @@
 }
 .p-description{
 	border-bottom:1px solid rgb(240,240,240);
-	margin:0.5rem 0 0.5rem 0;
+	/*margin:0.5rem 0 0.5rem 0;*/
 	line-height: 1.6rem;
 	padding-bottom: 0.4rem;
 }
 .userinfo-l{
 	float: left;
-	
+	color:rgb(102,102,102);
+	margin-top: 0.3rem;
 }
 
 .userinfo-name{
@@ -38,17 +39,18 @@
 .userinfo-data{
 	font-size: 0.9rem;
 	color: rgb(153,153,153);
+	
 }
 
 .userinfo-r{
 	float: right;
 	vertical-align: middle;
-	width: 34%;
+	/*width: 34%;*/
 }
 .userinfo-r a{
 	display:inline-block;
 	vertical-align: middle;
-	width: 30%;
+	/*width: 30%;*/
 }
 .userinfo-r a span{
 	vertical-align: middle;
@@ -125,12 +127,12 @@ video::-webkit-media-controls {
 	height: 100%;
 }
 .textareas{
-	width: 90%;
+	width: 100%;
 	display: none;
 	background: #fff;
-	position: absolute;
-	bottom: 6rem;
-	left: 2rem;
+	position: fixed;
+	bottom: 0rem;
+	left: 0;
 }
 /*留言板*/
 .bc-center{
@@ -138,7 +140,7 @@ video::-webkit-media-controls {
 }
 .textareas .pl-text{
 	padding: 0.5rem;
-	min-height: 6rem;
+	/* min-height: 6rem; */
 	width: 85%;
 }
 
@@ -164,7 +166,7 @@ video::-webkit-media-controls {
 
 		/*评论*/
 .videosa{
-	width: 90%;
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
@@ -178,7 +180,12 @@ video::-webkit-media-controls {
 .styles{
 	 float: right;
 	 height: 2rem;
-	 margin-top: 4rem;
+	 margin-top: 2rem;
 	 text-align: center;
 	 line-height: 2rem;
+	 margin-right: 0.5rem;
+	
+}
+.styles a{
+	 color: #000 !important;
 }

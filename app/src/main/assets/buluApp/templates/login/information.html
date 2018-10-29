@@ -53,9 +53,9 @@
 		<script src="../../js/jquery.min.js"></script>
 		<script src="../../js/mui.js"></script>
 		<script src="../../js/data.js"></script>
-		<!--<script src="../../js/login.js"></script>-->
+		<script src="../../js/login.js"></script>
 		<script>
-			var activeUrl="http://192.168.0.215:8080/";
+			var activeUrl="http://c.service.bulu.aikaoen.com/buluc/";
 			var id = getValue()['id'] || ''; 
 			function getValue(){
 				  var str = decodeURIComponent( window.location.search ),
@@ -76,37 +76,37 @@
 				    return obj;
 				  }
 				}
-//			$('.finish').click(function(){
-//				var sex= $('#selected').find('option:selected').val() 
-//				var years= $('.birthday').find('option:selected').val()
-//				var month= $('.birthday1').find('option:selected').val()
-//				var month=	month < 10 ? '0' + month: month;
-//				var day= $('.birthday2').find('option:selected').val() 
-//				var day=day < 10 ? '0' + day: day;
-//				var birthDate=(years+'/'+month+'/'+day)
-////				console.log(birthday)
-////				console.log(sex)
-//              $.ajax({
-//                  type:'post',
-//                  url:activeUrl+'user/completion',
-////                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
-//                  data:{
-//                      sex:sex,
-//                      birthDate:birthDate,
-//                      id:id
-//                 	},
-//                  dataType:'json',
-//                 
-//                  success:function(data){
-//                  	console.log(data)
-//						if(data.code==10000){
-//							window.location.href="login.html?sex="+sex+"&birthDate="+birthDate+'&id='+id;
-//						}
-//                      
-//                  }
-//
-//              })
-//			})
+			$('.finish').click(function(){
+				var sex= $('#selected').find('option:selected').val() 
+				var years= $('.birthday').find('option:selected').val()
+				var month= $('.birthday1').find('option:selected').val()
+				var month=	month < 10 ? '0' + month: month;
+				var day= $('.birthday2').find('option:selected').val() 
+				var day=day < 10 ? '0' + day: day;
+				var birthDate=(years+'/'+month+'/'+day)
+//				console.log(birthday)
+//				console.log(sex)
+                $.ajax({
+                    type:'post',
+                    url:activeUrl+'user/completion',
+//                  http:"//localhost:8080/user/registUser?userName=房金&accountNumber=qwe12ssss3456&passwd=123456&patriarch=景浩&tel=18510003196"
+                    data:{
+                        sex:sex,
+                        birthDate:birthDate,
+                        id:id
+                   	},
+                    dataType:'json',
+                   
+                    success:function(data){
+                    	console.log(data)
+						if(data.code==10000){
+							window.location.href="login.html?sex="+sex+"&birthDate="+birthDate+'&id='+id;
+						}
+                        
+                    }
+
+                })
+			})
 		</script>
 	</body>
 

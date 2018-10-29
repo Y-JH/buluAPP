@@ -1,151 +1,214 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.mui-plus.mui-android header.mui-bar{
+
+.aa {
+	background: #ccc !important;
+}
+
+.mui-plus.mui-android header.mui-bar {
 	display: none;
 }
-.mui-plus.mui-android .mui-bar-nav~.mui-content{
+
+.mui-plus.mui-android .mui-bar-nav~.mui-content {
 	padding: 0;
 }
-.mui-bar-nav~.mui-content{
+
+.mui-bar-nav~.mui-content {
 	padding: 0 !important;
 }
+
+.boxslider{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    height: 2rem;
+}
+.stars-con{
+    height: 100%;
+    align-items: center;
+}
+.mui_xxk {
+	font-size: 0.8rem;
+	width: -webkit-max-content;
+	margin: 0 auto;
+}
+
+.slide {
+	width: 5rem;
+	height: auto;
+	float: left;
+	position: relative;
+	overflow: auto;
+}
+
 /*选项卡变换颜色*/
-.static-color{
-	color: rgb(102,102,102) !important;
+
+.static-color {
+	color: rgb(102, 102, 102) !important;
 }
+
 .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
-    color:rgb(255,139,54) !important;
-    background: 0 0;
-    
+	color: rgb(255, 139, 54) !important;
+	background: 0 0;
 }
-.her{
-	color: rgb(102,102,102);
+
+.her {
+	color: rgb(102, 102, 102);
 	line-height: 2rem !important;
 	font-weight: normal;
 }
-.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
 	padding: 0rem 1.5rem;
 }
+
+
 /*banner*/
-.booking_header{
+
+.booking_header {
 	background-image: url(../img/banner.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 7.5rem;
 }
-.mui-bar{
+
+.mui-bar {
 	background: none !important;
 }
-.mui-bar-nav{
+
+.mui-bar-nav {
 	border: none !important;
 	box-shadow: none !important;
 }
-.mui-title{
+
+.mui-title {
 	color: white !important;
 }
+
+
 /*声乐*/
-.main_font{
+
+.main_font {
 	width: 90%;
 	height: auto;
 	margin: 0.8rem auto;
 	background-color: #E6E6E6;
-	text-indent: 1em; 
+	text-indent: 1em;
 	border-radius: 0.5rem;
 	position: relative;
 }
-.main_font p{
+
+.main_font p {
 	margin-bottom: 0.1rem !important;
 }
-.hdr{
+
+.hdr {
 	padding: 1rem 0 0.5rem 0;
-	color: rgb(102,102,102);
+	color: rgb(102, 102, 102);
 	font-size: 1rem;
 }
-.padd{
-	color: rgb(153,153,153); 
+
+.padd {
+	color: rgb(153, 153, 153);
 	padding-bottom: 0.5rem;
 }
+
+
 /*预约button*/
-.btn{
+
+.btn {
 	position: absolute;
 	right: 2rem;
 	bottom: 2rem;
 	overflow: hidden;
-	
 }
-.btn button{
+
+.btn button {
 	border-radius: 1rem;
 	width: 4rem;
 	height: 2rem;
 }
-.btn1{
+
+.btn1 {
 	position: absolute;
 	right: 2.5rem;
 	bottom: 12rem;
 	overflow: hidden;
-	
 }
-.btn1 button{
+
+.btn1 button {
 	border-radius: 1rem;
 	width: 4rem;
 	height: 2rem;
 }
-.btn2{
+
+.btn2 {
 	position: absolute;
 	right: 2.5rem;
 	bottom: 2.5rem;
 	overflow: hidden;
-	
 }
-.btn2 button{
+
+.btn2 button {
 	border-radius: 1rem;
 	width: 4rem;
 	height: 2rem;
 }
+
+
 /*日历*/
-.time-kc{
+
+.time-kc {
 	margin-top: 1rem;
 	margin-bottom: 0.6rem;
 }
-.time-kc li{
+
+.time-kc li {
 	float: left;
 	width: 14.2%;
 	text-align: center;
-	color:#fff;
+	color: #fff;
 	font-size: 0.9rem;
 }
-.wcDate{
+
+.wcDate {
 	display: flex;
 }
-.wcDate li{
+
+.wcDate li {
 	/*float: left;*/
 	width: 14.2%;
-	height:2.8rem;
+	height: 2.8rem;
 	line-height: 2.8rem;
 	text-align: center;
 	color: #fff;
 	font-size: 0.9rem;
 }
-ul.wcDate > li.active {
-    background: url(../img/yuan.png) no-repeat;
-    background-size: 50%;
-    background-position:1rem 0.5rem ;
-}
-ul.wcDate > li.today {
-     background: url(../img/yuan.png) no-repeat;
-    background-size: 50%;
-    background-position:1rem 0.5rem ;
+
+ul.wcDate>li.active {
+	background: url(../img/yuan.png) no-repeat;
+	background-size: 50%;
+	background-position: 0.9rem 0.5rem;
 }
 
+ul.wcDate>li.today {
+	background: url(../img/yuan.png) no-repeat;
+	background-size: 50%;
+	background-position: 0.9rem 0.5rem;
+}
+
+
 /*公用样视*/
-.lines{
+
+.lines {
 	width: 100%;
 	height: 1rem;
-	background:rgb(240,240,240);
+	background: rgb(240, 240, 240);
 }
-.mui-slider-indicator.mui-segmented-control{
+
+.mui-slider-indicator.mui-segmented-control {
 	font-size: 1rem;
-} 
+}

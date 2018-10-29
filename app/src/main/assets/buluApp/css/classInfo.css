@@ -13,10 +13,11 @@
 }
 .kc-img{
 	width: 100%;
-	/*height: 4rem;*/
+	height: 14rem;
 }
 .kc-info img{
 	width: 100%;
+	height: 100%;
 	display: block;
 }
 .kc-info p{
@@ -79,6 +80,8 @@
 	top:0;
 	right:0.6rem;
 	width: 3rem;
+
+	
 }
 .appointment img{
 	width: 100%;
@@ -139,7 +142,7 @@
 }
 .cencle-box{
 	width: 100%;
-	height: 2.5em;
+	/*height: 2.5em;*/
 	line-height: 2.5rem;
 	border-top: 1px solid #ccc;
 	margin-top: 0.5rem;
