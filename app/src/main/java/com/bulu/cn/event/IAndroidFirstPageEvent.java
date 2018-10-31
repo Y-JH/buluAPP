@@ -35,4 +35,19 @@ public interface IAndroidFirstPageEvent {
             mFlag = flag;
         }
     }
+
+    /**选择头像**/
+    class SelctAvatar {
+        public final String SELECT_AVATAR_EVENT = "SELECT_AVATAR_EVENT";
+        public SelctAvatar(){}
+    }
+
+    /**选择头像**/
+    class SelctAvatarNotify {
+        public final String SELECT_AVATAR_NOTIFY_EVENT = "SELECT_AVATAR_NOTIFY_EVENT";
+        public final String picUrl;
+        public SelctAvatarNotify(String picUrl){
+            this.picUrl = picUrl;
+        }
+    }
 }

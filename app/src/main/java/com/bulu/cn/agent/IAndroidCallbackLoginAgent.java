@@ -61,12 +61,12 @@ public class IAndroidCallbackLoginAgent {
      * 功能：登录
      */
     @JavascriptInterface
-    public void loginToHome() {
+    public void loginToHome(final String cid) {
         deliver.post(new Runnable() {
             @Override
             public void run() {
                 EventBusActivityScope.getDefault(mActivity)
-                        .post(new IAndroidLoginPageEvent.Login());
+                        .post(new IAndroidLoginPageEvent.Login(cid));
             }
         });
     }

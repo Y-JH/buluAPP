@@ -31,6 +31,8 @@ public class ConsActions {
     public static final String CLOSE_PAGE_EVENT="CLOSE_PAGE_EVENT";
     public static final String CUR_BACK_PAGE_EVENT="CUR_BACK_PAGE_EVENT";
     public static final String CUR_FORWARD_PAGE_EVENT="CUR_FORWARD_PAGE_EVENT";
+    public static final String SELECT_AVATAR_EVENT="SELECT_AVATAR_EVENT";
+    public static final String SELECT_AVATAR_NOTIFY_EVENT="SELECT_AVATAR_NOTIFY_EVENT";
 
 
     /** 欢迎页的点击事件 **/

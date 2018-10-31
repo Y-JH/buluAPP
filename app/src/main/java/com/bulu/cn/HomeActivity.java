@@ -115,4 +115,5 @@ public class HomeActivity extends SupportActivity {
         EventBusActivityScope.getDefault(this).unregister(this);
     }
 
+
 }

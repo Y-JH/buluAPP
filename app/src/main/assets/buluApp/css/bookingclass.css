@@ -194,10 +194,9 @@ ul.wcDate>li.active {
 	background-position: 0.9rem 0.5rem;
 }
 
-ul.wcDate>li.today {
-	background: url(../img/yuan.png) no-repeat;
-	background-size: 50%;
-	background-position: 0.9rem 0.5rem;
+ ul.wcDate>li.today {
+	color: #000;
+	font-weight: bold;
 }
 
 

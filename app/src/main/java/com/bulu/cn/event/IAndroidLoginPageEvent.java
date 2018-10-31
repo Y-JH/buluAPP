@@ -36,8 +36,9 @@ public interface IAndroidLoginPageEvent {
     class Login {
         //打开新的web页面指令
         public final String NEW_PAGE_EVENT = "NEW_PAGE_EVENT";
-
-        public Login() {
+        public final String cid;
+        public Login(String cid) {
+            this.cid = cid;
         }
     }
 

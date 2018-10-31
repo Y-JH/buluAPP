@@ -55,6 +55,11 @@ dependencies {
     implementation files('libs/ShareSDK-Wechat-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
+    implementation files('libs/gson-2.0.jar')
+    compile project(path: ':xutils')
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.9'
+//    implementation 'com.github.bumptech.glide:glide:4.4.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
 }
 
 

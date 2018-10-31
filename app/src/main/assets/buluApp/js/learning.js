@@ -47,11 +47,17 @@ $(function() {
 				var newdatem = (data.data.jrskinfo[0].time_bucket).substr(11, 5)
 				console.log(data.data.xyinfo[0].user_name)
 				var stc = ''
-				stc += `
-					<div class="mui-row">
-						<div class="left mui-col-sm-9 mui-col-xs-9">
-							<img src="../../img/students.png" alt="" />
-							<div class="hide clearfix">`
+                                				stc += `
+                                					<div class="mui-row">
+                                						<div class="left mui-col-sm-9 mui-col-xs-9">`
+                                					if(data.data.xyinfo.picture == null){
+                                				stc += `
+                                						< a onclick="viewProfile()">< img src="../../img/tou.png" /></ a>`
+                                			}else{
+                                				stc += `
+                                						< a onclick="classApply()">< img src='${imgSrc}${data.data.xyinfo.picture}'/></ a>`
+                                			}
+                                				stc += `<div class="hide clearfix">`
 				if(xyid > 0) {
 					stc += `<h1 class="names">${data.data.xyinfo[0].study}</h1>`
 				} else {
@@ -63,7 +69,7 @@ $(function() {
 						</div>
 
 						<div class="right mui-col-sm-3 mui-col-xs-3">
-							<a onclick="classApply()" href="bookingclass.html" class="pic">
+							<a onclick="alert('error')" href="bookingclass.html" class="pic">
 								<img src="../../img/kes.png" />
 							</a>
 						</div>
@@ -89,7 +95,7 @@ $(function() {
 				stc += `
 					<div class="mui-row">
 						<div class="left mui-col-sm-9 mui-col-xs-9">
-							<img src="../../img/students.png" alt="" />
+							<img onclick="viewProfile()" src="../../img/students.png" alt="" />
 							<div class="hide clearfix">`
 
 				if(xyid > 0) {
@@ -102,7 +108,7 @@ $(function() {
 							</div>
 						</div>
 						<div class="right mui-col-sm-3 mui-col-xs-3">
-							<a href="bookingclass.html" class="pic">
+							<a onclick="classApply()" class="pic">
 								<img src="../../img/kes.png" />
 							</a>
 						</div>

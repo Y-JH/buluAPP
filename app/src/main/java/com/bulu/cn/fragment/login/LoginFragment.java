@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bulu.cn.BaseApplication;
 import com.bulu.cn.MainFragment;
 import com.bulu.cn.R;
 import com.bulu.cn.agent.IAndroidCallbackLoginAgent;
@@ -13,7 +14,9 @@ import com.bulu.cn.agent.WebAgentFragmentImpl;
 import com.bulu.cn.base.BaseMainFragment;
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.IAndroidLoginPageEvent;
+import com.bulu.cn.tool.SharedPreferencesHelper;
 import com.just.agentweb.AgentWeb;
+import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -108,6 +111,8 @@ public class LoginFragment extends BaseMainFragment {
     @Subscribe
     public void onLoginToHomePage(IAndroidLoginPageEvent.Login event) {
         if(ConsActions.NEW_PAGE_EVENT.equals(event.NEW_PAGE_EVENT)){
+            SharedPreferencesHelper.putSharedPreferences(BaseApplication.getsInstance(), "cid", event.cid);
+            Logger.e(TAG, "event.cid=="+event.cid);
             startBrotherFragment(MainFragment.newInstance());
         }
     }

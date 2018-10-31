@@ -1,105 +1,151 @@
 <!doctype html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>资料编辑</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../../css/mui.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/ziliao.css" />
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>资料编辑</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/ziliao.css"/>
+</head>
 
-	<body>
-		<div class="wrap">
-			<!--头部-->
-			<header class="mui-bar mui-bar-nav">
-				<a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()"></a>
-				<h1 class="mui-title">资料编辑</h1>
-			</header>
+<body>
+<div class="wrap">
+    <!--头部-->
+    <header class="mui-bar mui-bar-nav">
+        <a class=" mui-icon mui-icon-left-nav mui-pull-left config-return" onclick="onBack()"></a>
+        <h1 class="mui-title">资料编辑</h1>
+    </header>
 
-			<div class="lines"></div>
-			<!--列表-->
-			<ul class="ziliao-list clearfix" id="ziliao">
-				<li>
-					<p>姓名</p>
-					<span class="names xm"></span>
-				</li>
+    <div class="lines"></div>
+    <!--列表-->
+    <ul class="ziliao-list clearfix" id="ziliao">
+        <li>
+            <p>姓名</p>
+            <span class="names xm"></span>
+        </li>
 
-				<li class="profile-photo">
-					<p>头像</p>
-					<a href="#" class="head-photos" onclick=""><img src="" class="photos" /></a>
-					<a href="#" class="head-photo"><img src="../../img/more.png" alt="" /></a>
-				</li>
+        <li onclick="onSelectAvatar()" class="profile-photo">
+            <p>头像</p>
+            <a class="head-photos"><img src="" class="photos"/></a>
+            <a class="head-photo"><img src="../../img/more.png" alt=""/></a>
+        </li>
 
-				<li>
-					<p>性别</p>
-					<span class="sex">女</span>
-				</li>
+        <li>
+            <p>性别</p>
+            <span class="sex">女</span>
+        </li>
 
-				<li id="none">
-					<p>生日</p>
-					<span class="datas sr"></span>
-				</li>
+        <li id="none">
+            <p>生日</p>
+            <span class="datas sr"></span>
+        </li>
 
-				<div class="lines" style="margin-top: 0;"></div>
+        <div class="lines" style="margin-top: 0;"></div>
 
-				<li class="clearfix">
-					<p>手机号码</p>
-					<a href="#" class="tells iphone"> 
-						<span class="dh"> </span>
-						<img src="../../img/more.png" alt="" />
-					</a>
-				</li>
+        <li class="clearfix">
+            <p>手机号码</p>
+            <a href="#" class="tells iphone">
+                <span class="dh"> </span>
+                <img src="../../img/more.png" alt=""/>
+            </a>
+        </li>
 
-				<li>
-					<p>家长姓名</p>
-					<span class="jz-name jzxm"></span>
-				</li>
+        <li>
+            <p>家长姓名</p>
+            <span class="jz-name jzxm"></span>
+        </li>
 
-				<li class="clearfix">
-					<p>我的学号</p>
-					<a href="#" class="tells">
-						<span class="student_number"> </span>
-						<img src="../../img/more.png" alt="" />
-					</a>
-				</li>
+        <li class="clearfix">
+            <p>我的学号</p>
+            <a href="#" class="tells">
+                <span class="student_number"> </span>
+                <img src="../../img/more.png" alt=""/>
+            </a>
+        </li>
 
-				<li>
-					<p>收货地址</p>
-					<a href="#" class="head-photo"><img src="../../img/more.png" alt="" /></a>
-				</li>
+        <li>
+            <p>收货地址</p>
+            <a href="#" class="head-photo"><img src="../../img/more.png" alt=""/></a>
+        </li>
 
-				<div class="masks">
-					<div class="mask"></div>
-					<ul class="mask-a">
-						<a href="#" class="photo-btn">
-							<li>拍照</li>
-						</a>
-						<a href="#" class="album-btn">
-							<li>从相册中选择</li>
-						</a>
-						<a href="#" class="cancel">
-							<li style="border-top: 0.3rem solid rgb(240,240,240);">取消</li>
-						</a>
-					</ul>
-				</div>
+        <div class="masks">
+            <div class="mask"></div>
+            <ul class="mask-a">
+                <a href="#" class="photo-btn">
+                    <li>拍照</li>
+                </a>
+                <a href="#" class="album-btn">
+                    <li>从相册中选择</li>
+                </a>
+                <a href="#" class="cancel">
+                    <li style="border-top: 0.3rem solid rgb(240,240,240);">取消</li>
+                </a>
+            </ul>
+        </div>
 
-				<div class="lines" style="margin-top:0;"></div>
-			</ul>
-		</div>
-		<script src="../../js/mui.min.js"></script>
-		<script src="../../js/zepto.min.js"></script>
-		<script src="../../js/ziliao.js"></script>
-		<script src="../../js/login.js"></script>
-		<script src="../../js/ziliaos.js"></script>
-		<script src="../../js/app.js"></script>
-		<script src="../../Urlroot.js" type="text/javascript" charset="utf-8"></script>
-		<script>
+        <div class="lines" style="margin-top:0;"></div>
+    </ul>
+</div>
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/zepto.min.js"></script>
+<script src="../../js/ziliao.js"></script>
+<script src="../../js/login.js"></script>
+<script src="../../js/ziliaos.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../Urlroot.js" type="text/javascript" charset="utf-8"></script>
+<script>
 			function onBack(){
 				window.android.closeAndroidFirstPage(1);
 			};
-		</script>
-	</body>
+
+			function onSelectAvatar(){
+				window.android.onSelectAvatar();
+			}
+
+	//ziliao.html 个人资料 被本地java调用更新UI
+	function selectAvatar(){
+	    $.ajax({
+        		type: "post",
+        		url: activeUrl + "/mine/CUserInfo",
+        		data: {
+        			"xyid": xyid,
+        			"cid": zcid
+        		},
+        		async: false,
+        		dataType: "json",
+        		success: function(data) {
+        //			console.log(data)
+        			$('.xm').text(data.data.user_name)
+        			$('.sr').text(data.data.birth_date)
+        			$('.dh').text(data.data.tel)
+        			$('.jzxm').text(data.data.patriarch)
+        			$('.student_number').text(data.data.student_number)
+        			if(data.data.picture == null){
+        				$('.photos').attr('src',"../../img/tou.png")
+        			}else{
+        				$('.photos').attr('src',imgSrc+data.data.picture)
+        			}
+        			if($('.student_number').text() == '') {
+        				//点击学号跳转绑定学号
+        				$(document).on('click', '.tells', function() {
+        					$(this).attr('href', 'xuehao.html')
+        				})
+        			}
+        			//点击手机号跳转修改手机号
+        			$(document).on('click', '.iphone', function() {
+        				$(this).attr('href', 'replaceTell.html')
+        			})
+        		},
+        		error: function(XMLHttpRequest, textStatus, errorThrown) {
+        			alert("服务器开小差了 请稍后重试！");
+        		}
+        	});
+	}
+
+</script>
+</body>
 
 </html>

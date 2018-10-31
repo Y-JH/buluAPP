@@ -68,4 +68,12 @@ public class IAndroidCallbackFirstAgent {
     }
 
 
+    /**
+     * 从相册选择皂片作为头像 ziliao.html中的js调用
+     */
+    @JavascriptInterface
+    public void onSelectAvatar(){
+        EventBusActivityScope.getDefault(mActivity)
+                .post(new IAndroidFirstPageEvent.SelctAvatar());
+    }
 }

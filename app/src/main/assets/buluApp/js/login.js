@@ -198,6 +198,10 @@ $(function() {
 					ycTips('验证码输入不正确', '确定')
 					return false;
 				}
+				if(!/^[a-zA-Z0-9_]{0,}$/.test($accountNumber)) {
+                	ycTips('账号不能包含中文', '确定')
+                	return false;
+                }
 
 			},
 			success: function(data) {
@@ -321,7 +325,8 @@ $(function() {
 						localStorage.setItem('zcid',zcid)
 						localStorage.setItem('xyid',xyid)
 
-						onClickLogin()
+                        //传入修改个人头像的cid，用于调用本地方法进行本地存储
+						onClickLogin(zcid)
 					}
 
 				}

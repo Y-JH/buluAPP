@@ -23,11 +23,12 @@ $(function() {
 			var stz = ''
 			stz += `<div class="left mui-col-sm-3 mui-col-xs-3">`
 			if(data.data.userinfo.picture == null){
+
 				stz += `
-						<a onclick="viewProfile()" href="ziliao.html"><img src="../../img/tou.png" /></a>`
+						<a onclick="onClickUserAvatar()" ><img src="../../img/tou.png" /></a>`
 			}else{
 				stz += `
-						<a onclick="viewProfile()" href="ziliao.html"><img src='${imgSrc}${data.data.userinfo.picture}'/></a>`
+						<a  onclick="onClickUserAvatar()"><img src='${imgSrc}${data.data.userinfo.picture}'/></a>`
 			}
 			stz += `
 					</div>

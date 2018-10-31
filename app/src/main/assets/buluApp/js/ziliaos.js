@@ -38,43 +38,44 @@ $(function() {
 		}
 
 	})
-	//ziliao.html 个人资料 
-	$.ajax({
-		type: "post",
-		url: activeUrl + "/mine/CUserInfo",
-		data: {
-			"xyid": xyid,
-			"cid": zcid
-		},
-		async: false,
-		dataType: "json",
-		success: function(data) {
-//			console.log(data)
-			$('.xm').text(data.data.user_name)
-			$('.sr').text(data.data.birth_date)
-			$('.dh').text(data.data.tel)
-			$('.jzxm').text(data.data.patriarch)
-			$('.student_number').text(data.data.student_number)
-			if(data.data.picture == null){
-				$('.photos').attr('src',"../../img/tou.png")
-			}else{
-				$('.photos').attr('src',imgSrc+data.data.picture)
-			}
-			if($('.student_number').text() == '') {
-				//点击学号跳转绑定学号
-				$(document).on('click', '.tells', function() {
-					$(this).attr('href', 'xuehao.html')
-				})
-			}
-			//点击手机号跳转修改手机号
-			$(document).on('click', '.iphone', function() {
-				$(this).attr('href', 'replaceTell.html')
-			})
-		},
-		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			alert("服务器开小差了 请稍后重试！");
-		}
-	});
+	//ziliao.html 个人资料
+	    $.ajax({
+        		type: "post",
+        		url: activeUrl + "/mine/CUserInfo",
+        		data: {
+        			"xyid": xyid,
+        			"cid": zcid
+        		},
+        		async: false,
+        		dataType: "json",
+        		success: function(data) {
+        //			console.log(data)
+        			$('.xm').text(data.data.user_name)
+        			$('.sr').text(data.data.birth_date)
+        			$('.dh').text(data.data.tel)
+        			$('.jzxm').text(data.data.patriarch)
+        			$('.student_number').text(data.data.student_number)
+        			if(data.data.picture == null){
+        				$('.photos').attr('src',"../../img/tou.png")
+        			}else{
+        				$('.photos').attr('src',imgSrc+data.data.picture)
+        			}
+        			if($('.student_number').text() == '') {
+        				//点击学号跳转绑定学号
+        				$(document).on('click', '.tells', function() {
+        					$(this).attr('href', 'xuehao.html')
+        				})
+        			}
+        			//点击手机号跳转修改手机号
+        			$(document).on('click', '.iphone', function() {
+        				$(this).attr('href', 'replaceTell.html')
+        			})
+        		},
+        		error: function(XMLHttpRequest, textStatus, errorThrown) {
+        			alert("服务器开小差了 请稍后重试！");
+        		}
+        	});
+
 	
 // 修改手机号
 	$('#amend').click(function() {

@@ -34,4 +34,5 @@ public interface IAndroidSecondPageEvent {
 
         public ClosePage(){}
     }
+
 }

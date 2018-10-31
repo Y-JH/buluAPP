@@ -6,6 +6,8 @@ import android.content.Context;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 
+import org.xutils.x;
+
 import me.yokeyword.fragmentation.Fragmentation;
 import me.yokeyword.fragmentation.helper.ExceptionHandler;
 
@@ -34,6 +36,7 @@ public class BaseApplication extends Application {
 
         initLogger();
         initFragmentation();
+        initXUtils3();
     }
 
 
@@ -78,5 +81,9 @@ public class BaseApplication extends Application {
                 .hideThreadInfo()
                 .methodCount(3)
                 .logLevel(LogLevel.FULL);
+    }
+
+    private void initXUtils3(){
+        x.Ext.init(this);
     }
 }
