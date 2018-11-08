@@ -43,8 +43,8 @@ function getValue() {
 //var activeUrl = "http://c.service.bulu.aikaoen.com/buluc";
 //var activeZq = "http://c.service.bulu.aikaoen.com/buluc/";
 var imgSrc = "http://file.bulu.aikaoen.com/";
-var activeUrl = "http://192.168.0.132:8080";
-//var activeUrl = "http://192.168.0.159:8080";
+//var activeUrl = "http://192.168.0.132:8080";
+var activeUrl = "http://c.service.bulu.aikaoen.com";
 //var activeUrl = "http://c.service.bulu.aikaoen.com";
 
 //zcid=localStorage.getItem('zcid')

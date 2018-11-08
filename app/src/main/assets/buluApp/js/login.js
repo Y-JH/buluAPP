@@ -1,5 +1,5 @@
-//var activeUrl = "http://c.service.bulu.aikaoen.com/buluc/";
-var activeUrl="http://192.168.0.132:8080/";
+var activeUrl = "http://c.service.bulu.aikaoen.com/";
+//var activeUrl="http://192.168.0.132:8080/";
 var codes = -1;
 var ids;
 zcid=sessionStorage.getItem('zcid') ; // c端注册用户id
