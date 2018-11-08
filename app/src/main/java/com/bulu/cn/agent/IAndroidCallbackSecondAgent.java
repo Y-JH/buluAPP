@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.webkit.JavascriptInterface;
 
+import com.bulu.cn.event.IAndroidFirstPageEvent;
 import com.bulu.cn.event.IAndroidSecondPageEvent;
 import com.just.agentweb.AgentWeb;
 
@@ -55,5 +56,10 @@ public class IAndroidCallbackSecondAgent {
                 .post(new IAndroidSecondPageEvent.ClosePage());
     }
 
-
+    /**退出登录、重新登录**/
+    @JavascriptInterface
+    public void reSignIn(){
+        EventBusActivityScope.getDefault(mActivity)
+                .post(new IAndroidFirstPageEvent.ReSignIn());
+    }
 }

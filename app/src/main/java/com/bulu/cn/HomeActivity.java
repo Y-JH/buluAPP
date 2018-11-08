@@ -1,9 +1,12 @@
 package com.bulu.cn;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.bulu.cn.constant.ConsActions;
 import com.bulu.cn.event.TabStatusEvent;
+import com.bulu.cn.fragment.login.LoginFragment;
+import com.bulu.cn.tool.SharedPreferencesHelper;
 import com.gyf.barlibrary.ImmersionBar;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -22,14 +25,42 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
 public class HomeActivity extends SupportActivity {
 
     protected ImmersionBar mImmersionBar;
+    private boolean reSignIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+
         EventBusActivityScope.getDefault(this).register(this);
         //设置状态栏透明
         initImmersionBar(true, false, R.color.translate);
+        startScreenMode();
+
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        Bundle bundle = intent.getBundleExtra("reSignIn");
+        if (null != bundle) {
+            reSignIn = bundle.getBoolean("reSignIn");
+        }
+        if (reSignIn) {
+            //如果用户点击重新登录（退出登录）执行这里
+            reSignIn = false;
+            SharedPreferencesHelper.putSharedPreferences(BaseApplication.getsInstance(), "cid", "");//置空
+            popTo(LoginFragment.class, false);
+        }
+
+    }
+
+    /**
+     * 页面启动方式
+     **/
+    private void startScreenMode() {
         //加载闪屏页
         if (null == findFragment(SplashFragment.class)) {
             loadRootFragment(R.id.fl_container, SplashFragment.newInstance());
@@ -38,13 +69,14 @@ public class HomeActivity extends SupportActivity {
 
     /**
      * 功能：设置status
+     *
      * @param isFullScreen 是否全屏
-     * @param isBlackTxt 状态栏字体是否黑色
-     * @param statusColor 状态栏背景色
+     * @param isBlackTxt   状态栏字体是否黑色
+     * @param statusColor  状态栏背景色
      */
-    protected void initImmersionBar(boolean isFullScreen, boolean isBlackTxt, int statusColor){
+    protected void initImmersionBar(boolean isFullScreen, boolean isBlackTxt, int statusColor) {
         int resColor = R.color.white;
-        if(isBlackTxt){
+        if (isBlackTxt) {
             resColor = R.color.black;
         }
         mImmersionBar = ImmersionBar.with(this)
@@ -69,19 +101,19 @@ public class HomeActivity extends SupportActivity {
     }
 
 
-
     /**
      * 功能：eventbus 接收消息修改状态栏
+     *
      * @param event
      */
     @Subscribe
     public void onTabStatusEvent(TabStatusEvent event) {
-        if(null == event || event.position == -3)return;
+        if (null == event || event.position == -3) return;
         setImmerSionBar(event.position);
     }
 
     public void setImmerSionBar(int fragLocation) {
-        switch (fragLocation){
+        switch (fragLocation) {
             case ConsActions.I_TAB_PAGE_HOME:
             case ConsActions.I_TAB_PAGE_BULO_FAMILY:
             case ConsActions.I_TAB_PAGE_LEARNNING_CENTER:
@@ -94,16 +126,10 @@ public class HomeActivity extends SupportActivity {
                 break;
 
             case ConsActions.MAIN_ACTIVITY:
-                initImmersionBar(false, false, R.color.translate);
+//                initImmersionBar(false, false, R.color.translate);
                 break;
         }
     }
-
-
-
-
-
-
 
 
     @Override

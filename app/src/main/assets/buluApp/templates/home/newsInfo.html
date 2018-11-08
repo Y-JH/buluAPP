@@ -45,6 +45,13 @@
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);
 			}
+
+			<!--新闻动态 二级页面跳转到3级-->
+			function onClickNewsAct(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/home/newCondition2.html?"+location;
+				window.android.showAndroidNewFirstPage(fileUrl);
+
+			}
 		</script>
 	</body>
 

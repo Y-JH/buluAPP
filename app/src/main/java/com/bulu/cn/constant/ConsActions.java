@@ -47,4 +47,7 @@ public class ConsActions {
 
     /**shareSDK分享功能**/
     public static final String SAHRE_SDK_EVENT = "SAHRE_SDK_EVENT";
+
+    /**退出登录、重新登录**/
+    public static  final String RESIGNIN = "RESIGNIN";
 }

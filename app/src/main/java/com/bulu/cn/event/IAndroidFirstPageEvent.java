@@ -50,4 +50,13 @@ public interface IAndroidFirstPageEvent {
             this.picUrl = picUrl;
         }
     }
+
+
+    /**退出登录、重新登录**/
+    class ReSignIn {
+        public final String RESIGNIN = "RESIGNIN";
+        public ReSignIn(){
+
+        }
+    }
 }

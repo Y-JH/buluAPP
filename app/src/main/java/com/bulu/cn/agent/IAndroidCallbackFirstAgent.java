@@ -76,4 +76,12 @@ public class IAndroidCallbackFirstAgent {
         EventBusActivityScope.getDefault(mActivity)
                 .post(new IAndroidFirstPageEvent.SelctAvatar());
     }
+
+
+    /**退出登录、重新登录**/
+    @JavascriptInterface
+    public void reSignIn(){
+        EventBusActivityScope.getDefault(mActivity)
+                .post(new IAndroidFirstPageEvent.ReSignIn());
+    }
 }

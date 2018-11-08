@@ -1,5 +1,6 @@
 package com.bulu.cn.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bulu.cn.BaseApplication;
+import com.bulu.cn.HomeActivity;
 import com.bulu.cn.R;
 import com.bulu.cn.agent.IAndroidCallbackFirstAgent;
 import com.bulu.cn.agent.WebAgentFragmentImpl;
@@ -123,6 +125,18 @@ public class PublicFirstWebViewFragment extends BaseBackFragment {
         super.onPause();
     }
 
+
+    /**退出登录、重新登录**/
+    @Subscribe
+    public void reSignIn(IAndroidFirstPageEvent.ReSignIn event){
+        if (ConsActions.RESIGNIN.equals(event.RESIGNIN)) {
+            Intent re = new Intent(getActivity(), HomeActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("reSignIn", true);
+            re.putExtra("reSignIn", bundle);
+            getActivity().startActivity(re);
+        }
+    }
 
     /**
      * 功能：eventbus 接收消息修改状态栏

@@ -62,6 +62,12 @@
 			function onBack(){
 				window.android.closeAndroidFirstPage(0);
 			}
+
+			<!--点击活动演出更多列表item-->
+			function onClickPerformItem(location){
+				var fileUrl = "file:///android_asset/buluApp/templates/home/activeInfo2.html?"+location;
+				window.android.showAndroidNewFirstPage(fileUrl);
+			}
 		</script>
 	</body>
 

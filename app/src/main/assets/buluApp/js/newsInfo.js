@@ -17,7 +17,7 @@ $(function(){
 							var datacreat=(data.data[i].createTime).substr(0,10)
 							var consulta='';
 							consulta+=`
-								<a href="newCondition.html?id=${data.data[i].id}"><div class="consulta" style="margin-top: 0;">
+								<a onclick="onClickNewsAct('id=${data.data[i].id}')" ><div class="consulta" style="margin-top: 0;">
 									<div class="consultas clearfix">
 										<div class="consulta-l">
 											<img src="${imgSrc}${data.data[i].content}" alt="" />
