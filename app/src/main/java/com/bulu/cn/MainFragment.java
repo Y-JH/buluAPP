@@ -47,6 +47,8 @@ public class MainFragment extends SupportFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //第一次进入home页面
+        EventBusActivityScope.getDefault(_mActivity).post(new TabStatusEvent(ConsActions.I_TAB_PAGE_HOME));
         SupportFragment firstFragment = findChildFragment(BuloHomeFragment.class);
         if (firstFragment == null) {
             mFragments[ConsActions.I_TAB_PAGE_HOME] = BuloHomeFragment.newInstance();

@@ -35,7 +35,7 @@ public class HomeActivity extends SupportActivity {
 
         EventBusActivityScope.getDefault(this).register(this);
         //设置状态栏透明
-        initImmersionBar(true, false, R.color.translate);
+        initImmersionBar(true, true, R.color.translate,true);
         startScreenMode();
 
     }
@@ -74,7 +74,10 @@ public class HomeActivity extends SupportActivity {
      * @param isBlackTxt   状态栏字体是否黑色
      * @param statusColor  状态栏背景色
      */
-    protected void initImmersionBar(boolean isFullScreen, boolean isBlackTxt, int statusColor) {
+    protected void initImmersionBar(boolean isFullScreen,
+                                    boolean isBlackTxt,
+                                    int statusColor,
+                                    boolean fontcolor) {
         int resColor = R.color.white;
         if (isBlackTxt) {
             resColor = R.color.black;
@@ -83,8 +86,9 @@ public class HomeActivity extends SupportActivity {
                 .statusBarColor(statusColor)     //状态栏颜色，不写默认透明色
                 .statusBarAlpha(0.3f)  //状态栏透明度，不写默认0.0f
                 .statusBarDarkFont(isBlackTxt)   //状态栏字体是深色，不写默认为亮色
-                .flymeOSStatusBarFontColor(resColor)  //修改flyme OS状态栏字体颜色
-                .fullScreen(isFullScreen);      //有导航栏的情况下，activity全屏显示，也就是activity最下面被导航栏覆盖，不写默认非全屏
+                .statusBarDarkFont(fontcolor) //字体颜色 true=黑色
+                .flymeOSStatusBarFontColor(resColor);  //修改flyme OS状态栏字体颜色
+//                .fullScreen(isFullScreen);      //有导航栏的情况下，activity全屏显示，也就是activity最下面被导航栏覆盖，不写默认非全屏
         mImmersionBar.init();  //必须调用方可沉浸式
     }
 
@@ -115,18 +119,27 @@ public class HomeActivity extends SupportActivity {
     public void setImmerSionBar(int fragLocation) {
         switch (fragLocation) {
             case ConsActions.I_TAB_PAGE_HOME:
+                initImmersionBar(true, true, R.color.transparent, false);
+                break;
+
             case ConsActions.I_TAB_PAGE_BULO_FAMILY:
+                initImmersionBar(true, true, R.color.transparent, true);
+
+                break;
             case ConsActions.I_TAB_PAGE_LEARNNING_CENTER:
+                initImmersionBar(true, true, R.color.transparent, true);
+
+                break;
             case ConsActions.I_TAB_PAGE_MINE_CENTER:
-                initImmersionBar(false, true, R.color.translate);
+                initImmersionBar(false, true, R.color.zgc_red, true);
                 break;
 
             case ConsActions.SPLASH_FRAGMENT:
-                initImmersionBar(true, false, R.color.translate);
+                initImmersionBar(true, false, R.color.transparent, true);
                 break;
 
             case ConsActions.MAIN_ACTIVITY:
-//                initImmersionBar(false, false, R.color.translate);
+                initImmersionBar(false, true, R.color.transparent, true);
                 break;
         }
     }
